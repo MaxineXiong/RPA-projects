@@ -1,0 +1,7 @@
+click if the from_email is Gmail: https://accounts.google.com/DisplayUnlockCaptcha 
+click if the from_email is Outlook: https://account.live.com/Activity?mkt=zh-CN&refd=account.microsoft.com&refp=privacy 
+for more debugging practice, see https://github.com/miguelgrinberg/flasky/issues/207
+for other from_email servers, search '如何打开POP3/SMTP/IMAP功能？' in google
+
+
+

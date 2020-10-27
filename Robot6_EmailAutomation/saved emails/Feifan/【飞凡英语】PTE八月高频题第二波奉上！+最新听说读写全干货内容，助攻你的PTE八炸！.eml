@@ -1,0 +1,3124 @@
+Delivered-To: meenoxiong@gmail.com
+Received: from localhost (localhost [127.0.0.1])
+	by mail50.suw111.mcdlv.net (MailChimp) with ESMTP id 41rNg21b26z5pZpcb
+	for <meenoxiong@gmail.com>; Wed, 15 Aug 2018 21:59:58 +0000 (GMT)
+X-Google-Smtp-Source: AA+uWPzjvt2OsFoRdNkhBkgEbQbu9Dcdli4XetRMGdvpNYMckMdd++PrEMoQJPVpF+HccfAroTYx
+X-Received: by 2002:a25:c9c1:: with SMTP id
+ z184-v6mr16066200ybf.120.1534370420680;        Wed, 15 Aug 2018 15:00:20
+ -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1534370420; cv=none; d=google.com;
+	s=arc-20160816;
+	b=dpTKuA8MP4iEbA0aobux1LB+dSYFN5BZuy/eXAgtCDJ6prdQ1BZY4/Ae2Rv0E69ciR8Sdn7mBXL
+	4A7lIQ7A4FXu7o96vYzr9eJYQstLr6LOgZ1XKm5tU+VLfe4fxWCR83jxW5rAbMgvAyVIFC70zum0a
+	h5ZZv4XQr4xwYY/+Gfj5goDrlldGlpq/tiTr9rx1M5Ar8q2vFZtYJ3RWxVEGxti/EZ8MRFJOaZKZO
+	VebUjAQ4h3ml17RcULMZkbrlWcKuaAnKu1U/Zoh4l9Bt7+t+59oaXr1qS7/LnRqTBu8NvgCUUrIAZ
+	NrNLNLbzcuLT3Lluxyx3+7EmjyAG2VWy365w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=mime-version:list-unsubscribe-post:list-unsubscribe:precedence:list-id:
+	feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature:
+	dkim-signature:arc-authentication-results;
+	bh=qvegxFZY5TemWNO6XFSHEADL+OUiXWNJB4C7tg4iEpU=;
+	b=UKukqBWGVXZSqyrWpCG08OQXGWX/U9ZGas7nJpMV3euNefRaWngFtk88vLHPXDTiAWHfhSjaQiN
+	mJ0nfmxDhU1zhB6mM+7c3S0Xp3EDZ29SXdX+aHCUcYrXihU+PZSNfV+imJtRMf8R9sZuq2w6DbHjP
+	dIAN97rtqURz4UMHkpGdQVo5Rs1yg1jTB91BsM/9oLlJTBAXwYiBB5yTXZ0fHmPbioQ2CVWoALMR1
+	erby7yCDxGffO/WRhC1qGvi3TO8k3ao4gNFoIWIhJLah4XRk3L+JpuEqIR+j6yHMcXTsU8/aWfWyZ
+	9l+5AnUCWu8+X3e0xYBE4HM01qQC7VSu4NYw==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=B+5nJ4F3;
+	dkim=pass header.i=@feifan.com.au header.s=k1 header.b=1jsAuxjT; spf=pass
+	(google.com: domain of bounce-mc.us18_96317537.142683-meenoxiong=gmail.com@mail50.suw111.mcdlv.net designates 198.2.185.50 as permitted sender)
+	smtp.mailfrom=
+	"bounce-mc.us18_96317537.142683-meenoxiong=gmail.com@mail50.suw111.mcdlv.net"
+Return-Path: =?us-ascii?q?=3Cbounce-mc=2Eus18=5F96317537=2E142683-meenoxiong=3Dgmail=2Ecom=40mail50=2Es?=
+ =?us-ascii?q?uw111=2Emcdlv=2Enet=3E?=
+Received-SPF: pass (google.com: domain of
+ bounce-mc.us18_96317537.142683-meenoxiong=gmail.com@mail50.suw111.mcdlv.net
+ designates 198.2.185.50 as permitted sender) client-ip=198.2.185.50;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=B+5nJ4F3;
+	dkim=pass header.i=@feifan.com.au header.s=k1 header.b=1jsAuxjT; spf=pass
+	(google.com: domain of bounce-mc.us18_96317537.142683-meenoxiong=gmail.com@mail50.suw111.mcdlv.net designates 198.2.185.50 as permitted sender)
+	smtp.mailfrom=
+	"bounce-mc.us18_96317537.142683-meenoxiong=gmail.com@mail50.suw111.mcdlv.net"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=feifan.com.au; s=k1;
+	t=1534370398; i=auto@feifan.com.au;
+	bh=qvegxFZY5TemWNO6XFSHEADL+OUiXWNJB4C7tg4iEpU=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+	Content-Type:MIME-Version;
+	b=1jsAuxjTvxnrOl4u0NEUGFEBif77K35B2qkKEAOvUORxRziGn2f4cjTFK0Iuterv1KV7oZp+vd9
+	V09axG72ooHtMbJg2Ppr0zHxxhmqzEHJ/8icSySJ82ajkSOQdin3bMCjYQK14gGEokdmdoL2h6tv/
+	P5a4o1XKy9TA6LI9imI=
+x-mcpf-jobid: mc.us18_96317537.142683.5b74a247d30f0.full_000001
+Subject: =?utf-8?b?44CQ6aOe5Yeh6Iux6K+t44CRUFRF5YWr5pyI6auY6aKR6aKY56ys5LqM5rOi5aWJ?=
+ =?utf-8?b?5LiK77yBK+acgOaWsOWQrOivtOivu+WGmeWFqOW5sui0p+WGheWuue+8jOWKqQ==?=
+ =?utf-8?b?5pS75L2g55qEUFRF5YWr54K477yB?=
+From: =?utf-8?b?6aOe5Yeh6Iux6K+t?= <auto@feifan.com.au>
+Reply-To: us18-29fb5111da-7e569e3768@conversation01.mailchimpapp.com
+To: meenoxiong@gmail.com
+Date: Wed, 15 Aug 2018 21:59:55 +0000
+Message-ID: <2a498baff03c8c8d396c36aca.91a3dd9eae.20180815215938.824c6cbbb1.75ef1877@mail50.suw111.mcdlv.net>
+X-Mailer: MailChimp Mailer - **CID824c6cbbb191a3dd9eae**
+X-Campaign: mailchimp2a498baff03c8c8d396c36aca.824c6cbbb1
+X-campaignid: mailchimp2a498baff03c8c8d396c36aca.824c6cbbb1
+X-Report-Abuse: Please report abuse for this campaign here:
+ =?us-ascii?q?http=3A=2F=2Fwww=2Emailchimp=2Ecom=2Fabuse=2Fabuse=2Ephtml=3Fu=3D2a498baff03c8c8d?=
+ =?us-ascii?q?396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae?=
+X-MC-User: 2a498baff03c8c8d396c36aca
+Feedback-ID: 96317537:96317537.142683:us18:mc
+List-ID: 2a498baff03c8c8d396c36acamc list
+ <2a498baff03c8c8d396c36aca.84791.list-id.mcsv.net>
+Precedence: bulk
+X-Auto-Response-Suppress: OOF, AutoReply
+X-Accounttype: pd
+List-Unsubscribe: =?us-ascii?q?=3Chttps=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Funsubscribe=3Fu=3D2a498baff0?=
+ =?us-ascii?q?3c8c8d396c36aca&id=3D014b63954e&e=3D91a3dd9eae&c=3D824c6cbbb1=3E=2C?=
+ =?us-ascii?q?_=3Cmailto=3Aunsubscribe-mc=2Eus18=5F2a498baff03c8c8d396c36aca=2E824c6cb?=
+ =?us-ascii?q?bb1-91a3dd9eae=40mailin=2Emcsv=2Enet=3Fsubject=3Dunsubscribe=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Uid: 7
+Folder: UiPath Test
+PlainText: =?utf-8?b?UFRF5YWr5pyI56ys5LqM5pyf6auY6aKR6aKE5rWL6aKY5bqTK+e7g+S5oOinhg==?=
+ =?utf-8?b?6aKRK+WQhOenjeW5sui0p2h0dHA6Ly93d3cuZmVpZmFuLmNvbS5hdS8/dXRtX3Nv?=
+ =?utf-8?q?urce=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D82?=
+ =?utf-8?q?4c6cbbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3De?=
+ =?utf-8?q?mail&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=E9=A9=AC=E4=B8=8A?=
+ =?utf-8?b?54K55Ye76K6i6ZiF6aOe5Yeh6Iux6K+t5pyA5paw5a2m5Lmg6LWE6K6v?=
+ =?utf-8?q?_=28https=3A=2F=2Fmailchi=2Emp=2Ffeifan=2Fsignup=3Futm=5Fsource=3D%E9%A3%9E%E5%87%?=
+ =?utf-8?q?A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6cbbb1-EMAIL=5FCAMPAI?=
+ =?utf-8?q?GN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail&utm=5Fterm=3D0=5F014b6?=
+ =?utf-8?q?3954e-824c6cbbb1-40006919=29**?=
+ =?utf-8?b?IFBUReWFq+aciOmrmOmikemimOW6k+esrOS6jOacny0tLS0tLS0tLS0tLS0tLS0tLQ==?=
+ =?utf-8?q?------------------------------------------=E6=A0=B9=E6=8D=AE?=
+ =?utf-8?b?6L+R5pyf6ICD55Sf5Zyo6ICD6K+V5pe26YGH5Yiw55qE55yf5a6eUFRF6K+V6aKY?=
+ =?utf-8?b?5pW055CG5Ye66ZW/6L6+MjLpobXnmoTpq5jpopHpopjlupNodHRwOi8vd3d3LmZl?=
+ =?utf-8?q?ifan=2Ecom=2Eau=2Fcontent=2F%E8%AF%BE%E7%A8%8B%E9%A1%BE%E9%97%AE-iren?=
+ =?utf-8?q?e=3Futm=5Fsource=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcam?=
+ =?utf-8?q?paign=3D824c6cbbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5F?=
+ =?utf-8?q?medium=3Demail&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=E9=A9=AC?=
+ =?utf-8?b?5LiK54K55Ye76L+Z6YeM6aKG5Y+WUFRF5YWr5pyI6auY6aKR6aKE5rWL56ys5LqM?=
+ =?utf-8?b?5pyfUERG54mI5pys5paH5Lu2?=
+ =?utf-8?q?_=28http=3A=2F=2Fwww=2Efeifan=2Ecom=2Eau=2Fcontent=2F%E8%AF%BE%E7%A8%8B%E9%A1%BE?=
+ =?utf-8?q?%E9%97%AE-irene=3Futm=5Fsource=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%?=
+ =?utf-8?q?AD=5FSyd&utm=5Fcampaign=3D824c6cbbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F0?=
+ =?utf-8?q?9=5FCOPY=5F01&utm=5Fmedium=3Demail&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-4?=
+ =?utf-8?b?MDAwNjkxOSnjgJDpo57lh6HlkI3luIjorrLloILjgJHnlLHpo57lh6Hoi7Hor60=?=
+ =?utf-8?b?5ZCE5LiT6aG56ICB5biI5Lqy6Ieq57yW5YaZ55qE5bmy6LSn44CB5ZCE56eN562U?=
+ =?utf-8?b?6aKY5oqA5ben44CB5a6e5L6L5LiO5ryU57uD562J562J44CC5YaF5a655ra155uW?=
+ =?utf-8?b?5Y+j6K+t44CB5ZCs5Yqb44CB6ZiF6K+75ZKM5YaZ5L2c5Lul5Y+K5ZCE56eN6aKY?=
+ =?utf-8?b?5Z6L44CC5q+P5ZGo6YO95pyJ5pu05paw77yM5ZyoUFRF5aSH6ICD6Lev5LiK55qE?=
+ =?utf-8?b?5L2g5oCO6IO96ZSZ6L+H77yf6ams5LiK54K55Ye76L+Z6YeM?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fmp=2Fhomepage=3F=5F=5Fbiz=3DMzAxODIxMzcyNg=3D=3D&?=
+ =?utf-8?q?hid=3D1&sn=3D8f7787f708f1ab451684b6bf16106c0d&scene=3D1&devicetype=3D?=
+ =?utf-8?q?android-26&version=3D26060742=E3=80=88=3Den&nettype=3DWIFI&ascene=3D7&se?=
+ =?utf-8?q?ssion=5Fus=3Dgh=5Fe29070283dee&wx=5Fheader=3D1=29?=
+ =?utf-8?b?IOafpeeci+abtOWkmuivpue7huWGheWuue+8gWh0dHA6Ly9tcC53ZWl4aW4ucXEuYw==?=
+ =?utf-8?q?om=2Fmp=2Fhomepage=3F=5F=5Fbiz=3DMzAxODIxMzcyNg=3D=3D&hid=3D1&sn=3D8f7787f708f1ab?=
+ =?utf-8?q?451684b6bf16106c0d&scene=3D18&utm=5Fsource=3D%E9%A3%9E%E5%87%A1%E8%?=
+ =?utf-8?q?8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6cbbb1-EMAIL=5FCAMPAIGN=5F201?=
+ =?utf-8?q?8=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail&utm=5Fterm=3D0=5F014b63954e-?=
+ =?utf-8?b?ODI0YzZjYmJiMS00MDAwNjkxOSN3ZWNoYXRfcmVkaXJlY3Tngrnlh7vku6XkuIs=?=
+ =?utf-8?b?5ZCE6ZO+5o6l55yL6ICB5biI6L+R5pyf5Y6f5Yib5bmy6LSn5paH56ug44CQUFRF?=
+ =?utf-8?b?5Y+j6K+t44CRQmVsaW5kYeiAgeW4iO+8muWPo+ivreS4reeahFN0cmVzc+WSjERl?=
+ =?utf-8?q?stress?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2Fsm76vKWxT9skVB6A1sE2Qw=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29Daniel=E8=80=81?=
+ =?utf-8?b?5biI77ya5rWB56iL5Zu+56m256uf6K+l5oCO5LmI6K+077yfKOWQq+a7oeWIhg==?=
+ =?utf-8?b?6Z+z6aKRKQ==?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2FkK=5FjgG2mtxjDmVeXlXL-dQ=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29Morgan=E8=80=81?=
+ =?utf-8?b?5biI77ya5YGa5YiwU2VudGVuY2UtbGV2ZWw=?=
+ =?utf-8?b?IFN0cmVzc+WPqumcgOi/kOeUqOi/meS4quaWueazlQ==?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2FfG0995SHqlN5OC6tvJ2SeA=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29=E3=80=90PTE=E5=90=AC?=
+ =?utf-8?b?5Yqb44CRUmFjaGVs6ICB5biI77ya5ZCs5YqbRklC5Y2V6K+N6YeP5oyH5pWw5omp?=
+ =?utf-8?b?5byg5rOV?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2FZPDcO3RNapKaDDFfI2P07A=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29?=
+ =?utf-8?b?IOOAgVdGROi/m+mYtuaKgOiDveWkp+aPreenmA==?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2Fmq1plHJsOMtmVwQwy2yINw=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29=E3=80=90PTE=E9=98=85?=
+ =?utf-8?b?6K+744CRTWFyeeiAgeW4iO+8muaVmeS9oFJlLW9yZGVy?=
+ =?utf-8?b?IFBhcmFncmFwaOS4jeivu+aHguWwseWBmuWvueeahOaKgOW3pw==?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2FzUjl3pwzlXpYkLJGa4esxw=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29Shirley=E8=80=81?=
+ =?utf-8?b?5biI77ya5aaC5L2V5bu656uL5bGe5LqO6Ieq5bex55qE6K+N5bqT?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2F-Bm8Bw-cK=5FeFSMWhSRSl=5FQ=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29=E3=80=90PTE=E5=86=99?=
+ =?utf-8?b?5L2c44CRTGF1cmVuY2XogIHluIjvvJrluKbkvaDlvoHmnI3pnZ7luLjop4TnmoQ=?=
+ =?utf-8?b?5aWH6JGp5aSn5L2c5paH?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2FPZD7A1wlJTlw0c3KbwlGEw=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29Shao=E8=80=81?=
+ =?utf-8?b?5biI77yaUFRF5aSn5L2c5paH6K+N5rGH5pCt6YWN6ZSZ6K+v5L2g5Lit5oub5LqG?=
+ =?utf-8?b?5ZCX77yf?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2FUg5tMxJiATC=5Fjd4Jk=5FsoxA=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29Zhao=E8=80=81?=
+ =?utf-8?b?5biI77yaU1dU5bCP5L2c5paH5a+75om+5YWz6ZSu5Y+l55qE56eY56yI?=
+ =?utf-8?q?_=28https=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fs=2F-2VAJzg4Rv4ikn3yKyAbJg=3Futm=5Fsource?=
+ =?utf-8?q?=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6c?=
+ =?utf-8?q?bbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail?=
+ =?utf-8?q?&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29=E5=89=8D=E5=BE=80?=
+ =?utf-8?b?6aOe5Yeh5LqR6K6y5aCC5p+l55yL5pu05aSa5bmy6LSn5paH56ug?=
+ =?utf-8?q?_=28http=3A=2F=2Fmp=2Eweixin=2Eqq=2Ecom=2Fmp=2Fhomepage=3F=5F=5Fbiz=3DMzAxODIxMzcyNg=3D=3D&h?=
+ =?utf-8?q?id=3D1&sn=3D8f7787f708f1ab451684b6bf16106c0d&scene=3D18&utm=5Fsource=3D?=
+ =?utf-8?q?%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6cb?=
+ =?utf-8?q?bb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail&?=
+ =?utf-8?q?utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919#wechat=5Fredirect=29**?=
+ =?utf-8?b?IOesrOS4gOacn1JlcGVhdA==?=
+ =?utf-8?b?IFNlbnRlbmNl57uD5Lmg6KeG6aKRLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ==?=
+ =?utf-8?b?LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS3kuLrluK7liqnnq6Xpnos=?=
+ =?utf-8?b?5Lus5pu05pyJ6ZKI5a+55oCn5Zyw57uD5Lmg5Y+K5aSH6ICD77yM6aOe5Yeh6Iux?=
+ =?utf-8?b?6K+t5qC55o2uUFRF55yf6aKY77yM5q+P5pyf57K+6YCJNTDlj6VSZXBlYXQ=?=
+ =?utf-8?b?IFNlbnRlbmNl57uD5Lmg6aKY77yM5bm255Sx6ICB5biI5Lus5Lqy6Ieq5b2V5Yi2?=
+ =?utf-8?b?77yM5biM5pyb56ul6Z6L5Lus6YO96IO955So5a2m5Yiw55qE5q2j56Gu55qE562U?=
+ =?utf-8?b?6aKY5oqA5ben5aSa5Yqg57uD5Lmg77yM5pep5pel5LiOUFRF5YiG5omL77yB5Zu9?=
+ =?utf-8?b?5aSW5pyL5Y+L5Y67WW91VHViZeeciw==?=
+ =?utf-8?q?_=28https=3A=2F=2Fwww=2Eyoutube=2Ecom=2Fwatch=3Fv=3DN9W2McRA9kc&feature=3Dyoutu=2Ebe?=
+ =?utf-8?q?&utm=5Fsource=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcamp?=
+ =?utf-8?q?aign=3D824c6cbbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fm?=
+ =?utf-8?q?edium=3Demail&utm=5Fterm=3D0=5F014b63954e-824c6cbbb1-40006919=29=E5=9B=BD?=
+ =?utf-8?b?5YaF5pyL5Y+L5Y676IW+6K6v55yL?=
+ =?utf-8?q?_=28https=3A=2F=2Fv=2Eqq=2Ecom=2Fx=2Fpage=2Fi0739ntx7bi=2Ehtml=3Futm=5Fsource=3D%E9%A3%9?=
+ =?utf-8?q?E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6cbbb1-EMAI?=
+ =?utf-8?q?L=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail&utm=5Fterm?=
+ =?utf-8?b?PTBfMDE0YjYzOTU0ZS04MjRjNmNiYmIxLTQwMDA2OTE5KemcgOimgeabtOaYjg==?=
+ =?utf-8?b?56Gu55qEUFRF57uD5Lmg5pa55ZCR77yf5oOz5pu05pyJ5pWI55qE57uD5Lmg77yf?=
+ =?utf-8?b?6YKj5bCx5LiN6IO95LiN55SoUFRF572R5LiK57uD5Lmg5bmz5Y+w?=
+ =?utf-8?q?_=28http=3A=2F=2Fwww=2Efeifan=2Ecom=2Eau=2Fcontent=2Fptepractice=3Futm=5Fsource=3D%E9%?=
+ =?utf-8?q?A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6cbbb1-?=
+ =?utf-8?q?EMAIL=5FCAMPAIGN=5F2018=5F07=5F30=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail&utm=5F?=
+ =?utf-8?q?term=3D0=5F014b63954e-824c6cbbb1-40006919=29http=3A=2F=2Fwww=2Efeifan=2Ecom=2Ea?=
+ =?utf-8?q?u=2Fcontent=2Fptepractice=3Futm=5Fsource=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%?=
+ =?utf-8?q?E8%AF%AD=5FSyd&utm=5Fcampaign=3D824c6cbbb1-EMAIL=5FCAMPAIGN=5F2018=5F07=5F3?=
+ =?utf-8?q?0=5F05=5F09=5FCOPY=5F01&utm=5Fmedium=3Demail&utm=5Fterm=3D0=5F014b63954e-824c6c?=
+ =?utf-8?q?bbb1-40006919http=3A=2F=2Fus18=2Eforward-to-friend=2Ecom=2Fforward=3Fu=3D2a49?=
+ =?utf-8?q?8baff03c8c8d396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae?=
+ =?utf-8?b?IOWwhuacrOmCruS7tuWIhuS6q+e7meaCqOeahOaci+WPiw==?=
+ =?utf-8?q?_=28http=3A=2F=2Fus18=2Eforward-to-friend=2Ecom=2Fforward=3Fu=3D2a498baff03c8c8d?=
+ =?utf-8?q?396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae=29=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D?=
+ =?utf-8?q?=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DCopyright_=C2=A9_2018?=
+ =?utf-8?b?IOmjnuWHoeiLseivrSwgQWxsIHJpZ2h0cyByZXNlcnZlZC4=?=
+ =?utf-8?b?IOaCqOS8muaUtuWIsOi/meWwgemCruS7tu+8jOaYr+WboOS4uuaCqOS5i+WJjemAmg==?=
+ =?utf-8?b?6L+H5Lul5LiL5pa55byP55WZ57uZ5oiR5Lus5oKo55qE6YKu566x5Zyw5Z2A5Lul?=
+ =?utf-8?b?5L6/5oiR5Lus5LiO5oKo6IGU57O777ya5oiR5Lus5oiW5oiR5Lus5ZCI5L2c5LyZ?=
+ =?utf-8?b?5Ly055qE572R56uZ44CB546w5Zy65rS75Yqo5oiW5ZKo6K+i6aG+6Zeu562J44CC?=
+ =?utf-8?q?You?= are receiving this email because you opted in via our
+ website/events/consultations.Our mailing address
+ =?utf-8?b?aXM66aOe5Yeh6Iux6K+tTGV2ZWw=?= 7, 263 Clarence StSydney, NSW
+ 2000AustraliaWant to change how you receive these emails?You can ** update
+ your preferences
+ =?utf-8?q?=28https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Fprofile=3Fu=3D2a498baff03c8c?=
+ =?utf-8?q?8d396c36aca&id=3D014b63954e&e=3D91a3dd9eae=29or?= ** unsubscribe
+ from this list
+ =?utf-8?q?=28https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Funsubscribe=3Fu=3D2a498baff0?=
+ =?utf-8?q?3c8c8d396c36aca&id=3D014b63954e&e=3D91a3dd9eae&c=3D824c6cbbb1=29=2E?=
+HtmlBody: <!doctype html><html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office">	<head>		<!-- NAME: EDUCATE
+ -->		<!--[if gte mso 15]>		<xml>			<o:OfficeDocumentSettings>			<o:AllowPNG/>		
+	<o:PixelsPerInch>96</o:PixelsPerInch>			</o:OfficeDocumentSettings>		</xml>	
+	<![endif]-->		<meta charset="UTF-8">        <meta
+ http-equiv="X-UA-Compatible" content="IE=edge">        <meta name="viewport"
+ content="width=device-width, initial-scale=1">	
+	=?utf-8?b?PHRpdGxlPuOAkOmjnuWHoeiLseivreOAkVBUReWFq+aciOmrmOmikemimOesrA==?=
+ =?utf-8?b?5LqM5rOi5aWJ5LiK77yBK+acgOaWsOWQrOivtOivu+WGmeWFqOW5sui0p+WGhQ==?=
+ =?utf-8?b?5a6577yM5Yqp5pS75L2g55qEUFRF5YWr54K477yBPC90aXRsZT4=?=    <style
+ type="text/css">		p{			margin:10px 0;			padding:0;		}		table{		
+	border-collapse:collapse;		}		h1,h2,h3,h4,h5,h6{			display:block;			margin:0;		
+	padding:0;		}		img,a img{			border:0;			height:auto;			outline:none;		
+	text-decoration:none;		}		body,#bodyTable,#bodyCell{			height:100%;		
+	margin:0;			padding:0;			width:100%;		}		.mcnPreviewText{			display:none
+ !important;		}		#outlook a{			padding:0;		}		img{		
+	-ms-interpolation-mode:bicubic;		}		table{			mso-table-lspace:0pt;		
+	mso-table-rspace:0pt;		}		.ReadMsgBody{			width:100%;		}		.ExternalClass{		
+	width:100%;		}		p,a,li,td,blockquote{			mso-line-height-rule:exactly;		}	
+	a[href^=tel],a[href^=sms]{			color:inherit;			cursor:default;		
+	text-decoration:none;		}		p,a,li,td,body,table,blockquote{		
+	-ms-text-size-adjust:100%;			-webkit-text-size-adjust:100%;		}	
+	.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass
+ div,.ExternalClass span,.ExternalClass font{			line-height:100%;		}	
+	a[x-apple-data-detectors]{			color:inherit !important;			text-decoration:none
+ !important;			font-size:inherit !important;			font-family:inherit !important;		
+	font-weight:inherit !important;			line-height:inherit !important;		}	
+	.templateContainer{			max-width:600px !important;		}		a.mcnButton{		
+	display:block;		}		.mcnImage,.mcnRetinaImage{			vertical-align:bottom;		}	
+	.mcnTextContent{			word-break:break-word;		}		.mcnTextContent img{		
+	height:auto !important;		}		.mcnDividerBlock{			table-layout:fixed
+ !important;		}		h1{			color:#222222;			font-family:Helvetica;		
+	font-size:40px;			font-style:normal;			font-weight:bold;			line-height:150%;		
+	letter-spacing:normal;			text-align:left;		}		h2{			color:#222222;		
+	font-family:Helvetica;			font-size:28px;			font-style:normal;		
+	font-weight:bold;			line-height:150%;			letter-spacing:normal;		
+	text-align:left;		}		h3{			color:#444444;			font-family:Helvetica;		
+	font-size:22px;			font-style:normal;			font-weight:bold;			line-height:150%;		
+	letter-spacing:normal;			text-align:left;		}		h4{			color:#999999;		
+	font-family:Georgia;			font-size:20px;			font-style:italic;		
+	font-weight:normal;			line-height:125%;			letter-spacing:normal;		
+	text-align:left;		}		#templateHeader{			background-color:#F7F7F7;		
+	background-image:none;			background-repeat:no-repeat;		
+	background-position:center;			background-size:cover;			border-top:0;		
+	border-bottom:0;			padding-top:0px;			padding-bottom:0px;		}	
+	.headerContainer{			background-color:transparent;			background-image:none;		
+	background-repeat:no-repeat;			background-position:center;		
+	background-size:cover;			border-top:0;			border-bottom:0;			padding-top:0;		
+	padding-bottom:0;		}		.headerContainer .mcnTextContent,.headerContainer
+ .mcnTextContent p{			color:#808080;			font-family:Helvetica;		
+	font-size:16px;			line-height:150%;			text-align:left;		}		.headerContainer
+ .mcnTextContent a,.headerContainer .mcnTextContent p a{			color:#00ADD8;		
+	font-weight:normal;			text-decoration:underline;		}		#templateBody{		
+	background-color:#FFFFFF;			background-image:none;		
+	background-repeat:no-repeat;			background-position:center;		
+	background-size:cover;			border-top:0;			border-bottom:0;			padding-top:27px;		
+	padding-bottom:63px;		}		.bodyContainer{			background-color:transparent;		
+	background-image:none;			background-repeat:no-repeat;		
+	background-position:center;			background-size:cover;			border-top:0;		
+	border-bottom:0;			padding-top:0;			padding-bottom:0;		}		.bodyContainer
+ .mcnTextContent,.bodyContainer .mcnTextContent p{			color:#808080;		
+	font-family:Helvetica;			font-size:16px;			line-height:150%;		
+	text-align:left;		}		.bodyContainer .mcnTextContent a,.bodyContainer
+ .mcnTextContent p a{			color:#00ADD8;			font-weight:normal;		
+	text-decoration:underline;		}		#templateFooter{			background-color:#333333;		
+	background-image:none;			background-repeat:no-repeat;		
+	background-position:center;			background-size:cover;			border-top:0;		
+	border-bottom:0;			padding-top:45px;			padding-bottom:63px;		}	
+	.footerContainer{			background-color:transparent;			background-image:none;		
+	background-repeat:no-repeat;			background-position:center;		
+	background-size:cover;			border-top:0;			border-bottom:0;			padding-top:0;		
+	padding-bottom:0;		}		.footerContainer .mcnTextContent,.footerContainer
+ .mcnTextContent p{			color:#FFFFFF;			font-family:Helvetica;		
+	font-size:12px;			line-height:150%;			text-align:center;		}		.footerContainer
+ .mcnTextContent a,.footerContainer .mcnTextContent p a{			color:#FFFFFF;		
+	font-weight:normal;			text-decoration:underline;		}	@media only screen and
+ (min-width:768px){		.templateContainer{			width:600px !important;		}}	@media
+ only screen and (max-width: 480px){		body,table,td,p,a,li,blockquote{		
+	-webkit-text-size-adjust:none !important;		}}	@media only screen and
+ (max-width: 480px){		body{			width:100% !important;			min-width:100%
+ !important;		}}	@media only screen and (max-width: 480px){		.mcnRetinaImage{		
+	max-width:100% !important;		}}	@media only screen and (max-width: 480px){	
+	.mcnImage{			width:100% !important;		}}	@media only screen and (max-width:
+ 480px){	
+	=?utf-8?q?=2EmcnCartContainer=2C=2EmcnCaptionTopContent=2C=2EmcnRecContentContain?=
+ =?utf-8?q?er=2C=2EmcnCaptionBottomContent=2C=2EmcnTextContentContainer=2C=2EmcnBoxe?=
+ =?utf-8?q?dTextContentContainer=2C=2EmcnImageGroupContentContainer=2C=2EmcnCapt?=
+ =?utf-8?q?ionLeftTextContentContainer=2C=2EmcnCaptionRightTextContentContai?=
+ =?utf-8?q?ner=2C=2EmcnCaptionLeftImageContentContainer=2C=2EmcnCaptionRightImag?=
+ =?utf-8?q?eContentContainer=2C=2EmcnImageCardLeftTextContentContainer=2C=2EmcnI?=
+ =?utf-8?q?mageCardRightTextContentContainer=2C=2EmcnImageCardLeftImageConte?=
+ =?utf-8?q?ntContainer=2C=2EmcnImageCardRightImageContentContainer{?=		
+	max-width:100% !important;			width:100% !important;		}}	@media only screen
+ and (max-width: 480px){		.mcnBoxedTextContentContainer{			min-width:100%
+ !important;		}}	@media only screen and (max-width: 480px){	
+	.mcnImageGroupContent{			padding:9px !important;		}}	@media only screen and
+ (max-width: 480px){		.mcnCaptionLeftContentOuter
+ .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{		
+	padding-top:9px !important;		}}	@media only screen and (max-width: 480px){	
+	.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child
+ .mcnCaptionBottomImageContent,.mcnCaptionBlockInner
+ .mcnCaptionTopContent:last-child .mcnTextContent{			padding-top:18px
+ !important;		}}	@media only screen and (max-width: 480px){	
+	.mcnImageCardBottomImageContent{			padding-bottom:9px !important;		}}	@media
+ only screen and (max-width: 480px){		.mcnImageGroupBlockInner{		
+	padding-top:0 !important;			padding-bottom:0 !important;		}}	@media only
+ screen and (max-width: 480px){		.mcnImageGroupBlockOuter{			padding-top:9px
+ !important;			padding-bottom:9px !important;		}}	@media only screen and
+ (max-width: 480px){		.mcnTextContent,.mcnBoxedTextContentColumn{		
+	padding-right:18px !important;			padding-left:18px !important;		}}	@media
+ only screen and (max-width: 480px){	
+	.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{		
+	padding-right:18px !important;			padding-bottom:0 !important;		
+	padding-left:18px !important;		}}	@media only screen and (max-width: 480px){	
+	.mcpreview-image-uploader{			display:none !important;			width:100%
+ !important;		}}	@media only screen and (max-width: 480px){		h1{		
+	font-size:30px !important;			line-height:125% !important;		}}	@media only
+ screen and (max-width: 480px){		h2{			font-size:26px !important;		
+	line-height:125% !important;		}}	@media only screen and (max-width: 480px){	
+	h3{			font-size:20px !important;			line-height:150% !important;		}}	@media
+ only screen and (max-width: 480px){		h4{			font-size:18px !important;		
+	line-height:150% !important;		}}	@media only screen and (max-width: 480px){	
+	.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer
+ .mcnTextContent p{			font-size:14px !important;			line-height:150%
+ !important;		}}	@media only screen and (max-width: 480px){		.headerContainer
+ .mcnTextContent,.headerContainer .mcnTextContent p{			font-size:16px
+ !important;			line-height:150% !important;		}}	@media only screen and
+ (max-width: 480px){		.bodyContainer .mcnTextContent,.bodyContainer
+ .mcnTextContent p{			font-size:16px !important;			line-height:150%
+ !important;		}}	@media only screen and (max-width: 480px){		.footerContainer
+ .mcnTextContent,.footerContainer .mcnTextContent p{			font-size:14px
+ !important;			line-height:150% !important;		}}</style></head>    <body
+ style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">		<!---->		<!--[if !gte mso
+ 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px;
+ line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;
+ visibility:hidden;
+ =?utf-8?b?bXNvLWhpZGU6YWxsOyI+UFRF5YWr5pyI56ys5LqM5pyf6auY6aKR6aKE5rWL6aKY?=
+ =?utf-8?b?5bqTK+e7g+S5oOinhumikSvlkITnp43lubLotKc8L3NwYW4+PCEtLTwhW2VuZGlm?=
+ =?utf-8?q?=5D--=3E?=		<!---->        <center>            <table
+ align="center" border="0" cellpadding="0" cellspacing="0" height="100%"
+ width="100%" id="bodyTable" style="border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width:
+ 100%;">                <tr>                    <td align="center"
+ valign="top" id="bodyCell" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height:
+ 100%;margin: 0;padding: 0;width: 100%;">                        <!-- BEGIN
+ TEMPLATE // -->                        <table border="0" cellpadding="0"
+ cellspacing="0" width="100%" style="border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">							<tr>								<td align="center"
+ valign="top" id="templateHeader" data-template-container=""
+ style="background:#F7F7F7 none no-repeat center/cover;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:
+ 100%;background-color: #F7F7F7;background-image: none;background-repeat:
+ no-repeat;background-position: center;background-size: cover;border-top:
+ 0;border-bottom: 0;padding-top: 0px;padding-bottom: 0px;">									<!--[if
+ (gte mso 9)|(IE)]>									<table align="center" border="0" cellspacing="0"
+ cellpadding="0" width="600" style="width:600px;">									<tr>									<td
+ align="center" valign="top" width="600" style="width:600px;">								
+	<![endif]-->									<table align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%" class="templateContainer"
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width:
+ 600px !important;">										<tr>                                			<td
+ valign="top" class="headerContainer" style="background:transparent none
+ no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;background-color:
+ transparent;background-image: none;background-repeat:
+ no-repeat;background-position: center;background-size: cover;border-top:
+ 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;"><table border="0"
+ cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock"
+ style="min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">    <tbody class="mcnImageBlockOuter">           
+ <tr>                <td valign="top" style="padding:
+ 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">                   
+ <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0"
+ class="mcnImageContentContainer" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                        <tbody><tr>                           
+ <td class="mcnImageContent" valign="top" style="padding-right:
+ 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align:
+ center;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                                    <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Dbf286cd301&e=3D91a3dd9eae=22?=
+ title="Feifan English" class="" target="_blank" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                                       
+ <img align="center" alt=""
+ =?utf-8?q?src=3D=22https=3A=2F=2Fgallery=2Emailchimp=2Ecom=2F2a498baff03c8c8d396c36aca=2F?=
+ =?utf-8?q?images=2F2ec8ba21-e5c7-4cc2-9b64-523673bf672e=2Ejpg=22?=
+ width="564" style="max-width: 720px;padding-bottom: 0;display: inline
+ !important;vertical-align: bottom;border: 0;height: auto;outline:
+ none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+ class="mcnImage">                                    </a>                           
+ </td>                        </tr>                    </tbody></table>               
+ </td>            </tr>    </tbody></table></td>										</tr>								
+	</table>									<!--[if (gte mso 9)|(IE)]>									</td>									</tr>								
+	</table>									<![endif]-->								</td>                            </tr>						
+	<tr>								<td align="center" valign="top" id="templateBody"
+ data-template-container="" style="background:#FFFFFF none no-repeat
+ center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;background-color:
+ #FFFFFF;background-image: none;background-repeat:
+ no-repeat;background-position: center;background-size: cover;border-top:
+ 0;border-bottom: 0;padding-top: 27px;padding-bottom: 63px;">									<!--[if
+ (gte mso 9)|(IE)]>									<table align="center" border="0" cellspacing="0"
+ cellpadding="0" width="600" style="width:600px;">									<tr>									<td
+ align="center" valign="top" width="600" style="width:600px;">								
+	<![endif]-->									<table align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%" class="templateContainer"
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width:
+ 600px !important;">										<tr>                                			<td
+ valign="top" class="bodyContainer" style="background:transparent none
+ no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;background-color:
+ transparent;background-image: none;background-repeat:
+ no-repeat;background-position: center;background-size: cover;border-top:
+ 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;"><table border="0"
+ cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock"
+ style="min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">    <tbody class="mcnButtonBlockOuter">       
+ <tr>            <td style="padding-top: 0;padding-right: 18px;padding-bottom:
+ 18px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" valign="top" align="center"
+ class="mcnButtonBlockInner">                <table border="0" cellpadding="0"
+ cellspacing="0" width="100%" class="mcnButtonContentContainer"
+ style="border-collapse: separate !important;border-radius:
+ 3px;background-color: #B51F1F;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                   
+ <tbody>                        <tr>                            <td
+ align="center" valign="middle" class="mcnButtonContent" style="font-family:
+ Arial;font-size: 18px;padding: 15px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                               
+ <a class="mcnButton "
+ =?utf-8?b?dGl0bGU9IumprOS4iueCueWHu+iuoumYhemjnuWHoeiLseivreacgOaWsOWtpg==?=
+ =?utf-8?b?5Lmg6LWE6K6vIg==?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D37ec5d102f&e=3D91a3dd9eae=22?=
+ target="_blank" style="font-weight: bold;letter-spacing: normal;line-height:
+ 100%;text-align: center;text-decoration: none;color:
+ #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;display:
+ =?utf-8?b?YmxvY2s7Ij7pqazkuIrngrnlh7vorqLpmIXpo57lh6Hoi7Hor63mnIDmlrDlraY=?=
+ =?utf-8?b?5Lmg6LWE6K6vPC9hPg==?=                            </td>                       
+ </tr>                    </tbody>                </table>            </td>       
+ </tr>    </tbody></table><table class="mcnTextBlock" style="min-width:
+ 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"
+ cellspacing="0" cellpadding="0" border="0">    <tbody
+ class="mcnTextBlockOuter">        <tr>            <td
+ class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ valign="top">              	<!--[if mso]>				<table align="left" border="0"
+ cellspacing="0" cellpadding="0" width="100%" style="width:100%;">				<tr>			
+	<![endif]-->							<!--[if mso]>				<td valign="top" width="600"
+ style="width:600px;">				<![endif]-->                <table style="max-width:
+ 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer"
+ width="100%" cellspacing="0" cellpadding="0" border="0" align="left">                   
+ <tbody><tr>                        <td class="mcnTextContent"
+ style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color:
+ #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align:
+ left;" valign="top">                            <h1 class="null"
+ style="text-align: center;display: block;margin: 0;padding: 0;color:
+ #222222;font-family: Helvetica;font-size: 40px;font-style:
+ normal;font-weight: bold;line-height: 150%;letter-spacing: normal;"><span
+ style="color:#A52A2A"><span
+ =?utf-8?b?c3R5bGU9ImZvbnQtc2l6ZToyNnB4Ij48c3Ryb25nPlBUReWFq+aciOmrmOmikQ==?=
+ =?utf-8?b?6aKY5bqT56ys5LqM5pyfPC9zdHJvbmc+PC9zcGFuPjwvc3Bhbj48L2gxPjxkaXY=?=
+ style="text-align: center;"><span style="color:#696969"><span
+ =?utf-8?b?c3R5bGU9ImZvbnQtc2l6ZToxOHB4Ij7moLnmja7ov5HmnJ/ogIPnlJ/lnKjogIM=?=
+ =?utf-8?b?6K+V5pe26YGH5Yiw55qE55yf5a6eUFRF6K+V6aKY5pW055CG5Ye6PC9zcGFuPjwv?=
+ =?utf-8?q?span=3E=3Cspan_style=3D=22color=3A#FF0000=22=3E=3Cspan?=
+ =?utf-8?b?IHN0eWxlPSJmb250LXNpemU6MThweCI+PHN0cm9uZz7plb/ovr4yMumhtTwvc3Rybw==?=
+ =?utf-8?q?ng=3E=3C=2Fspan=3E=3C=2Fspan=3E=3Cspan_style=3D=22color=3A#696969=22=3E=3Cspan?=
+ =?utf-8?b?IHN0eWxlPSJmb250LXNpemU6MThweCI+55qE6auY6aKR6aKY5bqTPC9zcGFuPjwvcw==?=
+ =?utf-8?q?pan=3E=3C=2Fdiv=3E?=                        </td>                   
+ </tr>                </tbody></table>				<!--[if mso]>				</td>			
+	<![endif]-->				<!--[if mso]>				</tr>				</table>				<![endif]-->           
+ </td>        </tr>    </tbody></table><table class="mcnImageBlock"
+ style="min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0"
+ cellpadding="0" border="0">    <tbody class="mcnImageBlockOuter">           
+ <tr>                <td style="padding: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ class="mcnImageBlockInner" valign="top">                    <table
+ class="mcnImageContentContainer" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0"
+ cellpadding="0" border="0" align="left">                        <tbody><tr>                           
+ <td class="mcnImageContent" style="padding-right: 9px;padding-left:
+ 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ valign="top">                                    <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D19d75c8b0f&e=3D91a3dd9eae=22?=
+ title="FeifanPTEAug2" class="" target="_blank" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                                       
+ <img alt=""
+ =?utf-8?q?src=3D=22https=3A=2F=2Fgallery=2Emailchimp=2Ecom=2F2a498baff03c8c8d396c36aca=2F?=
+ =?utf-8?q?images=2F53ab28ee-eac4-4d3c-87de-732e9c2427c8=2Epng=22?=
+ style="max-width: 578px;padding-bottom: 0;display: inline
+ !important;vertical-align: bottom;border: 0;height: auto;outline:
+ none;text-decoration: none;-ms-interpolation-mode: bicubic;" class="mcnImage"
+ width="564" align="middle">                                    </a>                           
+ </td>                        </tr>                    </tbody></table>               
+ </td>            </tr>    </tbody></table><table class="mcnButtonBlock"
+ style="min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0"
+ cellpadding="0" border="0">    <tbody class="mcnButtonBlockOuter">       
+ <tr>            <td style="padding-top: 0;padding-right: 18px;padding-bottom:
+ 18px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnButtonBlockInner"
+ valign="top" align="center">                <table
+ class="mcnButtonContentContainer" style="border-collapse: separate
+ !important;border-radius: 3px;background-color: #E95935;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" cellspacing="0" cellpadding="0"
+ border="0">                    <tbody>                        <tr>                           
+ <td class="mcnButtonContent" style="font-family: Helvetica;font-size:
+ 18px;padding: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" valign="middle" align="center">                               
+ <a class="mcnButton "
+ =?utf-8?b?dGl0bGU9IumjnuWHoeiLseivrVBURemrmOmikTjmnIjkuozmnJ8i?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D1b349c8011&e=3D91a3dd9eae=22?=
+ target="_blank" style="font-weight: bold;letter-spacing: -0.5px;line-height:
+ 100%;text-align: center;text-decoration: none;color:
+ #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;display:
+ =?utf-8?b?YmxvY2s7Ij7pqazkuIrngrnlh7vov5nph4zpooblj5ZQVEXlhavmnIjpq5jpopE=?=
+ =?utf-8?b?6aKE5rWL56ys5LqM5pyfUERG54mI5pys5paH5Lu2PC9hPg==?=                           
+ </td>                        </tr>                    </tbody>               
+ </table>            </td>        </tr>    </tbody></table><table border="0"
+ cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock"
+ style="min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;">   
+ <tbody class="mcnDividerBlockOuter">        <tr>            <td
+ class="mcnDividerBlockInner" style="min-width: 100%;padding:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                <table
+ class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0"
+ width="100%" style="min-width: 100%;border-top: 2px solid
+ #EAEAEA;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                   
+ <tbody><tr>                        <td style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                           
+ <span></span>                        </td>                    </tr>               
+ </tbody></table><!--                <td class="mcnDividerBlockInner"
+ style="padding: 18px;">                <hr class="mcnDividerContent"
+ style="border-bottom-color:none; border-left-color:none;
+ border-right-color:none; border-bottom-width:0; border-left-width:0;
+ border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0;
+ margin-left:0;" />-->            </td>        </tr>    </tbody></table><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ class="mcnDividerBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;">   
+ <tbody class="mcnDividerBlockOuter">        <tr>            <td
+ class="mcnDividerBlockInner" style="min-width: 100%;padding: 18px 18px
+ 0px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                <table
+ class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0"
+ width="100%" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                    <tbody><tr>                       
+ <td style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                           
+ <span></span>                        </td>                    </tr>               
+ </tbody></table><!--                <td class="mcnDividerBlockInner"
+ style="padding: 18px;">                <hr class="mcnDividerContent"
+ style="border-bottom-color:none; border-left-color:none;
+ border-right-color:none; border-bottom-width:0; border-left-width:0;
+ border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0;
+ margin-left:0;" />-->            </td>        </tr>    </tbody></table><table
+ class="mcnTextBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0"
+ cellpadding="0" border="0">    <tbody class="mcnTextBlockOuter">        <tr>           
+ <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ valign="top">              	<!--[if mso]>				<table align="left" border="0"
+ cellspacing="0" cellpadding="0" width="100%" style="width:100%;">				<tr>			
+	<![endif]-->							<!--[if mso]>				<td valign="top" width="600"
+ style="width:600px;">				<![endif]-->                <table style="max-width:
+ 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer"
+ width="100%" cellspacing="0" cellpadding="0" border="0" align="left">                   
+ <tbody><tr>                        <td class="mcnTextContent"
+ style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color:
+ #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align:
+ left;" valign="top">                            <div style="text-align:
+ center;"><span style="color:#FFF0F5"><span
+ style="font-size:22px"><strong><span
+ =?utf-8?b?c3R5bGU9ImJhY2tncm91bmQtY29sb3I6I0IyMjIyMiI+44CQ6aOe5Yeh5ZCN5biI?=
+ =?utf-8?b?6K6y5aCC44CRPC9zcGFuPjwvc3Ryb25nPjwvc3Bhbj48L3NwYW4+PC9kaXY+?=                       
+ </td>                    </tr>                </tbody></table>				<!--[if
+ mso]>				</td>				<![endif]-->				<!--[if mso]>				</tr>				</table>			
+	<![endif]-->            </td>        </tr>    </tbody></table><table
+ class="mcnTextBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0"
+ cellpadding="0" border="0">    <tbody class="mcnTextBlockOuter">        <tr>           
+ <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ valign="top">              	<!--[if mso]>				<table align="left" border="0"
+ cellspacing="0" cellpadding="0" width="100%" style="width:100%;">				<tr>			
+	<![endif]-->							<!--[if mso]>				<td valign="top" width="600"
+ style="width:600px;">				<![endif]-->                <table style="max-width:
+ 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer"
+ width="100%" cellspacing="0" cellpadding="0" border="0" align="left">                   
+ <tbody><tr>                        <td class="mcnTextContent"
+ style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color:
+ #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align:
+ left;" valign="top">                            <div style="text-align:
+ =?utf-8?b?bGVmdDsiPueUsemjnuWHoeiLseivreWQhOS4k+mhueiAgeW4iOS6suiHque8lg==?=
+ =?utf-8?b?5YaZ55qE5bmy6LSn44CB5ZCE56eN562U6aKY5oqA5ben44CB5a6e5L6L5LiO5ryU?=
+ =?utf-8?b?57uD562J562J44CC5YaF5a655ra155uW5Y+j6K+t44CB5ZCs5Yqb44CB6ZiF6K+7?=
+ =?utf-8?b?5ZKM5YaZ5L2c5Lul5Y+K5ZCE56eN6aKY5Z6L44CC5q+P5ZGo6YO95pyJ5pu05paw?=
+ =?utf-8?b?77yM5ZyoUFRF5aSH6ICD6Lev5LiK55qE5L2g5oCO6IO96ZSZ6L+H77yf6ams5LiK?=
+ =?utf-8?b?54K55Ye7PGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D8707881907&e=3D91a3dd9eae=22?=
+ target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight:
+ normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+6L+Z6YeMPC9hPuafpeeci+abtOWkmuivpue7huWGheWuuQ==?=
+ =?utf-8?b?77yBPC9kaXY+?=                        </td>                   
+ </tr>                </tbody></table>				<!--[if mso]>				</td>			
+	<![endif]-->				<!--[if mso]>				</tr>				</table>				<![endif]-->           
+ </td>        </tr>    </tbody></table><table border="0" cellpadding="0"
+ cellspacing="0" width="100%" class="mcnCaptionBlock" style="border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">    <tbody
+ class="mcnCaptionBlockOuter">        <tr>            <td
+ class="mcnCaptionBlockInner" valign="top" style="padding:
+ 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;"><table align="left" border="0"
+ cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent"
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">   
+ <tbody><tr>        <td class="mcnCaptionBottomImageContent" align="center"
+ valign="top" style="padding: 0 9px 9px 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">           
+ <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Dcada3932b2&e=3D91a3dd9eae=22?=
+ =?utf-8?b?IHRpdGxlPSLpo57lh6HkupHorrLloIIi?= class="" target="_blank"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">            <img alt=""
+ =?utf-8?q?src=3D=22https=3A=2F=2Fgallery=2Emailchimp=2Ecom=2F2a498baff03c8c8d396c36aca=2F?=
+ =?utf-8?q?images=2F6ede68f2-a677-4126-88f5-c813557b6b9e=2Ejpg=22?=
+ width="550" style="max-width: 550px;border: 0;height: auto;outline:
+ none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align:
+ bottom;" class="mcnImage">            </a>        </td>    </tr>    <tr>       
+ <td class="mcnTextContent" valign="top" style="padding: 0 9px 0
+ 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color:
+ #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align:
+ left;" width="564">            <div style="text-align: center;"><span
+ style="color:#800000"><span
+ =?utf-8?b?c3R5bGU9ImZvbnQtc2l6ZToxNnB4Ij7ngrnlh7vku6XkuIvlkITpk77mjqXnnIs=?=
+ =?utf-8?b?6ICB5biI6L+R5pyf5Y6f5Yib5bmy6LSn5paH56ugPC9zcGFuPjwvc3Bhbj48YnI+?=
+ =?utf-8?q?=3Cbr=3E=3Cspan_style=3D=22font-size=3A18px=22=3E=3Cspan?=
+ =?utf-8?b?IHN0eWxlPSJjb2xvcjojMDAwMDAwIj7jgJBQVEXlj6Por63jgJE8L3NwYW4+PC9zcA==?=
+ =?utf-8?b?YW4+PC9kaXY+QmVsaW5kYeiAgeW4iO+8mjxh?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D9b08ebc0f4&e=3D91a3dd9eae=22?=
+ target="_blank" title="Belinda: Stress and Destress"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight:
+ normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5Y+j6K+t5Lit55qEU3RyZXNz5ZKMRGVzdHJlc3M8L2E+PGJy?=
+ =?utf-8?b?PkRhbmllbOiAgeW4iO+8mjxh?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D3f393a9277&e=3D91a3dd9eae=22?=
+ target="_blank" title="Daniel english speaking" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:
+ #00ADD8;font-weight: normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5rWB56iL5Zu+56m256uf6K+l5oCO5LmI6K+077yfKOWQqw==?=
+ =?utf-8?b?5ruh5YiG6Z+z6aKRKTwvYT48YnI+TW9yZ2Fu6ICB5biI77yaPGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D44396163ef&e=3D91a3dd9eae=22?=
+ target="_blank" title="Morgan: Sentence-level Stress"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight:
+ normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5YGa5YiwU2VudGVuY2UtbGV2ZWw=?=
+ =?utf-8?b?IFN0cmVzc+WPqumcgOi/kOeUqOi/meS4quaWueazlTwvYT48YnI+Jm5ic3A7PGRpdg==?=
+ style="text-align: center;"><span style="font-size:18px"><span
+ =?utf-8?b?c3R5bGU9ImNvbG9yOiMwMDAwMDAiPuOAkFBUReWQrOWKm+OAkTwvc3Bhbj48L3Nw?=
+ =?utf-8?b?YW4+PC9kaXY+UmFjaGVs6ICB5biI77yaPGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D6be59ad8d5&e=3D91a3dd9eae=22?=
+ target="_blank" title="Rachel FIB" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:
+ #00ADD8;font-weight: normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5ZCs5YqbRklC5Y2V6K+N6YeP5oyH5pWw5omp5byg5rOVPC9h?=
+ =?utf-8?b?PuOAgTxh?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Da530c96f63&e=3D91a3dd9eae=22?=
+ target="_blank" title="Rachel WFD" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:
+ #00ADD8;font-weight: normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+V0ZE6L+b6Zi25oqA6IO95aSn5o+t56eYPC9hPjxicj4mbmJz?=
+ =?utf-8?q?p=3B=3Cdiv_style=3D=22text-align=3A_center=3B=22=3E=3Cspan?=
+ style="font-size:18px"><span
+ =?utf-8?b?c3R5bGU9ImNvbG9yOiMwMDAwMDAiPuOAkFBURemYheivu+OAkTwvc3Bhbj48L3Nw?=
+ =?utf-8?b?YW4+PC9kaXY+TWFyeeiAgeW4iO+8mjxh?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Dcc152a67f9&e=3D91a3dd9eae=22?=
+ target="_blank" title="Mary Re-order paragraph" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:
+ #00ADD8;font-weight: normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5pWZ5L2gUmUtb3JkZXI=?=
+ =?utf-8?b?IFBhcmFncmFwaOS4jeivu+aHguWwseWBmuWvueeahOaKgOW3pzwvYT48YnI+U2hpcg==?=
+ =?utf-8?b?bGV56ICB5biI77yaPGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Dbb02f68472&e=3D91a3dd9eae=22?=
+ target="_blank" title="Shirley vocabulary" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:
+ #00ADD8;font-weight: normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5aaC5L2V5bu656uL5bGe5LqO6Ieq5bex55qE6K+N5bqTPC9h?=
+ =?utf-8?q?=3E=3Cbr=3E&nbsp=3B=3Cdiv_style=3D=22text-align=3A_center=3B=22=3E=3Cspan?=
+ style="font-size:18px"><span
+ =?utf-8?b?c3R5bGU9ImNvbG9yOiMwMDAwMDAiPuOAkFBUReWGmeS9nOOAkTwvc3Bhbj48L3Nw?=
+ =?utf-8?b?YW4+PC9kaXY+TGF1cmVuY2XogIHluIjvvJo8YQ==?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D525d99ef2d&e=3D91a3dd9eae=22?=
+ target="_blank" title="Laurence nonusual writing"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight:
+ normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5bim5L2g5b6B5pyN6Z2e5bi46KeE55qE5aWH6JGp5aSn5L2c?=
+ =?utf-8?b?5paHPC9hPjxicj5TaGFv6ICB5biI77yaPGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D0a298e39da&e=3D91a3dd9eae=22?=
+ target="_blank" title="Shao: writing" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:
+ #00ADD8;font-weight: normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+UFRF5aSn5L2c5paH6K+N5rGH5pCt6YWN6ZSZ6K+v5L2g5Lit?=
+ =?utf-8?b?5oub5LqG5ZCX77yfPC9hPjxicj5aaGFv6ICB5biI77yaPGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D17b6e322d2&e=3D91a3dd9eae=22?=
+ target="_blank" title="Zhao: SWT" style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:
+ #00ADD8;font-weight: normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+U1dU5bCP5L2c5paH5a+75om+5YWz6ZSu5Y+l55qE56eY56yI?=
+ =?utf-8?q?=3C=2Fa=3E=3Cdiv_style=3D=22text-align=3A_center=3B=22=3E=3Cbr=3E=3Ca?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Dc7c435ee60&e=3D91a3dd9eae=22?=
+ target="_blank" =?utf-8?b?dGl0bGU9IumjnuWHoeS6keiusuWggiI=?=
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight:
+ normal;text-decoration: underline;"><span
+ =?utf-8?b?c3R5bGU9ImNvbG9yOiMyRjRGNEYiPuWJjeW+gOmjnuWHoeS6keiusuWgguafpQ==?=
+ =?utf-8?b?55yL5pu05aSa5bmy6LSn5paH56ugPC9zcGFuPjwvYT48L2Rpdj4=?=        </td>   
+ </tr></tbody></table>            </td>        </tr>    </tbody></table><table
+ class="mcnDividerBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;"
+ width="100%" cellspacing="0" cellpadding="0" border="0">    <tbody
+ class="mcnDividerBlockOuter">        <tr>            <td
+ class="mcnDividerBlockInner" style="min-width: 100%;padding:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                <table
+ class="mcnDividerContent" style="min-width: 100%;border-top: 2px solid
+ #EAEAEA;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"
+ cellspacing="0" cellpadding="0" border="0">                    <tbody><tr>                       
+ <td style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                           
+ <span></span>                        </td>                    </tr>               
+ </tbody></table><!--                <td class="mcnDividerBlockInner"
+ style="padding: 18px;">                <hr class="mcnDividerContent"
+ style="border-bottom-color:none; border-left-color:none;
+ border-right-color:none; border-bottom-width:0; border-left-width:0;
+ border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0;
+ margin-left:0;" />-->            </td>        </tr>    </tbody></table><table
+ class="mcnTextBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0"
+ cellpadding="0" border="0">    <tbody class="mcnTextBlockOuter">        <tr>           
+ <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ valign="top">              	<!--[if mso]>				<table align="left" border="0"
+ cellspacing="0" cellpadding="0" width="100%" style="width:100%;">				<tr>			
+	<![endif]-->							<!--[if mso]>				<td valign="top" width="600"
+ style="width:600px;">				<![endif]-->                <table style="max-width:
+ 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer"
+ width="100%" cellspacing="0" cellpadding="0" border="0" align="left">                   
+ <tbody><tr>                        <td class="mcnTextContent"
+ style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color:
+ #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align:
+ left;" valign="top">                            <h1 class="null"
+ style="text-align: center;display: block;margin: 0;padding: 0;color:
+ #222222;font-family: Helvetica;font-size: 40px;font-style:
+ normal;font-weight: bold;line-height: 150%;letter-spacing: normal;"><span
+ style="color:#A52A2A"><span
+ =?utf-8?b?c3R5bGU9ImZvbnQtc2l6ZToyNnB4Ij48c3Ryb25nPuesrOS4gOacn1JlcGVhdA==?=
+ =?utf-8?b?IFNlbnRlbmNl57uD5Lmg6KeG6aKRPC9zdHJvbmc+PC9zcGFuPjwvc3Bhbj48L2gxPg==?=
+ =?utf-8?q?=3Cdiv_style=3D=22text-align=3A_center=3B=22=3E=3Cspan?=
+ style="font-size:17px"><font
+ =?utf-8?b?Y29sb3I9IiM2OTY5NjkiPuS4uuW4ruWKqeerpemei+S7rOabtOaciemSiOWvuQ==?=
+ =?utf-8?b?5oCn5Zyw57uD5Lmg5Y+K5aSH6ICD77yM6aOe5Yeh6Iux6K+t5qC55o2uPC9mb250?=
+ =?utf-8?q?=3E=3Cspan?=
+ =?utf-8?q?_style=3D=22color=3A#FF0000=22=3E=3Cstrong=3EPTE=E7=9C=9F=E9=A2=98=3C=2Fstrong=3E=3C=2Fsp?=
+ =?utf-8?q?an=3E=3Cfont?=
+ =?utf-8?b?IGNvbG9yPSIjNjk2OTY5Ij7vvIzmr4/mnJ/nsr7pgIk1MOWPpVJlcGVhdA==?=
+ =?utf-8?b?IFNlbnRlbmNl57uD5Lmg6aKY77yM5bm255Sx6ICB5biI5Lus5Lqy6Ieq5b2V5Yi2?=
+ =?utf-8?b?77yM5biM5pyb56ul6Z6L5Lus6YO96IO955So5a2m5Yiw55qEPC9mb250PjxzdHJv?=
+ =?utf-8?q?ng=3E=3Cspan?=
+ =?utf-8?b?IHN0eWxlPSJjb2xvcjojRkYwMDAwIj7mraPnoa7nmoTnrZTpopjmioDlt6c8L3NwYQ==?=
+ =?utf-8?q?n=3E=3C=2Fstrong=3E=3Cfont?=
+ =?utf-8?b?IGNvbG9yPSIjNjk2OTY5Ij7lpJrliqDnu4PkuaDvvIzml6nml6XkuI5QVEXliIY=?=
+ =?utf-8?b?5omL77yBPC9mb250Pjwvc3Bhbj48L2Rpdj4=?=                        </td>                   
+ </tr>                </tbody></table>				<!--[if mso]>				</td>			
+	<![endif]-->				<!--[if mso]>				</tr>				</table>				<![endif]-->           
+ </td>        </tr>    </tbody></table><table class="mcnCaptionBlock"
+ width="100%" cellspacing="0" cellpadding="0" border="0"
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">    <tbody
+ class="mcnCaptionBlockOuter">        <tr>            <td
+ class="mcnCaptionBlockInner" style="padding: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ valign="top"><table class="mcnCaptionBottomContent" cellspacing="0"
+ cellpadding="0" border="0" align="left" style="border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">    <tbody><tr>        <td
+ class="mcnCaptionBottomImageContent" style="padding: 0 9px 9px
+ 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" valign="top" align="center">           
+ <img alt=""
+ =?utf-8?q?src=3D=22https=3A=2F=2Fgallery=2Emailchimp=2Ecom=2F2a498baff03c8c8d396c36aca=2F?=
+ =?utf-8?q?images=2F5600480e-3eaf-4857-b34b-cda63eacda75=2Ejpeg=22?=
+ style="max-width: 600px;border: 0;height: auto;outline: none;text-decoration:
+ none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
+ class="mcnImage" width="564">        </td>    </tr>    <tr>        <td
+ class="mcnTextContent" style="padding: 0 9px 0 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break:
+ break-word;color: #808080;font-family: Helvetica;font-size: 16px;line-height:
+ 150%;text-align: left;" width="564" valign="top">            <div
+ style="text-align: =?utf-8?b?Y2VudGVyOyI+5Zu95aSW5pyL5Y+LPGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Dc6b2aa8f35&e=3D91a3dd9eae=22?=
+ target="_blank"
+ title="https://www.youtube.com/watch?v=N9W2McRA9kc&amp;feature=youtu.be"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight:
+ normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5Y67WW91VHViZeecizwvYT48YnI+5Zu95YaF5pyL5Y+LPGE=?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3Df3148d2264&e=3D91a3dd9eae=22?=
+ target="_blank" =?utf-8?b?dGl0bGU9IuOAkOmjnuWHoeiLseivreOAkVBURSBSZXBlYXQ=?=
+ =?utf-8?b?IFNlbnRlbmNl57uD5Lmg5bel5YW36KeG6aKR77yI56ys5LiA5pyf77yJIg==?=
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight:
+ normal;text-decoration:
+ =?utf-8?b?dW5kZXJsaW5lOyI+5Y676IW+6K6v55yLPC9hPjwvZGl2Pg==?=        </td>   
+ </tr></tbody></table>            </td>        </tr>    </tbody></table><table
+ class="mcnDividerBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;"
+ width="100%" cellspacing="0" cellpadding="0" border="0">    <tbody
+ class="mcnDividerBlockOuter">        <tr>            <td
+ class="mcnDividerBlockInner" style="min-width: 100%;padding:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                <table
+ class="mcnDividerContent" style="min-width: 100%;border-top: 2px solid
+ #EAEAEA;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%"
+ cellspacing="0" cellpadding="0" border="0">                    <tbody><tr>                       
+ <td style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                           
+ <span></span>                        </td>                    </tr>               
+ </tbody></table><!--                <td class="mcnDividerBlockInner"
+ style="padding: 18px;">                <hr class="mcnDividerContent"
+ style="border-bottom-color:none; border-left-color:none;
+ border-right-color:none; border-bottom-width:0; border-left-width:0;
+ border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0;
+ margin-left:0;" />-->            </td>        </tr>    </tbody></table><table
+ class="mcnTextBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0"
+ cellpadding="0" border="0">    <tbody class="mcnTextBlockOuter">        <tr>           
+ <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ valign="top">              	<!--[if mso]>				<table align="left" border="0"
+ cellspacing="0" cellpadding="0" width="100%" style="width:100%;">				<tr>			
+	<![endif]-->							<!--[if mso]>				<td valign="top" width="600"
+ style="width:600px;">				<![endif]-->                <table style="max-width:
+ 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer"
+ width="100%" cellspacing="0" cellpadding="0" border="0" align="left">                   
+ <tbody><tr>                        <td class="mcnTextContent"
+ style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color:
+ #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align:
+ left;" valign="top">                            <p style="box-sizing:
+ border-box;margin: 0px 0px 10px;line-height: 25px;color: #333333;font-family:
+ &quot;Microsoft Yahei&quot;;font-size: 14px;font-style:
+ normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight:
+ 400;letter-spacing: normal;orphans: 2;text-indent: 0px;text-transform:
+ none;white-space: normal;widows: 2;word-spacing:
+ 0px;-webkit-text-stroke-width: 0px;background-color:
+ #FFFFFF;text-decoration-style: initial;text-decoration-color:
+ initial;text-align: center;padding: 0;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span
+ style="box-sizing:border-box;
+ =?utf-8?b?Zm9udC1zaXplOjE4cHgiPumcgOimgeabtOaYjuehrueahFBURee7g+S5oOaWuQ==?=
+ =?utf-8?b?5ZCR77yfPC9zcGFuPjwvcD48cA==?= style="box-sizing:
+ border-box;margin: 0px 0px 10px;line-height: 25px;color: #333333;font-family:
+ &quot;Microsoft Yahei&quot;;font-size: 14px;font-style:
+ normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight:
+ 400;letter-spacing: normal;orphans: 2;text-indent: 0px;text-transform:
+ none;white-space: normal;widows: 2;word-spacing:
+ 0px;-webkit-text-stroke-width: 0px;background-color:
+ #FFFFFF;text-decoration-style: initial;text-decoration-color:
+ initial;text-align: center;padding: 0;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><span
+ style="box-sizing:border-box;
+ =?utf-8?b?Zm9udC1zaXplOjE4cHgiPuaDs+abtOacieaViOeahOe7g+S5oO+8nzwvc3Bhbj48?=
+ =?utf-8?q?=2Fp=3E=3Cp?= style="box-sizing: border-box;margin: 0px 0px
+ 10px;line-height: 25px;color: #333333;font-family: &quot;Microsoft
+ Yahei&quot;;font-size: 14px;font-style: normal;font-variant-ligatures:
+ normal;font-variant-caps: normal;font-weight: 400;letter-spacing:
+ normal;orphans: 2;text-indent: 0px;text-transform: none;white-space:
+ normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width:
+ 0px;background-color: #FFFFFF;text-decoration-style:
+ initial;text-decoration-color: initial;text-align: center;padding:
+ 0;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;"><span style="box-sizing:border-box;
+ =?utf-8?b?Zm9udC1zaXplOjE4cHgiPumCo+WwseS4jeiDveS4jeeUqDwvc3Bhbj48L3A+PHA=?=
+ style="box-sizing: border-box;margin: 0px 0px 10px;line-height: 25px;color:
+ #333333;font-family: &quot;Microsoft Yahei&quot;;font-size: 14px;font-style:
+ normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight:
+ 400;letter-spacing: normal;orphans: 2;text-indent: 0px;text-transform:
+ none;white-space: normal;widows: 2;word-spacing:
+ 0px;-webkit-text-stroke-width: 0px;background-color:
+ #FFFFFF;text-decoration-style: initial;text-decoration-color:
+ initial;text-align: center;padding: 0;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D213c0eddcb&e=3D91a3dd9eae=22?=
+ style="box-sizing: border-box;background-color: transparent;color:
+ #337AB7;text-decoration: none;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:
+ 100%;font-weight: normal;" target="_blank"
+ =?utf-8?b?dGl0bGU9IlBUReWcqOe6v+e7g+S5oCI+PHNwYW4=?=
+ style="box-sizing:border-box; font-size:20px"><strong
+ style="box-sizing:border-box;
+ =?utf-8?b?Zm9udC13ZWlnaHQ6NzAwIj5QVEXnvZHkuIrnu4PkuaDlubPlj7A8L3N0cm9uZz48?=
+ =?utf-8?q?=2Fspan=3E=3C=2Fa=3E=3C=2Fp=3E=3Cp?= style="box-sizing:
+ border-box;margin: 0px 0px 10px;line-height: 25px;color: #333333;font-family:
+ &quot;Microsoft Yahei&quot;;font-size: 14px;font-style:
+ normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight:
+ 400;letter-spacing: normal;orphans: 2;text-indent: 0px;text-transform:
+ none;white-space: normal;widows: 2;word-spacing:
+ 0px;-webkit-text-stroke-width: 0px;background-color:
+ #FFFFFF;text-decoration-style: initial;text-decoration-color:
+ initial;text-align: center;padding: 0;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><a
+ =?utf-8?q?href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fclick=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D8e6a20f21b&e=3D91a3dd9eae=22?=
+ style="box-sizing: border-box;background-color: transparent;color:
+ #337AB7;text-decoration: none;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:
+ 100%;font-weight: normal;" target="_blank"
+ =?utf-8?b?dGl0bGU9IlBUReWcqOe6v+e7g+S5oCI+PHNwYW4=?=
+ style="box-sizing:border-box; font-size:18px"><img alt="1534293878741345.png"
+ =?utf-8?q?src=3D=22http=3A=2F=2Fwww=2Efeifan=2Ecom=2Eau=2Fsites=2Fdefault=2Ffiles=2Fueditor=2F1=2Fu?=
+ =?utf-8?q?pload=2Fimage=2F20180815=2F1534293878741345=2Epng=22?=
+ style="box-sizing: border-box;border: 0px;vertical-align: middle;width:
+ 180px;height: 41px;outline: none;text-decoration:
+ none;-ms-interpolation-mode: bicubic;" title="1534293878741345.png"
+ width="180" vspace="0" height="41" border="0"></span></a></p>                       
+ </td>                    </tr>                </tbody></table>				<!--[if
+ mso]>				</td>				<![endif]-->				<!--[if mso]>				</tr>				</table>			
+	<![endif]-->            </td>        </tr>    </tbody></table><table
+ border="0" cellpadding="0" cellspacing="0" width="100%"
+ class="mcnDividerBlock" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;">   
+ <tbody class="mcnDividerBlockOuter">        <tr>            <td
+ class="mcnDividerBlockInner" style="min-width: 100%;padding:
+ 18px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                <table
+ class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0"
+ width="100%" style="min-width: 100%;border-top: 2px solid
+ #EAEAEA;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                   
+ <tbody><tr>                        <td style="mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                           
+ <span></span>                        </td>                    </tr>               
+ </tbody></table><!--                <td class="mcnDividerBlockInner"
+ style="padding: 18px;">                <hr class="mcnDividerContent"
+ style="border-bottom-color:none; border-left-color:none;
+ border-right-color:none; border-bottom-width:0; border-left-width:0;
+ border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0;
+ margin-left:0;" />-->            </td>        </tr>    </tbody></table><table
+ border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnShareBlock"
+ style="min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">    <tbody class="mcnShareBlockOuter">           
+ <tr>                <td valign="top" style="padding:
+ 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnShareBlockInner">                   
+ <table border="0" cellpadding="0" cellspacing="0" width="100%"
+ class="mcnShareContentContainer" style="min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">    <tbody><tr>        <td
+ align="center" style="padding-top: 0;padding-left: 9px;padding-bottom:
+ 0;padding-right: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">            <table align="center"
+ border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:
+ 100%;background-color: #B51F1F;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" class="mcnShareContent">               
+ <tbody><tr>                    <td align="center" valign="top"
+ class="mcnShareContentItemContainer" style="padding-top: 9px;padding-right:
+ 9px;padding-left: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                        <table
+ align="center" border="0" cellpadding="0" cellspacing="0"
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                           
+ <tbody><tr>                                <td align="left" valign="top"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                                   
+ <!--[if mso]>                                    <table align="center"
+ border="0" cellspacing="0" cellpadding="0">                                   
+ <tr>                                    <![endif]-->                                       
+ <!--[if mso]>                                        <td align="center"
+ valign="top">                                        <![endif]-->                                       
+ <table align="left" border="0" cellpadding="0" cellspacing="0"
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                                           
+ <tbody><tr>                                                <td valign="top"
+ style="padding-right: 0;padding-bottom: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+ class="mcnShareContentItemContainer">                                                   
+ <table border="0" cellpadding="0" cellspacing="0" width=""
+ class="mcnShareContentItem" style="border-collapse: separate;border-radius:
+ 3px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                                                       
+ <tbody><tr>                                                            <td
+ align="left" valign="middle" style="padding-top: 5px;padding-right:
+ 9px;padding-bottom: 5px;padding-left: 9px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                                                               
+ <table align="left" border="0" cellpadding="0" cellspacing="0" width=""
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">                                                                   
+ <tbody><tr>                                                                       
+ <td align="center" valign="middle" width="24" class="mcnShareIconContent"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                                                                           
+ <a
+ =?utf-8?q?href=3D=22http=3A=2F=2Fus18=2Eforward-to-friend=2Ecom=2Fforward=3Fu=3D2a498baff03?=
+ =?utf-8?q?c8c8d396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae=22?= target="_blank"
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;"><img
+ =?utf-8?q?src=3D=22https=3A=2F=2Fcdn-images=2Emailchimp=2Ecom=2Ficons=2Fsocial-block-v2=2Fo?=
+ =?utf-8?q?utline-light-forwardtofriend-48=2Epng=22?= style="display:
+ block;border: 0;height: auto;outline: none;text-decoration:
+ none;-ms-interpolation-mode: bicubic;" height="24" width="24" class=""></a>                                                                       
+ </td>                                                                       
+ <td align="left" valign="middle" class="mcnShareTextContent"
+ style="padding-left: 5px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">                                                                           
+ <a
+ =?utf-8?q?href=3D=22http=3A=2F=2Fus18=2Eforward-to-friend=2Ecom=2Fforward=3Fu=3D2a498baff03?=
+ =?utf-8?q?c8c8d396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae=22?= target=""
+ style="color: #FFFFFF;font-family: Arial;font-size: 18px;font-weight:
+ normal;line-height: normal;text-align: center;text-decoration:
+ none;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust:
+ =?utf-8?b?MTAwJTsiPuWwhuacrOmCruS7tuWIhuS6q+e7meaCqOeahOaci+WPizwvYT4=?=                                                                       
+ </td>                                                                   
+ </tr>                                                               
+ </tbody></table>                                                           
+ </td>                                                        </tr>                                                   
+ </tbody></table>                                                </td>                                           
+ </tr>                                        </tbody></table>                                       
+ <!--[if mso]>                                        </td>                                       
+ <![endif]-->                                    <!--[if mso]>                                   
+ </tr>                                    </table>                                   
+ <![endif]-->                                </td>                           
+ </tr>                        </tbody></table>                    </td>               
+ </tr>            </tbody></table>        </td>    </tr></tbody></table>               
+ </td>            </tr>    </tbody></table></td>										</tr>								
+	</table>									<!--[if (gte mso 9)|(IE)]>									</td>									</tr>								
+	</table>									<![endif]-->								</td>                            </tr>                           
+ <tr>								<td align="center" valign="top" id="templateFooter"
+ data-template-container="" style="background:#333333 none no-repeat
+ center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;background-color:
+ #333333;background-image: none;background-repeat:
+ no-repeat;background-position: center;background-size: cover;border-top:
+ 0;border-bottom: 0;padding-top: 45px;padding-bottom: 63px;">									<!--[if
+ (gte mso 9)|(IE)]>									<table align="center" border="0" cellspacing="0"
+ cellpadding="0" width="600" style="width:600px;">									<tr>									<td
+ align="center" valign="top" width="600" style="width:600px;">								
+	<![endif]-->									<table align="center" border="0" cellpadding="0"
+ cellspacing="0" width="100%" class="templateContainer"
+ style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width:
+ 600px !important;">										<tr>                                			<td
+ valign="top" class="footerContainer" style="background:transparent none
+ no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;background-color:
+ transparent;background-image: none;background-repeat:
+ no-repeat;background-position: center;background-size: cover;border-top:
+ 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;"><table border="0"
+ cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock"
+ style="min-width: 100%;border-collapse: collapse;mso-table-lspace:
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">    <tbody class="mcnTextBlockOuter">       
+ <tr>            <td valign="top" class="mcnTextBlockInner"
+ style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;">              	<!--[if mso]>				<table
+ align="left" border="0" cellspacing="0" cellpadding="0" width="100%"
+ style="width:100%;">				<tr>				<![endif]-->							<!--[if mso]>				<td
+ valign="top" width="600" style="width:600px;">				<![endif]-->               
+ <table align="left" border="0" cellpadding="0" cellspacing="0"
+ style="max-width: 100%;min-width: 100%;border-collapse:
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;" width="100%"
+ class="mcnTextContentContainer">                    <tbody><tr>                       
+ <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right:
+ 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule:
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break:
+ break-word;color: #FFFFFF;font-family: Helvetica;font-size: 12px;line-height:
+ 150%;text-align: center;">                            <em>Copyright
+ =?utf-8?b?wqkgMjAxOCDpo57lh6Hoi7Hor60sIEFsbCByaWdodHM=?= reserved.</em><br>
+ =?utf-8?b?5oKo5Lya5pS25Yiw6L+Z5bCB6YKu5Lu277yM5piv5Zug5Li65oKo5LmL5YmN6YCa?=
+ =?utf-8?b?6L+H5Lul5LiL5pa55byP55WZ57uZ5oiR5Lus5oKo55qE6YKu566x5Zyw5Z2A5Lul?=
+ =?utf-8?b?5L6/5oiR5Lus5LiO5oKo6IGU57O777ya5oiR5Lus5oiW5oiR5Lus5ZCI5L2c5LyZ?=
+ =?utf-8?b?5Ly055qE572R56uZ44CB546w5Zy65rS75Yqo5oiW5ZKo6K+i6aG+6Zeu562J44CC?=
+ =?utf-8?q?You?= are receiving this email because you opted in via our
+ website/events/consultations.<br><br><strong>Our mailing address
+ is:</strong><br><div class="vcard"><span class="org
+ =?utf-8?b?Zm4iPumjnuWHoeiLseivrTwvc3Bhbj48ZGl2?= class="adr"><div
+ class="street-address">Level 7, 263 Clarence St</div><span
+ class="locality">Sydney</span>, <span class="region">NSW</span>  <span
+ class="postal-code">2000</span> <div
+ class="country-name">Australia</div></div><br><a
+ =?utf-8?q?href=3D=22=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Fvcard=3Fu=3D2a498baff03c8c8d3?=
+ =?utf-8?q?96c36aca&id=3D014b63954e=22?= class="hcard-download">Add us to your
+ address book</a></div><br><br>Want to change how you receive these
+ emails?<br>You can <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Fprofile=3Fu=3D2a498baff?=
+ =?utf-8?q?03c8c8d396c36aca&id=3D014b63954e&e=3D91a3dd9eae=22?=
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #FFFFFF;font-weight:
+ normal;text-decoration: underline;">update your preferences</a> or <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Funsubscribe=3Fu=3D2a498?=
+ =?utf-8?q?baff03c8c8d396c36aca&id=3D014b63954e&e=3D91a3dd9eae&c=3D824c6cbbb1=22?=
+ style="mso-line-height-rule: exactly;-ms-text-size-adjust:
+ 100%;-webkit-text-size-adjust: 100%;color: #FFFFFF;font-weight:
+ normal;text-decoration: underline;">unsubscribe from this list</a>.<br><br>                       
+ </td>                    </tr>                </tbody></table>				<!--[if
+ mso]>				</td>				<![endif]-->				<!--[if mso]>				</tr>				</table>			
+	<![endif]-->            </td>        </tr>    </tbody></table></td>									
+	</tr>									</table>									<!--[if (gte mso 9)|(IE)]>									</td>								
+	</tr>									</table>									<![endif]-->								</td>                           
+ </tr>                        </table>                        <!-- // END
+ TEMPLATE -->                    </td>                </tr>           
+ </table>        </center>    <img
+ =?utf-8?q?src=3D=22https=3A=2F=2Ffeifan=2Eus18=2Elist-manage=2Ecom=2Ftrack=2Fopen=2Ephp=3Fu=3D2a4?=
+ =?utf-8?q?98baff03c8c8d396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae=22?=
+ height="1" width="1"></body></html>
+Content-Type: multipart/alternative; boundary="=-ncGIJDJjq7bSyO6I3BFq5g=="
+
+--=-ncGIJDJjq7bSyO6I3BFq5g==
+Content-Type: text/plain; format=fixed; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <470c5be5-3852-4e49-bfef-21830620be89>
+
+PTE=E5=85=AB=E6=9C=88=E7=AC=AC=E4=BA=8C=E6=9C=9F=E9=AB=98=E9=A2=91=E9=A2=
+=84=E6=B5=8B=E9=A2=98=E5=BA=93+=E7=BB=83=E4=B9=A0=E8=A7=86=E9=A2=91+=E5=
+=90=84=E7=A7=8D=E5=B9=B2=E8=B4=A7
+
+http://www.feifan.com.au/?utm_source=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%=
+AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_30_05_09_CO=
+PY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-824c6cbbb1-40006919
+=E9=A9=AC=E4=B8=8A=E7=82=B9=E5=87=BB=E8=AE=A2=E9=98=85=E9=A3=9E=E5=87=A1=
+=E8=8B=B1=E8=AF=AD=E6=9C=80=E6=96=B0=E5=AD=A6=E4=B9=A0=E8=B5=84=E8=AE=AF=
+ (https://mailchi.mp/feifan/signup?utm_source=3D%E9%A3%9E%E5%87%A1%E8%=
+8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_30=
+_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-824c6cbbb1-4=
+0006919)
+
+
+** PTE=E5=85=AB=E6=9C=88=E9=AB=98=E9=A2=91=E9=A2=98=E5=BA=93=E7=AC=AC=E4=
+=BA=8C=E6=9C=9F
+------------------------------------------------------------
+=E6=A0=B9=E6=8D=AE=E8=BF=91=E6=9C=9F=E8=80=83=E7=94=9F=E5=9C=A8=E8=80=83=
+=E8=AF=95=E6=97=B6=E9=81=87=E5=88=B0=E7=9A=84=E7=9C=9F=E5=AE=9EPTE=E8=AF=
+=95=E9=A2=98=E6=95=B4=E7=90=86=E5=87=BA=E9=95=BF=E8=BE=BE22=E9=A1=B5=E7=
+=9A=84=E9=AB=98=E9=A2=91=E9=A2=98=E5=BA=93
+http://www.feifan.com.au/content/%E8%AF%BE%E7%A8%8B%E9%A1%BE%E9%97%AE-=
+irene?utm_source=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campai=
+gn=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3De=
+mail&utm_term=3D0_014b63954e-824c6cbbb1-40006919
+=E9=A9=AC=E4=B8=8A=E7=82=B9=E5=87=BB=E8=BF=99=E9=87=8C=E9=A2=86=E5=8F=96=
+PTE=E5=85=AB=E6=9C=88=E9=AB=98=E9=A2=91=E9=A2=84=E6=B5=8B=E7=AC=AC=E4=BA=
+=8C=E6=9C=9FPDF=E7=89=88=E6=9C=AC=E6=96=87=E4=BB=B6 (http://www.feifan=
+.com.au/content/%E8%AF%BE%E7%A8%8B%E9%A1%BE%E9%97%AE-irene?utm_source=3D=
+%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMA=
+IL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_0=
+14b63954e-824c6cbbb1-40006919)
+=E3=80=90=E9=A3=9E=E5=87=A1=E5=90=8D=E5=B8=88=E8=AE=B2=E5=A0=82=E3=80=91
+=E7=94=B1=E9=A3=9E=E5=87=A1=E8=8B=B1=E8=AF=AD=E5=90=84=E4=B8=93=E9=A1=B9=
+=E8=80=81=E5=B8=88=E4=BA=B2=E8=87=AA=E7=BC=96=E5=86=99=E7=9A=84=E5=B9=B2=
+=E8=B4=A7=E3=80=81=E5=90=84=E7=A7=8D=E7=AD=94=E9=A2=98=E6=8A=80=E5=B7=A7=
+=E3=80=81=E5=AE=9E=E4=BE=8B=E4=B8=8E=E6=BC=94=E7=BB=83=E7=AD=89=E7=AD=89=
+=E3=80=82=E5=86=85=E5=AE=B9=E6=B6=B5=E7=9B=96=E5=8F=A3=E8=AF=AD=E3=80=81=
+=E5=90=AC=E5=8A=9B=E3=80=81=E9=98=85=E8=AF=BB=E5=92=8C=E5=86=99=E4=BD=9C=
+=E4=BB=A5=E5=8F=8A=E5=90=84=E7=A7=8D=E9=A2=98=E5=9E=8B=E3=80=82=E6=AF=8F=
+=E5=91=A8=E9=83=BD=E6=9C=89=E6=9B=B4=E6=96=B0=EF=BC=8C=E5=9C=A8PTE=E5=A4=
+=87=E8=80=83=E8=B7=AF=E4=B8=8A=E7=9A=84=E4=BD=A0=E6=80=8E=E8=83=BD=E9=94=
+=99=E8=BF=87=EF=BC=9F=E9=A9=AC=E4=B8=8A=E7=82=B9=E5=87=BB=E8=BF=99=E9=87=
+=8C (https://mp.weixin.qq.com/mp/homepage?__biz=3DMzAxODIxMzcyNg=3D=3D=
+&hid=3D1&sn=3D8f7787f708f1ab451684b6bf16106c0d&scene=3D1&devicetype=3D=
+android-26&version=3D26060742=E2=8C=A9=3Den&nettype=3DWIFI&ascene=3D7&=
+session_us=3Dgh_e29070283dee&wx_header=3D1) =E6=9F=A5=E7=9C=8B=E6=9B=B4=
+=E5=A4=9A=E8=AF=A6=E7=BB=86=E5=86=85=E5=AE=B9=EF=BC=81
+http://mp.weixin.qq.com/mp/homepage?__biz=3DMzAxODIxMzcyNg=3D=3D&hid=3D=
+1&sn=3D8f7787f708f1ab451684b6bf16106c0d&scene=3D18&utm_source=3D%E9%A3=
+%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAM=
+PAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b639=
+54e-824c6cbbb1-40006919#wechat_redirect
+=E7=82=B9=E5=87=BB=E4=BB=A5=E4=B8=8B=E5=90=84=E9=93=BE=E6=8E=A5=E7=9C=8B=
+=E8=80=81=E5=B8=88=E8=BF=91=E6=9C=9F=E5=8E=9F=E5=88=9B=E5=B9=B2=E8=B4=A7=
+=E6=96=87=E7=AB=A0
+
+=E3=80=90PTE=E5=8F=A3=E8=AF=AD=E3=80=91
+Belinda=E8=80=81=E5=B8=88=EF=BC=9A=E5=8F=A3=E8=AF=AD=E4=B8=AD=E7=9A=84=
+Stress=E5=92=8CDestress (https://mp.weixin.qq.com/s/sm76vKWxT9skVB6A1s=
+E2Qw?utm_source=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaig=
+n=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Dem=
+ail&utm_term=3D0_014b63954e-824c6cbbb1-40006919)
+Daniel=E8=80=81=E5=B8=88=EF=BC=9A=E6=B5=81=E7=A8=8B=E5=9B=BE=E7=A9=B6=E7=
+=AB=9F=E8=AF=A5=E6=80=8E=E4=B9=88=E8=AF=B4=EF=BC=9F(=E5=90=AB=E6=BB=A1=
+=E5=88=86=E9=9F=B3=E9=A2=91) (https://mp.weixin.qq.com/s/kK_jgG2mtxjDm=
+VeXlXL-dQ?utm_source=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_ca=
+mpaign=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=
+=3Demail&utm_term=3D0_014b63954e-824c6cbbb1-40006919)
+Morgan=E8=80=81=E5=B8=88=EF=BC=9A=E5=81=9A=E5=88=B0Sentence-level Stre=
+ss=E5=8F=AA=E9=9C=80=E8=BF=90=E7=94=A8=E8=BF=99=E4=B8=AA=E6=96=B9=E6=B3=
+=95 (https://mp.weixin.qq.com/s/fG0995SHqlN5OC6tvJ2SeA?utm_source=3D%E=
+9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL=
+_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014=
+b63954e-824c6cbbb1-40006919)
+
+=E3=80=90PTE=E5=90=AC=E5=8A=9B=E3=80=91
+Rachel=E8=80=81=E5=B8=88=EF=BC=9A=E5=90=AC=E5=8A=9BFIB=E5=8D=95=E8=AF=8D=
+=E9=87=8F=E6=8C=87=E6=95=B0=E6=89=A9=E5=BC=A0=E6=B3=95 (https://mp.wei=
+xin.qq.com/s/ZPDcO3RNapKaDDFfI2P07A?utm_source=3D%E9%A3%9E%E5%87%A1%E8=
+%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_3=
+0_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-824c6cbbb1-=
+40006919) =E3=80=81WFD=E8=BF=9B=E9=98=B6=E6=8A=80=E8=83=BD=E5=A4=A7=E6=
+=8F=AD=E7=A7=98 (https://mp.weixin.qq.com/s/mq1plHJsOMtmVwQwy2yINw?utm=
+_source=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c=
+6cbbb1-EMAIL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_=
+term=3D0_014b63954e-824c6cbbb1-40006919)
+
+=E3=80=90PTE=E9=98=85=E8=AF=BB=E3=80=91
+Mary=E8=80=81=E5=B8=88=EF=BC=9A=E6=95=99=E4=BD=A0Re-order Paragraph=E4=
+=B8=8D=E8=AF=BB=E6=87=82=E5=B0=B1=E5=81=9A=E5=AF=B9=E7=9A=84=E6=8A=80=E5=
+=B7=A7 (https://mp.weixin.qq.com/s/zUjl3pwzlXpYkLJGa4esxw?utm_source=3D=
+%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMA=
+IL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_0=
+14b63954e-824c6cbbb1-40006919)
+Shirley=E8=80=81=E5=B8=88=EF=BC=9A=E5=A6=82=E4=BD=95=E5=BB=BA=E7=AB=8B=
+=E5=B1=9E=E4=BA=8E=E8=87=AA=E5=B7=B1=E7=9A=84=E8=AF=8D=E5=BA=93 (https=
+://mp.weixin.qq.com/s/-Bm8Bw-cK_eFSMWhSRSl_Q?utm_source=3D%E9%A3%9E%E5=
+%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_=
+2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-82=
+4c6cbbb1-40006919)
+
+=E3=80=90PTE=E5=86=99=E4=BD=9C=E3=80=91
+Laurence=E8=80=81=E5=B8=88=EF=BC=9A=E5=B8=A6=E4=BD=A0=E5=BE=81=E6=9C=8D=
+=E9=9D=9E=E5=B8=B8=E8=A7=84=E7=9A=84=E5=A5=87=E8=91=A9=E5=A4=A7=E4=BD=9C=
+=E6=96=87 (https://mp.weixin.qq.com/s/PZD7A1wlJTlw0c3KbwlGEw?utm_sourc=
+e=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1=
+-EMAIL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D=
+0_014b63954e-824c6cbbb1-40006919)
+Shao=E8=80=81=E5=B8=88=EF=BC=9APTE=E5=A4=A7=E4=BD=9C=E6=96=87=E8=AF=8D=
+=E6=B1=87=E6=90=AD=E9=85=8D=E9=94=99=E8=AF=AF=E4=BD=A0=E4=B8=AD=E6=8B=9B=
+=E4=BA=86=E5=90=97=EF=BC=9F (https://mp.weixin.qq.com/s/Ug5tMxJiATC_jd=
+4Jk_soxA?utm_source=3D%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_cam=
+paign=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3D=
+email&utm_term=3D0_014b63954e-824c6cbbb1-40006919)
+Zhao=E8=80=81=E5=B8=88=EF=BC=9ASWT=E5=B0=8F=E4=BD=9C=E6=96=87=E5=AF=BB=
+=E6=89=BE=E5=85=B3=E9=94=AE=E5=8F=A5=E7=9A=84=E7=A7=98=E7=AC=88 (https=
+://mp.weixin.qq.com/s/-2VAJzg4Rv4ikn3yKyAbJg?utm_source=3D%E9%A3%9E%E5=
+%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_=
+2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-82=
+4c6cbbb1-40006919)
+=E5=89=8D=E5=BE=80=E9=A3=9E=E5=87=A1=E4=BA=91=E8=AE=B2=E5=A0=82=E6=9F=A5=
+=E7=9C=8B=E6=9B=B4=E5=A4=9A=E5=B9=B2=E8=B4=A7=E6=96=87=E7=AB=A0 (http:=
+//mp.weixin.qq.com/mp/homepage?__biz=3DMzAxODIxMzcyNg=3D=3D&hid=3D1&sn=
+=3D8f7787f708f1ab451684b6bf16106c0d&scene=3D18&utm_source=3D%E9%A3%9E%=
+E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIG=
+N_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-=
+824c6cbbb1-40006919#wechat_redirect)
+
+
+** =E7=AC=AC=E4=B8=80=E6=9C=9FRepeat Sentence=E7=BB=83=E4=B9=A0=E8=A7=86=
+=E9=A2=91
+------------------------------------------------------------
+=E4=B8=BA=E5=B8=AE=E5=8A=A9=E7=AB=A5=E9=9E=8B=E4=BB=AC=E6=9B=B4=E6=9C=89=
+=E9=92=88=E5=AF=B9=E6=80=A7=E5=9C=B0=E7=BB=83=E4=B9=A0=E5=8F=8A=E5=A4=87=
+=E8=80=83=EF=BC=8C=E9=A3=9E=E5=87=A1=E8=8B=B1=E8=AF=AD=E6=A0=B9=E6=8D=AE=
+PTE=E7=9C=9F=E9=A2=98=EF=BC=8C=E6=AF=8F=E6=9C=9F=E7=B2=BE=E9=80=8950=E5=
+=8F=A5Repeat Sentence=E7=BB=83=E4=B9=A0=E9=A2=98=EF=BC=8C=E5=B9=B6=E7=94=
+=B1=E8=80=81=E5=B8=88=E4=BB=AC=E4=BA=B2=E8=87=AA=E5=BD=95=E5=88=B6=EF=BC=
+=8C=E5=B8=8C=E6=9C=9B=E7=AB=A5=E9=9E=8B=E4=BB=AC=E9=83=BD=E8=83=BD=E7=94=
+=A8=E5=AD=A6=E5=88=B0=E7=9A=84=E6=AD=A3=E7=A1=AE=E7=9A=84=E7=AD=94=E9=A2=
+=98=E6=8A=80=E5=B7=A7=E5=A4=9A=E5=8A=A0=E7=BB=83=E4=B9=A0=EF=BC=8C=E6=97=
+=A9=E6=97=A5=E4=B8=8EPTE=E5=88=86=E6=89=8B=EF=BC=81
+=E5=9B=BD=E5=A4=96=E6=9C=8B=E5=8F=8B=E5=8E=BBYouTube=E7=9C=8B (https:/=
+/www.youtube.com/watch?v=3DN9W2McRA9kc&feature=3Dyoutu.be&utm_source=3D=
+%E9%A3%9E%E5%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMA=
+IL_CAMPAIGN_2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_0=
+14b63954e-824c6cbbb1-40006919)
+=E5=9B=BD=E5=86=85=E6=9C=8B=E5=8F=8B=E5=8E=BB=E8=85=BE=E8=AE=AF=E7=9C=8B=
+ (https://v.qq.com/x/page/i0739ntx7bi.html?utm_source=3D%E9%A3%9E%E5%8=
+7%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_20=
+18_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-824c=
+6cbbb1-40006919)
+
+=E9=9C=80=E8=A6=81=E6=9B=B4=E6=98=8E=E7=A1=AE=E7=9A=84PTE=E7=BB=83=E4=B9=
+=A0=E6=96=B9=E5=90=91=EF=BC=9F
+
+=E6=83=B3=E6=9B=B4=E6=9C=89=E6=95=88=E7=9A=84=E7=BB=83=E4=B9=A0=EF=BC=9F
+
+=E9=82=A3=E5=B0=B1=E4=B8=8D=E8=83=BD=E4=B8=8D=E7=94=A8
+
+PTE=E7=BD=91=E4=B8=8A=E7=BB=83=E4=B9=A0=E5=B9=B3=E5=8F=B0 (http://www.=
+feifan.com.au/content/ptepractice?utm_source=3D%E9%A3%9E%E5%87%A1%E8%8=
+B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_2018_07_30_=
+05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-824c6cbbb1-40=
+006919)
+
+http://www.feifan.com.au/content/ptepractice?utm_source=3D%E9%A3%9E%E5=
+%87%A1%E8%8B%B1%E8%AF%AD_Syd&utm_campaign=3D824c6cbbb1-EMAIL_CAMPAIGN_=
+2018_07_30_05_09_COPY_01&utm_medium=3Demail&utm_term=3D0_014b63954e-82=
+4c6cbbb1-40006919
+http://us18.forward-to-friend.com/forward?u=3D2a498baff03c8c8d396c36ac=
+a&id=3D824c6cbbb1&e=3D91a3dd9eae =E5=B0=86=E6=9C=AC=E9=82=AE=E4=BB=B6=E5=
+=88=86=E4=BA=AB=E7=BB=99=E6=82=A8=E7=9A=84=E6=9C=8B=E5=8F=8B (http://u=
+s18.forward-to-friend.com/forward?u=3D2a498baff03c8c8d396c36aca&id=3D8=
+24c6cbbb1&e=3D91a3dd9eae)
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Copyright =C2=A9 2018 =E9=A3=9E=E5=87=A1=E8=8B=B1=E8=AF=AD, All rights=
+ reserved.
+ =E6=82=A8=E4=BC=9A=E6=94=B6=E5=88=B0=E8=BF=99=E5=B0=81=E9=82=AE=E4=BB=
+=B6=EF=BC=8C=E6=98=AF=E5=9B=A0=E4=B8=BA=E6=82=A8=E4=B9=8B=E5=89=8D=E9=80=
+=9A=E8=BF=87=E4=BB=A5=E4=B8=8B=E6=96=B9=E5=BC=8F=E7=95=99=E7=BB=99=E6=88=
+=91=E4=BB=AC=E6=82=A8=E7=9A=84=E9=82=AE=E7=AE=B1=E5=9C=B0=E5=9D=80=E4=BB=
+=A5=E4=BE=BF=E6=88=91=E4=BB=AC=E4=B8=8E=E6=82=A8=E8=81=94=E7=B3=BB=EF=BC=
+=9A=E6=88=91=E4=BB=AC=E6=88=96=E6=88=91=E4=BB=AC=E5=90=88=E4=BD=9C=E4=BC=
+=99=E4=BC=B4=E7=9A=84=E7=BD=91=E7=AB=99=E3=80=81=E7=8E=B0=E5=9C=BA=E6=B4=
+=BB=E5=8A=A8=E6=88=96=E5=92=A8=E8=AF=A2=E9=A1=BE=E9=97=AE=E7=AD=89=E3=80=
+=82=0D
+You are receiving this email because you opted in via our website/even=
+ts/consultations.
+
+Our mailing address is:
+=E9=A3=9E=E5=87=A1=E8=8B=B1=E8=AF=AD
+Level 7, 263 Clarence St
+Sydney, NSW 2000
+Australia
+Want to change how you receive these emails?
+You can ** update your preferences (https://feifan.us18.list-manage.co=
+m/profile?u=3D2a498baff03c8c8d396c36aca&id=3D014b63954e&e=3D91a3dd9eae=
+)
+or ** unsubscribe from this list (https://feifan.us18.list-manage.com/=
+unsubscribe?u=3D2a498baff03c8c8d396c36aca&id=3D014b63954e&e=3D91a3dd9e=
+ae&c=3D824c6cbbb1)
+.
+--=-ncGIJDJjq7bSyO6I3BFq5g==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <c820dc48-43ca-4d8c-b259-9dc077b18356>
+
+<!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-mi=
+crosoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+	<head>
+		<!-- NAME: EDUCATE -->
+		<!--[if gte mso 15]>
+		<xml>
+			<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+			</o:OfficeDocumentSettings>
+		</xml>
+		<![endif]-->
+		<meta charset=3D"UTF-8">
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initi=
+al-scale=3D1">
+		<title>=E3=80=90=E9=A3=9E=E5=87=A1=E8=8B=B1=E8=AF=AD=E3=80=91PTE=E5=85=
+=AB=E6=9C=88=E9=AB=98=E9=A2=91=E9=A2=98=E7=AC=AC=E4=BA=8C=E6=B3=A2=E5=A5=
+=89=E4=B8=8A=EF=BC=81+=E6=9C=80=E6=96=B0=E5=90=AC=E8=AF=B4=E8=AF=BB=E5=
+=86=99=E5=85=A8=E5=B9=B2=E8=B4=A7=E5=86=85=E5=AE=B9=EF=BC=8C=E5=8A=A9=E6=
+=94=BB=E4=BD=A0=E7=9A=84PTE=E5=85=AB=E7=82=B8=EF=BC=81</title>
+
+    <style type=3D"text/css">
+		p{
+			margin:10px 0;
+			padding:0;
+		}
+		table{
+			border-collapse:collapse;
+		}
+		h1,h2,h3,h4,h5,h6{
+			display:block;
+			margin:0;
+			padding:0;
+		}
+		img,a img{
+			border:0;
+			height:auto;
+			outline:none;
+			text-decoration:none;
+		}
+		body,#bodyTable,#bodyCell{
+			height:100%;
+			margin:0;
+			padding:0;
+			width:100%;
+		}
+		.mcnPreviewText{
+			display:none !important;
+		}
+		#outlook a{
+			padding:0;
+		}
+		img{
+			-ms-interpolation-mode:bicubic;
+		}
+		table{
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		p,a,li,td,blockquote{
+			mso-line-height-rule:exactly;
+		}
+		a[href^=3Dtel],a[href^=3Dsms]{
+			color:inherit;
+			cursor:default;
+			text-decoration:none;
+		}
+		p,a,li,td,body,table,blockquote{
+			-ms-text-size-adjust:100%;
+			-webkit-text-size-adjust:100%;
+		}
+		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div=
+,.ExternalClass span,.ExternalClass font{
+			line-height:100%;
+		}
+		a[x-apple-data-detectors]{
+			color:inherit !important;
+			text-decoration:none !important;
+			font-size:inherit !important;
+			font-family:inherit !important;
+			font-weight:inherit !important;
+			line-height:inherit !important;
+		}
+		.templateContainer{
+			max-width:600px !important;
+		}
+		a.mcnButton{
+			display:block;
+		}
+		.mcnImage,.mcnRetinaImage{
+			vertical-align:bottom;
+		}
+		.mcnTextContent{
+			word-break:break-word;
+		}
+		.mcnTextContent img{
+			height:auto !important;
+		}
+		.mcnDividerBlock{
+			table-layout:fixed !important;
+		}
+		h1{
+			color:#222222;
+			font-family:Helvetica;
+			font-size:40px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:150%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h2{
+			color:#222222;
+			font-family:Helvetica;
+			font-size:28px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:150%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h3{
+			color:#444444;
+			font-family:Helvetica;
+			font-size:22px;
+			font-style:normal;
+			font-weight:bold;
+			line-height:150%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		h4{
+			color:#999999;
+			font-family:Georgia;
+			font-size:20px;
+			font-style:italic;
+			font-weight:normal;
+			line-height:125%;
+			letter-spacing:normal;
+			text-align:left;
+		}
+		#templateHeader{
+			background-color:#F7F7F7;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:0px;
+			padding-bottom:0px;
+		}
+		.headerContainer{
+			background-color:transparent;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:0;
+			padding-bottom:0;
+		}
+		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
+			color:#808080;
+			font-family:Helvetica;
+			font-size:16px;
+			line-height:150%;
+			text-align:left;
+		}
+		.headerContainer .mcnTextContent a,.headerContainer .mcnTextContent =
+p a{
+			color:#00ADD8;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateBody{
+			background-color:#FFFFFF;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:27px;
+			padding-bottom:63px;
+		}
+		.bodyContainer{
+			background-color:transparent;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:0;
+			padding-bottom:0;
+		}
+		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+			color:#808080;
+			font-family:Helvetica;
+			font-size:16px;
+			line-height:150%;
+			text-align:left;
+		}
+		.bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a{
+			color:#00ADD8;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+		#templateFooter{
+			background-color:#333333;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:45px;
+			padding-bottom:63px;
+		}
+		.footerContainer{
+			background-color:transparent;
+			background-image:none;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:cover;
+			border-top:0;
+			border-bottom:0;
+			padding-top:0;
+			padding-bottom:0;
+		}
+		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
+			color:#FFFFFF;
+			font-family:Helvetica;
+			font-size:12px;
+			line-height:150%;
+			text-align:center;
+		}
+		.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent =
+p a{
+			color:#FFFFFF;
+			font-weight:normal;
+			text-decoration:underline;
+		}
+	@media only screen and (min-width:768px){
+		.templateContainer{
+			width:600px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		body,table,td,p,a,li,blockquote{
+			-webkit-text-size-adjust:none !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		body{
+			width:100% !important;
+			min-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnRetinaImage{
+			max-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImage{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcn=
+CaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentCont=
+ainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContain=
+er,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentCon=
+tainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextCont=
+entContainer,.mcnImageCardRightTextContentContainer,.mcnImageCardLeftI=
+mageContentContainer,.mcnImageCardRightImageContentContainer{
+			max-width:100% !important;
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnBoxedTextContentContainer{
+			min-width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupContent{
+			padding:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentO=
+uter .mcnTextContent{
+			padding-top:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mc=
+nCaptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent=
+:last-child .mcnTextContent{
+			padding-top:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardBottomImageContent{
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupBlockInner{
+			padding-top:0 !important;
+			padding-bottom:0 !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageGroupBlockOuter{
+			padding-top:9px !important;
+			padding-bottom:9px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnTextContent,.mcnBoxedTextContentColumn{
+			padding-right:18px !important;
+			padding-left:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
+			padding-right:18px !important;
+			padding-bottom:0 !important;
+			padding-left:18px !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcpreview-image-uploader{
+			display:none !important;
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h1{
+			font-size:30px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h2{
+			font-size:26px !important;
+			line-height:125% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h3{
+			font-size:20px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		h4{
+			font-size:18px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentCo=
+ntainer .mcnTextContent p{
+			font-size:14px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+			font-size:16px !important;
+			line-height:150% !important;
+		}
+
+}	@media only screen and (max-width: 480px){
+		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
+			font-size:14px !important;
+			line-height:150% !important;
+		}
+
+}</style></head>
+    <body style=3D"height: 100%;margin: 0;padding: 0;width: 100%;-ms-t=
+ext-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+		<!--
+-->
+		<!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" style=3D"d=
+isplay:none; font-size:0px; line-height:0px; max-height:0px; max-width=
+:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">PT=
+E=E5=85=AB=E6=9C=88=E7=AC=AC=E4=BA=8C=E6=9C=9F=E9=AB=98=E9=A2=91=E9=A2=
+=84=E6=B5=8B=E9=A2=98=E5=BA=93+=E7=BB=83=E4=B9=A0=E8=A7=86=E9=A2=91+=E5=
+=90=84=E7=A7=8D=E5=B9=B2=E8=B4=A7</span><!--<![endif]-->
+		<!--
+-->
+        <center>
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable" style=3D=
+"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt=
+;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100=
+%;margin: 0;padding: 0;width: 100%;">
+                <tr>
+                    <td align=3D"center" valign=3D"top" id=3D"bodyCell=
+" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: =
+100%;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"100%" style=3D"border-collapse: collapse;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-t=
+ext-size-adjust: 100%;">
+							<tr>
+								<td align=3D"center" valign=3D"top" id=3D"templateHeader" data=
+-template-container=3D"" style=3D"background:#F7F7F7 none no-repeat ce=
+nter/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;background-color: #F7F7F7;background-imag=
+e: none;background-repeat: no-repeat;background-position: center;backg=
+round-size: cover;border-top: 0;border-bottom: 0;padding-top: 0px;padd=
+ing-bottom: 0px;">
+									<!--[if (gte mso 9)|(IE)]>
+									<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" width=3D"600" style=3D"width:600px;">
+									<tr>
+									<td align=3D"center" valign=3D"top" width=3D"600" style=3D"wi=
+dth:600px;">
+									<![endif]-->
+									<table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" class=3D"templateContainer" style=3D"border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !=
+important;">
+										<tr>
+                                			<td valign=3D"top" class=3D"headerC=
+ontainer" style=3D"background:transparent none no-repeat center/cover;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;background-color: transparent;background-image: none=
+;background-repeat: no-repeat;background-position: center;background-s=
+ize: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-botto=
+m: 0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnImageBlock" style=3D"min-width: 100%;border-collaps=
+e: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;mso-line-heig=
+ht-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: =
+100%;" class=3D"mcnImageBlockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer"=
+ style=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: =
+0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"to=
+p" style=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;paddin=
+g-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-=
+size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                                    <a href=3D"https://feifan.us18.lis=
+t-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3Dbf286cd301=
+&e=3D91a3dd9eae" title=3D"Feifan English" class=3D"" target=3D"_blank"=
+ style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;">
+                                        <img align=3D"center" alt=3D""=
+ src=3D"https://gallery.mailchimp.com/2a498baff03c8c8d396c36aca/images=
+/2ec8ba21-e5c7-4cc2-9b64-523673bf672e.jpg" width=3D"564" style=3D"max-=
+width: 720px;padding-bottom: 0;display: inline !important;vertical-ali=
+gn: bottom;border: 0;height: auto;outline: none;text-decoration: none;=
+-ms-interpolation-mode: bicubic;" class=3D"mcnImage">
+                                    </a>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table></td>
+										</tr>
+									</table>
+									<!--[if (gte mso 9)|(IE)]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+                            </tr>
+							<tr>
+								<td align=3D"center" valign=3D"top" id=3D"templateBody" data-t=
+emplate-container=3D"" style=3D"background:#FFFFFF none no-repeat cent=
+er/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;background-color: #FFFFFF;background-image:=
+ none;background-repeat: no-repeat;background-position: center;backgro=
+und-size: cover;border-top: 0;border-bottom: 0;padding-top: 27px;paddi=
+ng-bottom: 63px;">
+									<!--[if (gte mso 9)|(IE)]>
+									<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" width=3D"600" style=3D"width:600px;">
+									<tr>
+									<td align=3D"center" valign=3D"top" width=3D"600" style=3D"wi=
+dth:600px;">
+									<![endif]-->
+									<table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" class=3D"templateContainer" style=3D"border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !=
+important;">
+										<tr>
+                                			<td valign=3D"top" class=3D"bodyCon=
+tainer" style=3D"background:transparent none no-repeat center/cover;ms=
+o-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-si=
+ze-adjust: 100%;background-color: transparent;background-image: none;b=
+ackground-repeat: no-repeat;background-position: center;background-siz=
+e: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom:=
+ 0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnButtonBlock" style=3D"min-width: 100%;border-collaps=
+e: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnButtonBlockOuter">
+        <tr>
+            <td style=3D"padding-top: 0;padding-right: 18px;padding-bo=
+ttom: 18px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-s=
+ize-adjust: 100%;-webkit-text-size-adjust: 100%;" valign=3D"top" align=
+=3D"center" class=3D"mcnButtonBlockInner">
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" class=3D"mcnButtonContentContainer" style=3D"border-c=
+ollapse: separate !important;border-radius: 3px;background-color: #B51=
+F1F;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: =
+100%;-webkit-text-size-adjust: 100%;">
+                    <tbody>
+                        <tr>
+                            <td align=3D"center" valign=3D"middle" cla=
+ss=3D"mcnButtonContent" style=3D"font-family: Arial;font-size: 18px;pa=
+dding: 15px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;">
+                                <a class=3D"mcnButton " title=3D"=E9=A9=
+=AC=E4=B8=8A=E7=82=B9=E5=87=BB=E8=AE=A2=E9=98=85=E9=A3=9E=E5=87=A1=E8=8B=
+=B1=E8=AF=AD=E6=9C=80=E6=96=B0=E5=AD=A6=E4=B9=A0=E8=B5=84=E8=AE=AF" hr=
+ef=3D"https://feifan.us18.list-manage.com/track/click?u=3D2a498baff03c=
+8c8d396c36aca&id=3D37ec5d102f&e=3D91a3dd9eae" target=3D"_blank" style=3D=
+"font-weight: bold;letter-spacing: normal;line-height: 100%;text-align=
+: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: ex=
+actly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;displa=
+y: block;">=E9=A9=AC=E4=B8=8A=E7=82=B9=E5=87=BB=E8=AE=A2=E9=98=85=E9=A3=
+=9E=E5=87=A1=E8=8B=B1=E8=AF=AD=E6=9C=80=E6=96=B0=E5=AD=A6=E4=B9=A0=E8=B5=
+=84=E8=AE=AF</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnTextBlock" style=3D"min-width: 100%;border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;" valign=3D"top">
+              	<!--[if mso]>
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"100%" style=3D"width:100%;">
+				<tr>
+				<![endif]-->
+		=09
+				<!--[if mso]>
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+				<![endif]-->
+                <table style=3D"max-width: 100%;min-width: 100%;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnText=
+ContentContainer" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"mcnTextContent" style=3D"padding-=
+top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;word-break: break-word;color: #808080;font-family: Helve=
+tica;font-size: 16px;line-height: 150%;text-align: left;" valign=3D"to=
+p">
+
+                            <h1 class=3D"null" style=3D"text-align: ce=
+nter;display: block;margin: 0;padding: 0;color: #222222;font-family: H=
+elvetica;font-size: 40px;font-style: normal;font-weight: bold;line-hei=
+ght: 150%;letter-spacing: normal;"><span style=3D"color:#A52A2A"><span=
+ style=3D"font-size:26px"><strong>PTE=E5=85=AB=E6=9C=88=E9=AB=98=E9=A2=
+=91=E9=A2=98=E5=BA=93=E7=AC=AC=E4=BA=8C=E6=9C=9F</strong></span></span=
+></h1>
+
+<div style=3D"text-align: center;"><span style=3D"color:#696969"><span=
+ style=3D"font-size:18px">=E6=A0=B9=E6=8D=AE=E8=BF=91=E6=9C=9F=E8=80=83=
+=E7=94=9F=E5=9C=A8=E8=80=83=E8=AF=95=E6=97=B6=E9=81=87=E5=88=B0=E7=9A=84=
+=E7=9C=9F=E5=AE=9EPTE=E8=AF=95=E9=A2=98=E6=95=B4=E7=90=86=E5=87=BA</sp=
+an></span><span style=3D"color:#FF0000"><span style=3D"font-size:18px"=
+><strong>=E9=95=BF=E8=BE=BE22=E9=A1=B5</strong></span></span><span sty=
+le=3D"color:#696969"><span style=3D"font-size:18px">=E7=9A=84=E9=AB=98=
+=E9=A2=91=E9=A2=98=E5=BA=93</span></span></div>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnImageBlock" style=3D"min-width: 100%;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td style=3D"padding: 9px;mso-line-height-rule: exactl=
+y;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D=
+"mcnImageBlockInner" valign=3D"top">
+                    <table class=3D"mcnImageContentContainer" style=3D=
+"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: =
+100%;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"left">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" style=3D"pad=
+ding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;tex=
+t-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;" valign=3D"top">
+
+                                    <a href=3D"https://feifan.us18.lis=
+t-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D19d75c8b0f=
+&e=3D91a3dd9eae" title=3D"FeifanPTEAug2" class=3D"" target=3D"_blank" =
+style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;">
+                                        <img alt=3D"" src=3D"https://g=
+allery.mailchimp.com/2a498baff03c8c8d396c36aca/images/53ab28ee-eac4-4d=
+3c-87de-732e9c2427c8.png" style=3D"max-width: 578px;padding-bottom: 0;=
+display: inline !important;vertical-align: bottom;border: 0;height: au=
+to;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic=
+;" class=3D"mcnImage" width=3D"564" align=3D"middle">
+                                    </a>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table class=3D"mcnButtonBlock" style=3D"min-width: 100%;borde=
+r-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-t=
+ext-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"mcnButtonBlockOuter">
+        <tr>
+            <td style=3D"padding-top: 0;padding-right: 18px;padding-bo=
+ttom: 18px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-s=
+ize-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnButtonBl=
+ockInner" valign=3D"top" align=3D"center">
+                <table class=3D"mcnButtonContentContainer" style=3D"bo=
+rder-collapse: separate !important;border-radius: 3px;background-color=
+: #E95935;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-ad=
+just: 100%;-webkit-text-size-adjust: 100%;" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0">
+                    <tbody>
+                        <tr>
+                            <td class=3D"mcnButtonContent" style=3D"fo=
+nt-family: Helvetica;font-size: 18px;padding: 18px;mso-line-height-rul=
+e: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"=
+ valign=3D"middle" align=3D"center">
+                                <a class=3D"mcnButton " title=3D"=E9=A3=
+=9E=E5=87=A1=E8=8B=B1=E8=AF=ADPTE=E9=AB=98=E9=A2=918=E6=9C=88=E4=BA=8C=
+=E6=9C=9F" href=3D"https://feifan.us18.list-manage.com/track/click?u=3D=
+2a498baff03c8c8d396c36aca&id=3D1b349c8011&e=3D91a3dd9eae" target=3D"_b=
+lank" style=3D"font-weight: bold;letter-spacing: -0.5px;line-height: 1=
+00%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-h=
+eight-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjus=
+t: 100%;display: block;">=E9=A9=AC=E4=B8=8A=E7=82=B9=E5=87=BB=E8=BF=99=
+=E9=87=8C=E9=A2=86=E5=8F=96PTE=E5=85=AB=E6=9C=88=E9=AB=98=E9=A2=91=E9=A2=
+=84=E6=B5=8B=E7=AC=AC=E4=BA=8C=E6=9C=9FPDF=E7=89=88=E6=9C=AC=E6=96=87=E4=
+=BB=B6</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-colla=
+pse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !imp=
+ortant;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100=
+%;padding: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+border-top: 2px solid #EAEAEA;border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;">
+                    <tbody><tr>
+                        <td style=3D"mso-line-height-rule: exactly;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 1=
+8px;">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom=
+-color:none; border-left-color:none; border-right-color:none; border-b=
+ottom-width:0; border-left-width:0; border-right-width:0; margin-top:0=
+; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-colla=
+pse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !imp=
+ortant;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100=
+%;padding: 18px 18px 0px;mso-line-height-rule: exactly;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody><tr>
+                        <td style=3D"mso-line-height-rule: exactly;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 1=
+8px;">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom=
+-color:none; border-left-color:none; border-right-color:none; border-b=
+ottom-width:0; border-left-width:0; border-right-width:0; margin-top:0=
+; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnTextBlock" style=3D"min-width: 100%;border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;" valign=3D"top">
+              	<!--[if mso]>
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"100%" style=3D"width:100%;">
+				<tr>
+				<![endif]-->
+		=09
+				<!--[if mso]>
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+				<![endif]-->
+                <table style=3D"max-width: 100%;min-width: 100%;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnText=
+ContentContainer" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"mcnTextContent" style=3D"padding-=
+top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;word-break: break-word;color: #808080;font-family: Helve=
+tica;font-size: 16px;line-height: 150%;text-align: left;" valign=3D"to=
+p">
+
+                            <div style=3D"text-align: center;"><span s=
+tyle=3D"color:#FFF0F5"><span style=3D"font-size:22px"><strong><span st=
+yle=3D"background-color:#B22222">=E3=80=90=E9=A3=9E=E5=87=A1=E5=90=8D=E5=
+=B8=88=E8=AE=B2=E5=A0=82=E3=80=91</span></strong></span></span></div>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnTextBlock" style=3D"min-width: 100%;border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;" valign=3D"top">
+              	<!--[if mso]>
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"100%" style=3D"width:100%;">
+				<tr>
+				<![endif]-->
+		=09
+				<!--[if mso]>
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+				<![endif]-->
+                <table style=3D"max-width: 100%;min-width: 100%;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnText=
+ContentContainer" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"mcnTextContent" style=3D"padding-=
+top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;word-break: break-word;color: #808080;font-family: Helve=
+tica;font-size: 16px;line-height: 150%;text-align: left;" valign=3D"to=
+p">
+
+                            <div style=3D"text-align: left;">=E7=94=B1=
+=E9=A3=9E=E5=87=A1=E8=8B=B1=E8=AF=AD=E5=90=84=E4=B8=93=E9=A1=B9=E8=80=81=
+=E5=B8=88=E4=BA=B2=E8=87=AA=E7=BC=96=E5=86=99=E7=9A=84=E5=B9=B2=E8=B4=A7=
+=E3=80=81=E5=90=84=E7=A7=8D=E7=AD=94=E9=A2=98=E6=8A=80=E5=B7=A7=E3=80=81=
+=E5=AE=9E=E4=BE=8B=E4=B8=8E=E6=BC=94=E7=BB=83=E7=AD=89=E7=AD=89=E3=80=82=
+=E5=86=85=E5=AE=B9=E6=B6=B5=E7=9B=96=E5=8F=A3=E8=AF=AD=E3=80=81=E5=90=AC=
+=E5=8A=9B=E3=80=81=E9=98=85=E8=AF=BB=E5=92=8C=E5=86=99=E4=BD=9C=E4=BB=A5=
+=E5=8F=8A=E5=90=84=E7=A7=8D=E9=A2=98=E5=9E=8B=E3=80=82=E6=AF=8F=E5=91=A8=
+=E9=83=BD=E6=9C=89=E6=9B=B4=E6=96=B0=EF=BC=8C=E5=9C=A8PTE=E5=A4=87=E8=80=
+=83=E8=B7=AF=E4=B8=8A=E7=9A=84=E4=BD=A0=E6=80=8E=E8=83=BD=E9=94=99=E8=BF=
+=87=EF=BC=9F=E9=A9=AC=E4=B8=8A=E7=82=B9=E5=87=BB<a href=3D"https://fei=
+fan.us18.list-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D=
+8707881907&e=3D91a3dd9eae" target=3D"_blank" style=3D"mso-line-height-=
+rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;color: #00ADD8;font-weight: normal;text-decoration: underline;">=E8=BF=
+=99=E9=87=8C</a>=E6=9F=A5=E7=9C=8B=E6=9B=B4=E5=A4=9A=E8=AF=A6=E7=BB=86=
+=E5=86=85=E5=AE=B9=EF=BC=81</div>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnCaptionBlock" style=3D"border-collapse: collapse;ms=
+o-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnCaptionBlockOuter">
+        <tr>
+            <td class=3D"mcnCaptionBlockInner" valign=3D"top" style=3D=
+"padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+
+
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"mcnCaptionBottomContent" style=3D"border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" va=
+lign=3D"top" style=3D"padding: 0 9px 9px 9px;mso-line-height-rule: exa=
+ctly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+
+            <a href=3D"https://feifan.us18.list-manage.com/track/click=
+?u=3D2a498baff03c8c8d396c36aca&id=3Dcada3932b2&e=3D91a3dd9eae" title=3D=
+"=E9=A3=9E=E5=87=A1=E4=BA=91=E8=AE=B2=E5=A0=82" class=3D"" target=3D"_=
+blank" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/2a498ba=
+ff03c8c8d396c36aca/images/6ede68f2-a677-4126-88f5-c813557b6b9e.jpg" wi=
+dth=3D"550" style=3D"max-width: 550px;border: 0;height: auto;outline: =
+none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-al=
+ign: bottom;" class=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: =
+0 9px 0 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;word-break: break-word;color: #808080;fo=
+nt-family: Helvetica;font-size: 16px;line-height: 150%;text-align: lef=
+t;" width=3D"564">
+            <div style=3D"text-align: center;"><span style=3D"color:#8=
+00000"><span style=3D"font-size:16px">=E7=82=B9=E5=87=BB=E4=BB=A5=E4=B8=
+=8B=E5=90=84=E9=93=BE=E6=8E=A5=E7=9C=8B=E8=80=81=E5=B8=88=E8=BF=91=E6=9C=
+=9F=E5=8E=9F=E5=88=9B=E5=B9=B2=E8=B4=A7=E6=96=87=E7=AB=A0</span></span=
+><br>
+<br>
+<span style=3D"font-size:18px"><span style=3D"color:#000000">=E3=80=90=
+PTE=E5=8F=A3=E8=AF=AD=E3=80=91</span></span></div>
+Belinda=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-=
+manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D9b08ebc0f4&e=
+=3D91a3dd9eae" target=3D"_blank" title=3D"Belinda: Stress and Destress=
+" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-d=
+ecoration: underline;">=E5=8F=A3=E8=AF=AD=E4=B8=AD=E7=9A=84Stress=E5=92=
+=8CDestress</a><br>
+Daniel=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-m=
+anage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D3f393a9277&e=3D=
+91a3dd9eae" target=3D"_blank" title=3D"Daniel english speaking" style=3D=
+"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-decoration:=
+ underline;">=E6=B5=81=E7=A8=8B=E5=9B=BE=E7=A9=B6=E7=AB=9F=E8=AF=A5=E6=
+=80=8E=E4=B9=88=E8=AF=B4=EF=BC=9F(=E5=90=AB=E6=BB=A1=E5=88=86=E9=9F=B3=
+=E9=A2=91)</a><br>
+Morgan=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-m=
+anage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D44396163ef&e=3D=
+91a3dd9eae" target=3D"_blank" title=3D"Morgan: Sentence-level Stress" =
+style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-dec=
+oration: underline;">=E5=81=9A=E5=88=B0Sentence-level Stress=E5=8F=AA=E9=
+=9C=80=E8=BF=90=E7=94=A8=E8=BF=99=E4=B8=AA=E6=96=B9=E6=B3=95</a><br>
+&nbsp;
+<div style=3D"text-align: center;"><span style=3D"font-size:18px"><spa=
+n style=3D"color:#000000">=E3=80=90PTE=E5=90=AC=E5=8A=9B=E3=80=91</spa=
+n></span></div>
+Rachel=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-m=
+anage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D6be59ad8d5&e=3D=
+91a3dd9eae" target=3D"_blank" title=3D"Rachel FIB" style=3D"mso-line-h=
+eight-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjus=
+t: 100%;color: #00ADD8;font-weight: normal;text-decoration: underline;=
+">=E5=90=AC=E5=8A=9BFIB=E5=8D=95=E8=AF=8D=E9=87=8F=E6=8C=87=E6=95=B0=E6=
+=89=A9=E5=BC=A0=E6=B3=95</a>=E3=80=81<a href=3D"https://feifan.us18.li=
+st-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3Da530c96f6=
+3&e=3D91a3dd9eae" target=3D"_blank" title=3D"Rachel WFD" style=3D"mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;color: #00ADD8;font-weight: normal;text-decoration: unde=
+rline;">WFD=E8=BF=9B=E9=98=B6=E6=8A=80=E8=83=BD=E5=A4=A7=E6=8F=AD=E7=A7=
+=98</a><br>
+&nbsp;
+<div style=3D"text-align: center;"><span style=3D"font-size:18px"><spa=
+n style=3D"color:#000000">=E3=80=90PTE=E9=98=85=E8=AF=BB=E3=80=91</spa=
+n></span></div>
+Mary=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-man=
+age.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3Dcc152a67f9&e=3D=
+91a3dd9eae" target=3D"_blank" title=3D"Mary Re-order paragraph" style=3D=
+"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-decoration:=
+ underline;">=E6=95=99=E4=BD=A0Re-order Paragraph=E4=B8=8D=E8=AF=BB=E6=
+=87=82=E5=B0=B1=E5=81=9A=E5=AF=B9=E7=9A=84=E6=8A=80=E5=B7=A7</a><br>
+Shirley=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-=
+manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3Dbb02f68472&e=
+=3D91a3dd9eae" target=3D"_blank" title=3D"Shirley vocabulary" style=3D=
+"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-decoration:=
+ underline;">=E5=A6=82=E4=BD=95=E5=BB=BA=E7=AB=8B=E5=B1=9E=E4=BA=8E=E8=
+=87=AA=E5=B7=B1=E7=9A=84=E8=AF=8D=E5=BA=93</a><br>
+&nbsp;
+<div style=3D"text-align: center;"><span style=3D"font-size:18px"><spa=
+n style=3D"color:#000000">=E3=80=90PTE=E5=86=99=E4=BD=9C=E3=80=91</spa=
+n></span></div>
+Laurence=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list=
+-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D525d99ef2d&=
+e=3D91a3dd9eae" target=3D"_blank" title=3D"Laurence nonusual writing" =
+style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-dec=
+oration: underline;">=E5=B8=A6=E4=BD=A0=E5=BE=81=E6=9C=8D=E9=9D=9E=E5=B8=
+=B8=E8=A7=84=E7=9A=84=E5=A5=87=E8=91=A9=E5=A4=A7=E4=BD=9C=E6=96=87</a>=
+<br>
+Shao=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-man=
+age.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D0a298e39da&e=3D=
+91a3dd9eae" target=3D"_blank" title=3D"Shao: writing" style=3D"mso-lin=
+e-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;color: #00ADD8;font-weight: normal;text-decoration: underli=
+ne;">PTE=E5=A4=A7=E4=BD=9C=E6=96=87=E8=AF=8D=E6=B1=87=E6=90=AD=E9=85=8D=
+=E9=94=99=E8=AF=AF=E4=BD=A0=E4=B8=AD=E6=8B=9B=E4=BA=86=E5=90=97=EF=BC=9F=
+</a><br>
+Zhao=E8=80=81=E5=B8=88=EF=BC=9A<a href=3D"https://feifan.us18.list-man=
+age.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D17b6e322d2&e=3D=
+91a3dd9eae" target=3D"_blank" title=3D"Zhao: SWT" style=3D"mso-line-he=
+ight-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust=
+: 100%;color: #00ADD8;font-weight: normal;text-decoration: underline;"=
+>SWT=E5=B0=8F=E4=BD=9C=E6=96=87=E5=AF=BB=E6=89=BE=E5=85=B3=E9=94=AE=E5=
+=8F=A5=E7=9A=84=E7=A7=98=E7=AC=88</a>
+
+<div style=3D"text-align: center;"><br>
+<a href=3D"https://feifan.us18.list-manage.com/track/click?u=3D2a498ba=
+ff03c8c8d396c36aca&id=3Dc7c435ee60&e=3D91a3dd9eae" target=3D"_blank" t=
+itle=3D"=E9=A3=9E=E5=87=A1=E4=BA=91=E8=AE=B2=E5=A0=82" style=3D"mso-li=
+ne-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-a=
+djust: 100%;color: #00ADD8;font-weight: normal;text-decoration: underl=
+ine;"><span style=3D"color:#2F4F4F">=E5=89=8D=E5=BE=80=E9=A3=9E=E5=87=A1=
+=E4=BA=91=E8=AE=B2=E5=A0=82=E6=9F=A5=E7=9C=8B=E6=9B=B4=E5=A4=9A=E5=B9=B2=
+=E8=B4=A7=E6=96=87=E7=AB=A0</span></a></div>
+
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnDividerBlock" style=3D"min-width: 100%;bord=
+er-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-=
+text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fi=
+xed !important;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100=
+%;padding: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;">
+                <table class=3D"mcnDividerContent" style=3D"min-width:=
+ 100%;border-top: 2px solid #EAEAEA;border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit=
+-text-size-adjust: 100%;" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">
+                    <tbody><tr>
+                        <td style=3D"mso-line-height-rule: exactly;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 1=
+8px;">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom=
+-color:none; border-left-color:none; border-right-color:none; border-b=
+ottom-width:0; border-left-width:0; border-right-width:0; margin-top:0=
+; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnTextBlock" style=3D"min-width: 100%;border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;" valign=3D"top">
+              	<!--[if mso]>
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"100%" style=3D"width:100%;">
+				<tr>
+				<![endif]-->
+		=09
+				<!--[if mso]>
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+				<![endif]-->
+                <table style=3D"max-width: 100%;min-width: 100%;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnText=
+ContentContainer" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"mcnTextContent" style=3D"padding-=
+top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;word-break: break-word;color: #808080;font-family: Helve=
+tica;font-size: 16px;line-height: 150%;text-align: left;" valign=3D"to=
+p">
+
+                            <h1 class=3D"null" style=3D"text-align: ce=
+nter;display: block;margin: 0;padding: 0;color: #222222;font-family: H=
+elvetica;font-size: 40px;font-style: normal;font-weight: bold;line-hei=
+ght: 150%;letter-spacing: normal;"><span style=3D"color:#A52A2A"><span=
+ style=3D"font-size:26px"><strong>=E7=AC=AC=E4=B8=80=E6=9C=9FRepeat Se=
+ntence=E7=BB=83=E4=B9=A0=E8=A7=86=E9=A2=91</strong></span></span></h1>
+
+<div style=3D"text-align: center;"><span style=3D"font-size:17px"><fon=
+t color=3D"#696969">=E4=B8=BA=E5=B8=AE=E5=8A=A9=E7=AB=A5=E9=9E=8B=E4=BB=
+=AC=E6=9B=B4=E6=9C=89=E9=92=88=E5=AF=B9=E6=80=A7=E5=9C=B0=E7=BB=83=E4=B9=
+=A0=E5=8F=8A=E5=A4=87=E8=80=83=EF=BC=8C=E9=A3=9E=E5=87=A1=E8=8B=B1=E8=AF=
+=AD=E6=A0=B9=E6=8D=AE</font><span style=3D"color:#FF0000"><strong>PTE=E7=
+=9C=9F=E9=A2=98</strong></span><font color=3D"#696969">=EF=BC=8C=E6=AF=
+=8F=E6=9C=9F=E7=B2=BE=E9=80=8950=E5=8F=A5Repeat Sentence=E7=BB=83=E4=B9=
+=A0=E9=A2=98=EF=BC=8C=E5=B9=B6=E7=94=B1=E8=80=81=E5=B8=88=E4=BB=AC=E4=BA=
+=B2=E8=87=AA=E5=BD=95=E5=88=B6=EF=BC=8C=E5=B8=8C=E6=9C=9B=E7=AB=A5=E9=9E=
+=8B=E4=BB=AC=E9=83=BD=E8=83=BD=E7=94=A8=E5=AD=A6=E5=88=B0=E7=9A=84</fo=
+nt><strong><span style=3D"color:#FF0000">=E6=AD=A3=E7=A1=AE=E7=9A=84=E7=
+=AD=94=E9=A2=98=E6=8A=80=E5=B7=A7</span></strong><font color=3D"#69696=
+9">=E5=A4=9A=E5=8A=A0=E7=BB=83=E4=B9=A0=EF=BC=8C=E6=97=A9=E6=97=A5=E4=B8=
+=8EPTE=E5=88=86=E6=89=8B=EF=BC=81</font></span></div>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnCaptionBlock" width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" style=3D"border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnCaptionBlockOuter">
+        <tr>
+            <td class=3D"mcnCaptionBlockInner" style=3D"padding: 9px;m=
+so-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-s=
+ize-adjust: 100%;" valign=3D"top">
+
+
+<table class=3D"mcnCaptionBottomContent" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" align=3D"left" style=3D"border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" style=3D"padding: 0=
+ 9px 9px 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;" valign=3D"top" align=3D"center">
+
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/2a498ba=
+ff03c8c8d396c36aca/images/5600480e-3eaf-4857-b34b-cda63eacda75.jpeg" s=
+tyle=3D"max-width: 600px;border: 0;height: auto;outline: none;text-dec=
+oration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"=
+ class=3D"mcnImage" width=3D"564">
+
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" style=3D"padding: 0 9px 0 9px;mso=
+-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;word-break: break-word;color: #808080;font-family: Helv=
+etica;font-size: 16px;line-height: 150%;text-align: left;" width=3D"56=
+4" valign=3D"top">
+            <div style=3D"text-align: center;">=E5=9B=BD=E5=A4=96=E6=9C=
+=8B=E5=8F=8B<a href=3D"https://feifan.us18.list-manage.com/track/click=
+?u=3D2a498baff03c8c8d396c36aca&id=3Dc6b2aa8f35&e=3D91a3dd9eae" target=3D=
+"_blank" title=3D"https://www.youtube.com/watch?v=3DN9W2McRA9kc&amp;fe=
+ature=3Dyoutu.be" style=3D"mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weigh=
+t: normal;text-decoration: underline;">=E5=8E=BBYouTube=E7=9C=8B</a><b=
+r>
+=E5=9B=BD=E5=86=85=E6=9C=8B=E5=8F=8B<a href=3D"https://feifan.us18.lis=
+t-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3Df3148d2264=
+&e=3D91a3dd9eae" target=3D"_blank" title=3D"=E3=80=90=E9=A3=9E=E5=87=A1=
+=E8=8B=B1=E8=AF=AD=E3=80=91PTE Repeat Sentence=E7=BB=83=E4=B9=A0=E5=B7=
+=A5=E5=85=B7=E8=A7=86=E9=A2=91=EF=BC=88=E7=AC=AC=E4=B8=80=E6=9C=9F=EF=BC=
+=89" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight: normal;tex=
+t-decoration: underline;">=E5=8E=BB=E8=85=BE=E8=AE=AF=E7=9C=8B</a></di=
+v>
+
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnDividerBlock" style=3D"min-width: 100%;bord=
+er-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-=
+text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fi=
+xed !important;" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100=
+%;padding: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;">
+                <table class=3D"mcnDividerContent" style=3D"min-width:=
+ 100%;border-top: 2px solid #EAEAEA;border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit=
+-text-size-adjust: 100%;" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">
+                    <tbody><tr>
+                        <td style=3D"mso-line-height-rule: exactly;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 1=
+8px;">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom=
+-color:none; border-left-color:none; border-right-color:none; border-b=
+ottom-width:0; border-left-width:0; border-right-width:0; margin-top:0=
+; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table class=3D"mcnTextBlock" style=3D"min-width: 100%;border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;" valign=3D"top">
+              	<!--[if mso]>
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"100%" style=3D"width:100%;">
+				<tr>
+				<![endif]-->
+		=09
+				<!--[if mso]>
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+				<![endif]-->
+                <table style=3D"max-width: 100%;min-width: 100%;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnText=
+ContentContainer" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" align=3D"left">
+                    <tbody><tr>
+
+                        <td class=3D"mcnTextContent" style=3D"padding-=
+top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;word-break: break-word;color: #808080;font-family: Helve=
+tica;font-size: 16px;line-height: 150%;text-align: left;" valign=3D"to=
+p">
+
+                            <p style=3D"box-sizing: border-box;margin:=
+ 0px 0px 10px;line-height: 25px;color: #333333;font-family: &quot;Micr=
+osoft Yahei&quot;;font-size: 14px;font-style: normal;font-variant-liga=
+tures: normal;font-variant-caps: normal;font-weight: 400;letter-spacin=
+g: normal;orphans: 2;text-indent: 0px;text-transform: none;white-space=
+: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;ba=
+ckground-color: #FFFFFF;text-decoration-style: initial;text-decoration=
+-color: initial;text-align: center;padding: 0;mso-line-height-rule: ex=
+actly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><spa=
+n style=3D"box-sizing:border-box; font-size:18px">=E9=9C=80=E8=A6=81=E6=
+=9B=B4=E6=98=8E=E7=A1=AE=E7=9A=84PTE=E7=BB=83=E4=B9=A0=E6=96=B9=E5=90=91=
+=EF=BC=9F</span></p>
+
+<p style=3D"box-sizing: border-box;margin: 0px 0px 10px;line-height: 2=
+5px;color: #333333;font-family: &quot;Microsoft Yahei&quot;;font-size:=
+ 14px;font-style: normal;font-variant-ligatures: normal;font-variant-c=
+aps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-in=
+dent: 0px;text-transform: none;white-space: normal;widows: 2;word-spac=
+ing: 0px;-webkit-text-stroke-width: 0px;background-color: #FFFFFF;text=
+-decoration-style: initial;text-decoration-color: initial;text-align: =
+center;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: =
+100%;-webkit-text-size-adjust: 100%;"><span style=3D"box-sizing:border=
+-box; font-size:18px">=E6=83=B3=E6=9B=B4=E6=9C=89=E6=95=88=E7=9A=84=E7=
+=BB=83=E4=B9=A0=EF=BC=9F</span></p>
+
+<p style=3D"box-sizing: border-box;margin: 0px 0px 10px;line-height: 2=
+5px;color: #333333;font-family: &quot;Microsoft Yahei&quot;;font-size:=
+ 14px;font-style: normal;font-variant-ligatures: normal;font-variant-c=
+aps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-in=
+dent: 0px;text-transform: none;white-space: normal;widows: 2;word-spac=
+ing: 0px;-webkit-text-stroke-width: 0px;background-color: #FFFFFF;text=
+-decoration-style: initial;text-decoration-color: initial;text-align: =
+center;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: =
+100%;-webkit-text-size-adjust: 100%;"><span style=3D"box-sizing:border=
+-box; font-size:18px">=E9=82=A3=E5=B0=B1=E4=B8=8D=E8=83=BD=E4=B8=8D=E7=
+=94=A8</span></p>
+
+<p style=3D"box-sizing: border-box;margin: 0px 0px 10px;line-height: 2=
+5px;color: #333333;font-family: &quot;Microsoft Yahei&quot;;font-size:=
+ 14px;font-style: normal;font-variant-ligatures: normal;font-variant-c=
+aps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-in=
+dent: 0px;text-transform: none;white-space: normal;widows: 2;word-spac=
+ing: 0px;-webkit-text-stroke-width: 0px;background-color: #FFFFFF;text=
+-decoration-style: initial;text-decoration-color: initial;text-align: =
+center;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: =
+100%;-webkit-text-size-adjust: 100%;"><a href=3D"https://feifan.us18.l=
+ist-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D213c0edd=
+cb&e=3D91a3dd9eae" style=3D"box-sizing: border-box;background-color: t=
+ransparent;color: #337AB7;text-decoration: none;mso-line-height-rule: =
+exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font=
+-weight: normal;" target=3D"_blank" title=3D"PTE=E5=9C=A8=E7=BA=BF=E7=BB=
+=83=E4=B9=A0"><span style=3D"box-sizing:border-box; font-size:20px"><s=
+trong style=3D"box-sizing:border-box; font-weight:700">PTE=E7=BD=91=E4=
+=B8=8A=E7=BB=83=E4=B9=A0=E5=B9=B3=E5=8F=B0</strong></span></a></p>
+
+<p style=3D"box-sizing: border-box;margin: 0px 0px 10px;line-height: 2=
+5px;color: #333333;font-family: &quot;Microsoft Yahei&quot;;font-size:=
+ 14px;font-style: normal;font-variant-ligatures: normal;font-variant-c=
+aps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-in=
+dent: 0px;text-transform: none;white-space: normal;widows: 2;word-spac=
+ing: 0px;-webkit-text-stroke-width: 0px;background-color: #FFFFFF;text=
+-decoration-style: initial;text-decoration-color: initial;text-align: =
+center;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: =
+100%;-webkit-text-size-adjust: 100%;"><a href=3D"https://feifan.us18.l=
+ist-manage.com/track/click?u=3D2a498baff03c8c8d396c36aca&id=3D8e6a20f2=
+1b&e=3D91a3dd9eae" style=3D"box-sizing: border-box;background-color: t=
+ransparent;color: #337AB7;text-decoration: none;mso-line-height-rule: =
+exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font=
+-weight: normal;" target=3D"_blank" title=3D"PTE=E5=9C=A8=E7=BA=BF=E7=BB=
+=83=E4=B9=A0"><span style=3D"box-sizing:border-box; font-size:18px"><i=
+mg alt=3D"1534293878741345.png" src=3D"http://www.feifan.com.au/sites/=
+default/files/ueditor/1/upload/image/20180815/1534293878741345.png" st=
+yle=3D"box-sizing: border-box;border: 0px;vertical-align: middle;width=
+: 180px;height: 41px;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;" title=3D"1534293878741345.png" width=3D"180" vspa=
+ce=3D"0" height=3D"41" border=3D"0"></span></a></p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-colla=
+pse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !imp=
+ortant;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100=
+%;padding: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+border-top: 2px solid #EAEAEA;border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;">
+                    <tbody><tr>
+                        <td style=3D"mso-line-height-rule: exactly;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 1=
+8px;">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom=
+-color:none; border-left-color:none; border-right-color:none; border-b=
+ottom-width:0; border-left-width:0; border-right-width:0; margin-top:0=
+; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnShareBlock" style=3D"min-width: 100%;border-collaps=
+e: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnShareBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;mso-line-heig=
+ht-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: =
+100%;" class=3D"mcnShareBlockInner">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" class=3D"mcnShareContentContainer" style=3D"min-wid=
+th: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rsp=
+ace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody><tr>
+        <td align=3D"center" style=3D"padding-top: 0;padding-left: 9px=
+;padding-bottom: 0;padding-right: 9px;mso-line-height-rule: exactly;-m=
+s-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;background-colo=
+r: #B51F1F;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-r=
+space: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"=
+ class=3D"mcnShareContent">
+                <tbody><tr>
+                    <td align=3D"center" valign=3D"top" class=3D"mcnSh=
+areContentItemContainer" style=3D"padding-top: 9px;padding-right: 9px;=
+padding-left: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: =
+100%;-webkit-text-size-adjust: 100%;">
+                        <table align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit=
+-text-size-adjust: 100%;">
+                            <tbody><tr>
+                                <td align=3D"left" valign=3D"top" styl=
+e=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;">
+                                    <!--[if mso]>
+                                    <table align=3D"center" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0">
+                                    <tr>
+                                    <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D=
+"top">
+                                        <![endif]-->
+                                        <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;">
+                                            <tbody><tr>
+                                                <td valign=3D"top" sty=
+le=3D"padding-right: 0;padding-bottom: 9px;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D=
+"mcnShareContentItemContainer">
+                                                    <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"" class=3D"mcnShareCont=
+entItem" style=3D"border-collapse: separate;border-radius: 3px;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webki=
+t-text-size-adjust: 100%;">
+                                                        <tbody><tr>
+                                                            <td align=3D=
+"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 9px;=
+padding-bottom: 5px;padding-left: 9px;mso-line-height-rule: exactly;-m=
+s-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 10=
+0%;">
+                                                                    <t=
+body><tr>
+                                                                      =
+  <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnShar=
+eIconContent" style=3D"mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                      =
+      <a href=3D"http://us18.forward-to-friend.com/forward?u=3D2a498ba=
+ff03c8c8d396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae" target=3D"_blank" s=
+tyle=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;"><img src=3D"https://cdn-images.mailchimp.c=
+om/icons/social-block-v2/outline-light-forwardtofriend-48.png" style=3D=
+"display: block;border: 0;height: auto;outline: none;text-decoration: =
+none;-ms-interpolation-mode: bicubic;" height=3D"24" width=3D"24" clas=
+s=3D""></a>
+                                                                      =
+  </td>
+                                                                      =
+  <td align=3D"left" valign=3D"middle" class=3D"mcnShareTextContent" s=
+tyle=3D"padding-left: 5px;mso-line-height-rule: exactly;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                      =
+      <a href=3D"http://us18.forward-to-friend.com/forward?u=3D2a498ba=
+ff03c8c8d396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae" target=3D"" style=3D=
+"color: #FFFFFF;font-family: Arial;font-size: 18px;font-weight: normal=
+;line-height: normal;text-align: center;text-decoration: none;mso-line=
+-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;">=E5=B0=86=E6=9C=AC=E9=82=AE=E4=BB=B6=E5=88=86=E4=BA=AB=E7=BB=
+=99=E6=82=A8=E7=9A=84=E6=9C=8B=E5=8F=8B</a>
+                                                                      =
+  </td>
+                                                                    </=
+tr>
+                                                                </tbod=
+y></table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                    <!--[if mso]>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+                </td>
+            </tr>
+    </tbody>
+</table></td>
+										</tr>
+									</table>
+									<!--[if (gte mso 9)|(IE)]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+                            </tr>
+                            <tr>
+								<td align=3D"center" valign=3D"top" id=3D"templateFooter" data=
+-template-container=3D"" style=3D"background:#333333 none no-repeat ce=
+nter/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;background-color: #333333;background-imag=
+e: none;background-repeat: no-repeat;background-position: center;backg=
+round-size: cover;border-top: 0;border-bottom: 0;padding-top: 45px;pad=
+ding-bottom: 63px;">
+									<!--[if (gte mso 9)|(IE)]>
+									<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" width=3D"600" style=3D"width:600px;">
+									<tr>
+									<td align=3D"center" valign=3D"top" width=3D"600" style=3D"wi=
+dth:600px;">
+									<![endif]-->
+									<table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" class=3D"templateContainer" style=3D"border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !=
+important;">
+										<tr>
+                                			<td valign=3D"top" class=3D"footerC=
+ontainer" style=3D"background:transparent none no-repeat center/cover;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;background-color: transparent;background-image: none=
+;background-repeat: no-repeat;background-position: center;background-s=
+ize: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-botto=
+m: 0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse=
+: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-a=
+djust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"pa=
+dding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;">
+              	<!--[if mso]>
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" width=3D"100%" style=3D"width:100%;">
+				<tr>
+				<![endif]-->
+		=09
+				<!--[if mso]>
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+				<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-colla=
+pse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%" class=3D=
+"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" st=
+yle=3D"padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-=
+left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;word-break: break-word;color: #FFFFFF;fon=
+t-family: Helvetica;font-size: 12px;line-height: 150%;text-align: cent=
+er;">
+
+                            <em>Copyright =C2=A9 2018 =E9=A3=9E=E5=87=A1=
+=E8=8B=B1=E8=AF=AD, All rights reserved.</em><br>
+ =E6=82=A8=E4=BC=9A=E6=94=B6=E5=88=B0=E8=BF=99=E5=B0=81=E9=82=AE=E4=BB=
+=B6=EF=BC=8C=E6=98=AF=E5=9B=A0=E4=B8=BA=E6=82=A8=E4=B9=8B=E5=89=8D=E9=80=
+=9A=E8=BF=87=E4=BB=A5=E4=B8=8B=E6=96=B9=E5=BC=8F=E7=95=99=E7=BB=99=E6=88=
+=91=E4=BB=AC=E6=82=A8=E7=9A=84=E9=82=AE=E7=AE=B1=E5=9C=B0=E5=9D=80=E4=BB=
+=A5=E4=BE=BF=E6=88=91=E4=BB=AC=E4=B8=8E=E6=82=A8=E8=81=94=E7=B3=BB=EF=BC=
+=9A=E6=88=91=E4=BB=AC=E6=88=96=E6=88=91=E4=BB=AC=E5=90=88=E4=BD=9C=E4=BC=
+=99=E4=BC=B4=E7=9A=84=E7=BD=91=E7=AB=99=E3=80=81=E7=8E=B0=E5=9C=BA=E6=B4=
+=BB=E5=8A=A8=E6=88=96=E5=92=A8=E8=AF=A2=E9=A1=BE=E9=97=AE=E7=AD=89=E3=80=
+=82=0D
+You are receiving this email because you opted in via our website/even=
+ts/consultations.<br>
+<br>
+<strong>Our mailing address is:</strong><br>
+<div class=3D"vcard"><span class=3D"org fn">=E9=A3=9E=E5=87=A1=E8=8B=B1=
+=E8=AF=AD</span><div class=3D"adr"><div class=3D"street-address">Level=
+ 7, 263 Clarence St</div><span class=3D"locality">Sydney</span>, <span=
+ class=3D"region">NSW</span>  <span class=3D"postal-code">2000</span> =
+<div class=3D"country-name">Australia</div></div><br><a href=3D"//feif=
+an.us18.list-manage.com/vcard?u=3D2a498baff03c8c8d396c36aca&id=3D014b6=
+3954e" class=3D"hcard-download">Add us to your address book</a></div>
+<br>
+<br>
+Want to change how you receive these emails?<br>
+You can <a href=3D"https://feifan.us18.list-manage.com/profile?u=3D2a4=
+98baff03c8c8d396c36aca&id=3D014b63954e&e=3D91a3dd9eae" style=3D"mso-li=
+ne-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-a=
+djust: 100%;color: #FFFFFF;font-weight: normal;text-decoration: underl=
+ine;">update your preferences</a> or <a href=3D"https://feifan.us18.li=
+st-manage.com/unsubscribe?u=3D2a498baff03c8c8d396c36aca&id=3D014b63954=
+e&e=3D91a3dd9eae&c=3D824c6cbbb1" style=3D"mso-line-height-rule: exactl=
+y;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #FF=
+FFFF;font-weight: normal;text-decoration: underline;">unsubscribe from=
+ this list</a>.<br>
+<br>
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+										</tr>
+									</table>
+									<!--[if (gte mso 9)|(IE)]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</td>
+                            </tr>
+                        </table>
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    <img src=3D"https://feifan.us18.list-manage.com/track/open.php?u=3D=
+2a498baff03c8c8d396c36aca&id=3D824c6cbbb1&e=3D91a3dd9eae" height=3D"1"=
+ width=3D"1"></body>
+</html>
+--=-ncGIJDJjq7bSyO6I3BFq5g==--

@@ -1,0 +1,6 @@
+﻿Email 1 sent on Mon, 30 Oct 2017 21:58:56 +0000 (UTC)
+Email 2 sent on Sat, 12 May 2018 19:05:53 -0700
+Email 3 sent on Wed, 4 Jul 2018 10:26:00 +0800 (GMT+08:00)
+Email 4 sent on Wed, 15 Aug 2018 21:59:55 +0000
+Email 5 sent on Fri, 29 Mar 2019 10:22:45 +0000
+Email 6 sent on Fri, 29 Mar 2019 11:40:05 +0000

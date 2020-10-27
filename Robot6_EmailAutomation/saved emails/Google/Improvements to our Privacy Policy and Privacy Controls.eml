@@ -1,0 +1,937 @@
+Delivered-To: meenoxiong@gmail.com
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+	by mx.google.com with SMTPS id t29-v6sor4734623qkt
+	.154.2018.05.12.19.05.53        for
+	<meenoxiong@gmail.com>        (Google Transport Security); Sat, 12 May 2018
+	19:05:53 -0700 (PDT)
+X-Received: by 2002:a37:9345:: with SMTP id
+ v66-v6mr10695279qkd.8.1526177153104; Sat, 12 May 2018 19:05:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1526177153; cv=none; d=google.com;
+	s=arc-20160816;
+	b=yeC8HFw17zM4n6ERWhlRFm5RD51Tz+UZH6Rqay6ls5QiorYbcDMmMtxUaSBwpuuXA3926Fk6kOr
+	WRdyAdqZ1fA/yixyTALE8R2PYbNwCSZvS2aUGR85n6dtY/5nj+Xl2G32QV73OBFOn3d858rv5kzJv
+	rcs8OJhS4/X9McMfXM7X6ZCpswwNfykxlPMV/qMyiRYi8Z+Lb3RGf0m0xc0zuaIdA5pRY3ZrEuS7k
+	OuWr6QgtnGhWSiEJzgcMPwyDzz7T/0DB4DA8+atOCi5rc35oGA3I1nDlf2sLZQCtNivjdNwAB9f6Z
+	Fk7+f4v1wPDN4yZonaV4agxJmJXyU2oBge9g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=to:from:subject:message-id:date:mime-version:dkim-signature:
+	arc-authentication-results;
+	bh=5YVuuWc/t9rmM7lYCCJmJh1dmjbFWprJH3mp6GyUDTo=;
+	b=GL8ykbtJvQ3gh6ZAwj/HDnxj+HIeFOmFt9Gg8y9Oab7sM92XVQ/2jj/UXcuCVOmAwiRMSabJTi0
+	fA6K2aVOcE4AsZaD6t9sNY6EdEww9Zj5IjsRQ4NZDMy1cFsTeImA8CHsWiR2M3/eSQZodPQkXigx/
+	sQbGrWQIzAGuCMs30yiStdhUKFlvKVX7KpzlWlJmJI5B7I4IW6qdEtEHC16psIe0xsM4AnL4v2EGh
+	8cG68ddDKfl6OkLgm6mbdDbiJM28AE6L26DK78EnP6pa6//PChf8A2WSmwE25FNmKVS2tkzeFfBJs
+	v/uAmLykb3I+4q2CO21nPL2j0PPHidqeiwzA==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@google.com header.s=20161025 header.b=N29ylRge; spf=pass
+	(google.com: domain of 3gz33wg8tahglnerwyu-jknalhulkheyeao.ckkcha.yki@chime-notifications.bounces.google.com designates 209.85.220.69 as permitted sender)
+	smtp.mailfrom=
+	3gZ33Wg8TAHglnerWYu-jknalhulkheYeao.ckkcha.Yki@chime-notifications.bounces.google.com;
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: =?us-ascii?q?=3C3gZ33Wg8TAHglnerWYu-jknalhulkheYeao=2Eckkcha=2EYki=40chime-notific?=
+ =?us-ascii?q?ations=2Ebounces=2Egoogle=2Ecom=3E?=
+Received-SPF: pass (google.com: domain of
+ =?us-ascii?q?3gz33wg8tahglnerwyu-jknalhulkheyeao=2Eckkcha=2Eyki=40chime-notifica?=
+ =?us-ascii?q?tions=2Ebounces=2Egoogle=2Ecom?= designates 209.85.220.69 as
+ permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@google.com header.s=20161025 header.b=N29ylRge; spf=pass
+	(google.com: domain of 3gz33wg8tahglnerwyu-jknalhulkheyeao.ckkcha.yki@chime-notifications.bounces.google.com designates 209.85.220.69 as permitted sender)
+	smtp.mailfrom=
+	3gZ33Wg8TAHglnerWYu-jknalhulkheYeao.ckkcha.Yki@chime-notifications.bounces.google.com;
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=20161025; h=mime-version:date:message-id:subject:from:to;
+	bh=5YVuuWc/t9rmM7lYCCJmJh1dmjbFWprJH3mp6GyUDTo=;
+	b=N29ylRgeSxlwTERJpZO+tLtPEn/vnGHyEK1KrgTwLFpv9pXhRoh7QyFDYfur5w0G55SIeXsTbCE
+	J7PvQzGl9rEsuQzQAicdJ+cySmqECdYiOZLjsGE1a+hL/bhKSfoj0koduKPiVRwv3VJVfVGMqJiuu
+	+f7mcyGu3oXnrWQqrqrjDuk5lsEvlGjlVqVCz2SLhOAfIT0S88uHsng7jMC/leWb3xUstDiPXpjnP
+	6ky0s9oXHnKDVv7Xx642hAVR5+kJjOHSJ2vJ1ePxX/Oq5e/PgbQe1e4yXcJDOENaCNsPqdsJOyEph
+	2GC6xgn5OqE/ySzwBFIlvvB564bLJr0AId0A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20161025;       
+ h=x-gm-message-state:mime-version:date:message-id:subject:from:to;       
+ bh=5YVuuWc/t9rmM7lYCCJmJh1dmjbFWprJH3mp6GyUDTo=;       
+ b=MA1dtIZLFWMKwuZ8ijn0d0eV73/S6nXS/1wivaOS2FUmbpsfJ6YnFcumMyXJNK4sq3        
+ U97uz7mWzGWdFGraTzvEhpH/yx8CZtf5Z6s2F61UCXfUF4UCb9sYG89AWDFrX/t6GFfV        
+ Kz5AiCAmFPROjfWfKhLmj3yGqUSDBwyt6YaJGzbqDhzetMpCda6kHi4gRFjuV3zfzR7D        
+ RusI7xMUpDCR3B1RfkkiExHKdn+z+y+PfPyzNFskIJ+08fovt+z99G8aS89d8l/XCHW+        
+ sq1mHR5iEsKxxT0v0xy+h4VOX2s308R14UP6TYDZDaZ53CDpNP3hdfm4AqabJ8KB/k1G        
+ 8EUw==
+X-Gm-Message-State: ALKqPweMrljcnS6yGBfOe9z/uNsX36vVClBTN5o+ktAllMXVSdVX2o3R
+	ZfKTOmVZy3jd58Ri9ZxICivm60mS71+gSMMixtn7IYFuWD2k
+X-Google-Smtp-Source: =?us-ascii?q?AB8JxZopjsIQ=2F7mxbrDxkJ7VclhIifMmjJG+o9btvdXIrFyaHnBuavViNx=2FdQ?=
+ =?us-ascii?q?Nc1oBy6XrSyOzFlD2hPbvzzneogKGeYeRXDkz4nLwuV+P38uQ=3D=3D?=
+MIME-Version: 1.0
+Date: Sat, 12 May 2018 19:05:53 -0700
+X-Notifications: meenoxiong@gmail.com|0
+Message-ID: <5fd43277b269ee70@policies.google.com>
+Subject: Improvements to our Privacy Policy and Privacy Controls
+From: Google <privacy-noreply@policies.google.com>
+To: meenoxiong@gmail.com
+Uid: 9
+Folder: UiPath Test
+PlainText: meenoxiong@gmail.comThis month, =?utf-8?b?d2XigJlyZQ==?= updating
+ our Privacy Policy to make it easier for you to understand what information
+ we collect and why we collect it. =?utf-8?b?V2XigJl2ZQ==?= also taken steps
+ to improve our Privacy Checkup and other controls we provide to safeguard
+ your data and protect your privacy.Nothing is changing about your current
+ settings or how your information is processed. Rather,
+ =?utf-8?b?d2XigJl2ZQ==?= improved the way we describe our practices and how
+ we explain the options you have to update, manage, export, and delete your
+ =?utf-8?b?ZGF0YS5XZeKAmXJl?= making these updates as new data protection
+ regulations come into effect in the European Union, and
+ =?utf-8?b?d2XigJlyZQ==?= taking the opportunity to make improvements for
+ Google users around the world.Making our Privacy Policy easier to
+ understandSimpler structure & clearer =?utf-8?b?bGFuZ3VhZ2VXZeKAmXZl?=
+ improved the navigation and organization of the policy to make it easier to
+ find what =?utf-8?b?eW914oCZcmUgbG9va2luZyBmb3IuIFdl4oCZdmU=?= also explained
+ our practices in more detail and with clearer language.New descriptive videos
+ & illustrationsOften a visual description is easier to understand than text
+ alone, so =?utf-8?b?d2XigJl2ZQ==?= added short videos and illustrations
+ throughout the policy.Embedded privacy =?utf-8?b?Y29udHJvbHNXZeKAmXZl?= made
+ it easier to jump to key settings directly from the policy, helping you make
+ choices about your privacy.The revised policy is available here
+ =?utf-8?q?=3Chttps=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenoxiong=40?=
+ =?utf-8?q?gmail=2Ecom&continue=3Dhttps%3A%2F%2Fpolicies=2Egoogle=2Ecom%2Fprivac?=
+ =?utf-8?q?y%2Fupdate%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26utm?=
+ =?utf-8?q?=5Fcampaign%3Dglobal=3E?= and will take effect on May 25,
+ 2018.Improving your privacy controlsWithin the past year, we updated My
+ Activity
+ =?utf-8?q?=3Chttps=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenoxiong=40?=
+ =?utf-8?q?gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyactivity=2Egoogle=2Ecom%2Fmyac?=
+ =?utf-8?q?tivity%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26utm=5Fcam?=
+ =?utf-8?q?paign%3Dglobal=3E?= so that you can better access and manage the
+ data in your Google Account. We also launched a redesigned Dashboard
+ =?utf-8?q?=3Chttps=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenoxiong=40?=
+ =?utf-8?q?gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyaccount=2Egoogle=2Ecom%2Fdashb?=
+ =?utf-8?q?oard%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26utm=5Fcampa?=
+ =?utf-8?q?ign%3Dglobal=3E=2C?= which allows you to easily see an overview of
+ products =?utf-8?b?eW914oCZcmU=?= using and your data associated with
+ them.This month, =?utf-8?b?d2XigJl2ZQ==?= updated our Privacy Checkup
+ =?utf-8?q?=3Chttps=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenoxiong=40?=
+ =?utf-8?q?gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyaccount=2Egoogle=2Ecom%2Fpriva?=
+ =?utf-8?q?cycheckup%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26utm=5F?=
+ =?utf-8?q?campaign%3Dglobal=3E?= with new illustrations and examples to help
+ you make more informed choices about your key privacy controls. And since we
+ understand that your preferences may change over time, the new Privacy
+ Checkup enables you to sign up for regular reminders to check your privacy
+ settings.To learn more about these and other controls to manage your privacy,
+ visit your Google Account
+ =?utf-8?q?=3Chttps=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenoxiong=40?=
+ =?utf-8?q?gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyaccount=2Egoogle=2Ecom%2F%3Fut?=
+ =?utf-8?q?m=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26utm=5Fcampaign%3Dglo?=
+ =?utf-8?q?bal=3E=2E=28c=29?= 2018 Google LLC, 1600 Amphitheatre Parkway,
+ Mountain View, CA 94043This email was sent to meenoxiong@gmail.com to provide
+ an update about your Google Account.
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+ xmlns="http://www.w3.org/1999/xhtml">   <head>      <title>Privacy
+ Policy</title>      <meta http-equiv="Content-Type" content="text/html;
+ charset=utf-8" />      <!--[if !mso]><!-->      <meta
+ http-equiv="X-UA-Compatible" content="IE=edge" />      <!--<![endif]-->     
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
+ <meta name="robots" content="no index">      <!--[if mso | ie]>      <style>        
+ img{         text-align: center !important;         }         .wid {        
+ width:280px !important;         }         .paddtop{         padding-top: 10px
+ !important;         }         .paddtop2{         padding-top: 7px !important;        
+ }         .nolineheight{         line-height: 0px !important;         }     
+ </style>      <![endif]-->      <style>         body{        
+ font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;        
+ color:#000000;         -webkit-text-size-adjust: none !important;        
+ -webkit-font-smoothing: antialiased !important;         -ms-text-size-adjust:
+ none !important;         }         table, tr, td {        
+ border-collapse:collapse;         mso-table-lspace:0pt;        
+ mso-table-rspace:0pt;         }         a:link, a:visited, a:hover, a:active
+ {         color: #4285f4;         text-decoration: none;         }        
+ .appleLinks a {color:#000000 !important; text-decoration:none !important;}        
+ strong {         font-weight: bold !important;         }         em {        
+ font-style: italic !important;         }         .yshortcuts a span {        
+ color: inherit !important;         border-bottom: none !important;         }        
+ html {         -webkit-text-size-adjust: none;         -ms-text-size-adjust:
+ 100%;         }         .ReadMsgBody {         width: 100%;         }        
+ .ExternalClass {         width: 100%;         }         .ExternalClass * {        
+ line-height: 100%         }         td {         -webkit-text-size-adjust:
+ none;         }         a[href^=tel] {         color: inherit;        
+ text-decoration: none;         }         .mob-hide {         display:none
+ !important;  }         div, p, a, li, td { -webkit-text-size-adjust:none; }        
+ td { text-decoration:none !important;}         a[x-apple-data-detectors]{        
+ color: inherit !important;         text-decoration: none !important;        
+ font-size: inherit !important;         font-family: inherit !important;        
+ font-weight: inherit !important;         line-height: inherit !important;        
+ }         @media screen and (max-width: 600px) {         .table{        
+ width: 320px !important;         }            .imgmob{               width:
+ 280px !important;               max-width: 280px !important;            }           
+ .footer{               padding-right: 22px !important;              
+ padding-left: 25px !important;            }				.mobblock{              
+ width:100% !important;               float:left !important;            }       
+ }@media screen and (max-width: 570px) {			  .txt{					text-align: left
+ !important;				}				.email{					padding-left: 30px !important;				
+	padding-top: 10px !important;				}				.wid100{					width: 360px !important;				
+	min-width: 360px !important;				}		  }       </style>   </head><body
+ style="margin: 0 auto; padding:0px;" bgcolor="#fafafa">   <table width="100%"
+ cellspacing="0" cellpadding="0" align="center" bgcolor="#fafafa">      <tr>        
+ <td align="center" valign="top">                    <!--[if (gte mso
+ 9)|(IE)]>            <table align="center" width="600" cellspacing="0"
+ cellpadding="0">               <tr>                  <td>                    
+ <![endif]-->                        <table width="100%" cellspacing="0"
+ cellpadding="0" bgcolor="#fafafa" style="max-width: 600px">                         
+ <!--Header starts--><tr>                              <td align="center"
+ valign="top" style="padding-top: 20px;padding-bottom:
+ 20px;border-bottom:none;">                                 <table
+ width="100%" cellspacing="0" cellpadding="0">                                   
+ <tr>                                       <td align="left" valign="middle"
+ style="padding-left: 30px;" class="mobblock">                                         
+ <a href="#" style="text-decoration: none;"><img style="outline: none;
+ text-decoration: none; display:block;"
+ src="http://services.google.com/fh/files/emails/updated_google_logo_new.png"
+ width="98" border="0" alt="Google" title="Google" /></a>                                      
+ </td><td align="right" valign="middle" style="padding-right: 25px;"
+ class="txt email wid100 mobblock"> <table align="right" cellspacing="0"
+ cellpadding="0" class="mobblock"><tr>                                               
+ <td class="txt" align="right" valign="middle" style="font-family: Roboto,
+ Arial, Open Sans, Helvetica, sans-serif;font-size: 14px;line-height:
+ 24px;color: #5F6368;font-weight: 500"><a href="#" style="text-decoration:
+ none; color: #5F6368;">meenoxiong@gmail.com</a>                                               
+ </td>                                             </tr>                                         
+ </table>                                       <td>                                   
+ </tr>                                 </table>                             
+ </td>                           </tr> <!--Header ends-->                          
+ <!--Body starts-->                           <tr>                             
+ <td align="center" style="padding-left: 15px;padding-right: 15px;">                                
+ <table width="100%" cellspacing="0" cellpadding="0">                                   
+ <tr>                                      <td bgcolor="#ffffff"
+ style="padding-left: 35px;padding-right: 35px;box-shadow: 0px 1px 2px 1px
+ rgba(0,0,0,0.24);-webkit-box-shadow: 0px 1px 2px 1px
+ rgba(0,0,0,0.24);-moz-box-shadow: 0px 1px 2px 1px
+ rgba(0,0,0,0.24);border-radius: 4px">                                         
+ <table width="100%" cellspacing="0" cellpadding="0">                                                  
+ <tr>                                                      <td align="center"
+ valign="top" style="padding-top: 35px">                                                        
+ <a href="#" style="text-decoration: none; max-width: 350px; display:
+ block;"><img
+ src="http://services.google.com/fh/files/emails/privacy_header_2x.png"
+ alt="Updating Our Privacy Policy" title="Updating Our Privacy Policy"
+ width="350" height="auto" style="display: block; max-width: 350px; width:
+ 100%; height: auto;"></a>                                                     
+ </td>                                                   </tr>                                                  
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 25px;font-family: Roboto
+ Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:
+ #5F6368">                                                         This month,
+ =?utf-8?b?d2XigJlyZQ==?= updating our Privacy Policy to make it easier for
+ you to understand what information we collect and why we collect it.
+ =?utf-8?b?V2XigJl2ZQ==?= also taken steps to improve our Privacy Checkup and
+ other controls we provide to safeguard your data and protect your privacy.                                                     
+ </td>                                                   </tr>                                                  
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 15px;font-family: Roboto
+ Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:
+ #5F6368">                                                         Nothing is
+ changing about your current settings or how your information is processed.
+ Rather, =?utf-8?b?d2XigJl2ZQ==?= improved the way we describe our practices
+ and how we explain the options you have to update, manage, export, and delete
+ your data.                                                   </tr>                                                    
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 15px;padding-bottom: 35px; font-family:
+ Roboto Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height:
+ 24px;border-bottom:1px solid #d5d5d5;color: #5F6368">                                                        
+ =?utf-8?b?V2XigJlyZQ==?= making these updates as new data protection
+ regulations come into effect in the European Union, and
+ =?utf-8?b?d2XigJlyZQ==?= taking the opportunity to make improvements for
+ Google users around the world.                                                  
+ </tr>                                                   <tr>                                                     
+ <td align="left" valign="top" style="padding-top:35px;font-family: Google
+ Sans, Roboto, Arial, Open Sans, Helvetica, sans-serif;font-size:
+ 20px;line-height: 28px;color: #202124;font-weight: 500">                                                             
+ Making our Privacy Policy easier to understand                                                     
+ </td>                                                   </tr>                                                  
+ <tr>                                                      <td align="center"
+ valign="top" style="padding-top: 13px">                                                          
+ <a href="#" style="text-decoration: none;max-width: 350px; display:
+ block"><img
+ src="http://services.google.com/fh/files/emails/email_sec_a_2x.png"
+ width="350" height="auto" style="display: block;max-width:
+ 350px;width:100%"></a>                                                     
+ </td>                                                   </tr>                                                  
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 20px;font-family: Google Sans, Roboto,
+ Arial, Open Sans, Helvetica, sans-serif;font-size: 16px;line-height:
+ 24px;font-weight: 500;color: #202124">                                                         
+ Simpler structure & clearer language                                                     
+ </td>                                                   </tr>                                                      
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 10px;font-family: Roboto
+ Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:
+ #5F6368">                                                  
+ =?utf-8?b?V2XigJl2ZQ==?= improved the navigation and organization of the
+ policy to make it easier to find what
+ =?utf-8?b?eW914oCZcmUgbG9va2luZyBmb3IuIFdl4oCZdmU=?= also explained our
+ practices in more detail and with clearer language.                                                     
+ </td>                                                   </tr>                                                  
+ <tr>                                                      <td align="center"
+ valign="top" style="padding-top: 35px">                                                         
+ <a href="#" style="text-decoration: none;max-width: 350px; display:
+ block"><img
+ src="http://services.google.com/fh/files/emails/email_sec_b_2x_new_1.png"
+ width="350" height="auto" style="display: block;max-width:
+ 350px;width:100%"></a>                                                     
+ </td>                                                   </tr>                                                    
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 15px;font-family: Google Sans, Roboto,
+ Arial, Open Sans, Helvetica, sans-serif;font-size: 16px;line-height:
+ 24px;font-weight: 500;color: #202124">                                                         
+ New descriptive videos & illustrations                                                     
+ </td>                                                   </tr>                                                    
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 6px;font-family: Roboto
+ Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:
+ #5F6368">                                                   Often a visual
+ description is easier to understand than text alone, so
+ =?utf-8?b?d2XigJl2ZQ==?= added short videos and illustrations throughout the
+ policy.                                                      </td>                                                  
+ </tr>                                                   <tr>                                                     
+ <td align="center" valign="top" style="padding-top: 35px">                                                        
+ <a href="#" style="text-decoration: none;max-width: 350px; display:
+ block"><img
+ src="http://services.google.com/fh/files/emails/email_sec_c_2x_cropped.png"
+ width="350"  height="auto" style="display: block;max-width:
+ 350px;width:100%"></a>                                                     
+ </td>                                                   </tr>                                                    
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 15px;font-family: Google Sans, Roboto,
+ Arial, Open Sans, Helvetica, sans-serif;font-size: 16px;line-height:
+ 24px;font-weight: 500;color: #202124">                                                         
+ Embedded privacy controls                                                     
+ </td>                                                   </tr>                                                     
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 6px;font-family: Roboto
+ Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:
+ #5F6368">                                                 
+ =?utf-8?b?V2XigJl2ZQ==?= made it easier to jump to key settings directly from
+ the policy, helping you make choices about your privacy.                                                     
+ </td>                                                   </tr>                                                    
+ <tr>                                                      <td align="left"
+ valign="top" style="border-bottom:1px solid #d5d5d5; padding-top:
+ 35px;font-family: Roboto Regular,Helvetica,Arial,sans-serif;font-size:
+ 14px;line-height: 24px;padding-bottom: 35px;color: #5F6368">                                                 
+ The revised policy is <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenox?=
+ =?utf-8?q?iong=40gmail=2Ecom&continue=3Dhttps%3A%2F%2Fpolicies=2Egoogle=2Ecom%2Fp?=
+ =?utf-8?q?rivacy%2Fupdate%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%?=
+ =?utf-8?q?26utm=5Fcampaign%3Dglobal=22?= target="_blank"
+ style="text-decoration: none;color: #1A73E8">available here</a> and will take
+ effect on May 25, 2018.                                                 
+ </td>                                                   </tr>                                                      
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 35px;font-family: Google Sans, Roboto,
+ Arial, Open Sans, Helvetica, sans-serif;font-size: 20px;line-height:
+ 28px;font-weight: 500;color: #202124">                                                         
+ Improving your privacy controls                                                     
+ </td>                                                   </tr>                                                     
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 12px;font-family: Roboto
+ Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:
+ #5F6368">                                                  Within the past
+ year, we updated <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenox?=
+ =?utf-8?q?iong=40gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyactivity=2Egoogle=2Ecom%2?=
+ =?utf-8?q?Fmyactivity%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26ut?=
+ =?utf-8?q?m=5Fcampaign%3Dglobal=22?= target="_blank" style="text-decoration:
+ none;color: #1A73E8">My Activity</a> so that you can better access and manage
+ the data in your Google Account. We also launched a redesigned <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenox?=
+ =?utf-8?q?iong=40gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyaccount=2Egoogle=2Ecom%2F?=
+ =?utf-8?q?dashboard%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26utm=5F?=
+ =?utf-8?q?campaign%3Dglobal=22?= target="_blank" style="text-decoration:
+ none;color: #1A73E8">Dashboard</a>, which allows you to easily see an
+ overview of products =?utf-8?b?eW914oCZcmU=?= using and your data associated
+ with them.                                                      </td>                                                  
+ </tr>                                                     <tr>                                                     
+ <td align="left" valign="top" style="padding-top: 20px;font-family: Roboto
+ Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:
+ #5F6368">                                                  This month,
+ =?utf-8?q?we=E2=80=99ve_updated_our_=3Ca?=
+ =?utf-8?q?_href=3D=22https=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenox?=
+ =?utf-8?q?iong=40gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyaccount=2Egoogle=2Ecom%2F?=
+ =?utf-8?q?privacycheckup%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%2?=
+ =?utf-8?q?6utm=5Fcampaign%3Dglobal=22?= target="_blank"
+ style="text-decoration: none;color: #1A73E8">Privacy Checkup</a> with new
+ illustrations and examples to help you make more informed choices about your
+ key privacy controls. And since we understand that your preferences may
+ change over time, the new Privacy Checkup enables you to sign up for regular
+ reminders to check your privacy settings.                                                     
+ </td>                                                   </tr>                                                    
+ <tr>                                                      <td align="left"
+ valign="top" style="padding-top: 15px;padding-bottom: 30px; font-family:
+ Roboto Regular,Helvetica,Arial,sans-serif;font-size: 14px;line-height:
+ 24px;color: #5F6368">                                                  To
+ learn more about these and other controls to manage your privacy, visit your
+ <a
+ =?utf-8?q?href=3D=22https=3A=2F=2Faccounts=2Egoogle=2Ecom=2FAccountChooser=3FEmail=3Dmeenox?=
+ =?utf-8?q?iong=40gmail=2Ecom&continue=3Dhttps%3A%2F%2Fmyaccount=2Egoogle=2Ecom%2F?=
+ =?utf-8?q?%3Futm=5Fsource%3Dpp-email%26utm=5Fmedium%3Demail%26utm=5Fcampaign%?=
+ =?utf-8?q?3Dglobal=22?= target="_blank" style="text-decoration: none;color:
+ #1A73E8">Google Account</a>.                                                     
+ </td>                                                   </tr>                                         
+ </table>                                       </td>                                   
+ </tr>                                 </table>                             
+ </td>                           </tr>                           <!--body
+ ends-->                           <tr>                              <td
+ align="left" style="padding-left: 15px;padding-right: 15px;padding-top: 30px"
+ class="footer">                                 <table width="100%"
+ cellspacing="0" cellpadding="0" class="table">                                   
+ <tr>                                      <td style="padding-left:
+ 35px;padding-right: 27px" class="footer">                                        
+ <a href="#" style="text-decoration: none;"><img
+ =?utf-8?q?src=3D=22http=3A=2F=2Fservices=2Egoogle=2Ecom=2Ffh=2Ffiles=2Femails=2Fgs=5F16q2=5Fwelco?=
+ =?utf-8?q?me=5Fgoogle=5Flogo=2Epng=22?= alt="Google" title="Google"
+ width="100" height="auto" style="display: block;"></a>                                     
+ </td>                                    </tr>                                   
+ <tr>                                          <td align="left" class="footer"
+ valign="top" style="font-family:Roboto,Helvetica,Arial,sans-serif; font-size:
+ 12px; mso-line-height-rule: exactly; color:#707575; line-height:16px;
+ padding-left: 35px;padding-right: 35px;padding-top:25px;"><a href="#"
+ style="text-decoration: none; color: #707575;">&copy; 2018 Google LLC, 1600
+ Amphitheatre Parkway, Mountain View, CA 94043</a></td>                                      
+ </tr>                                       <tr>                                         
+ <td align="left" valign="top"
+ style="font-family:Roboto,Helvetica,Arial,sans-serif; font-size: 12px;
+ mso-line-height-rule: exactly; color:#707575; line-height:16px; padding-left:
+ 35px;padding-right: 35px;padding-top:15px;padding-bottom: 105px"
+ class="footer">This email was sent to <a href="#" style="text-decoration:
+ none; color:#707575;">meenoxiong@gmail.com</a> to provide an update about
+ your Google Account.</td>                                       </tr>                                
+ </table>                              </td>                           </tr>                       
+ </table>                      <!--[if (gte mso 9)|(IE)]>                 
+ </td>               </tr>            </table>            <![endif]-->        
+ </td>      </tr>   </table></body></html>
+Content-Type: multipart/alternative; boundary="=-fyY7n5VQU7zMVezTvvAgVA=="
+
+--=-fyY7n5VQU7zMVezTvvAgVA==
+Content-Type: text/plain; delsp=yes; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: base64
+Content-Id: <d59a90c3-3700-4ff4-99fe-9aacee7509c7>
+
+bWVlbm94aW9uZ0BnbWFpbC5jb20NCg0KVGhpcyBtb250aCwgd2XigJlyZSB1cGRhdGluZyBv
+dXIgUHJpdmFjeSBQb2xpY3kgdG8gbWFrZSBpdCBlYXNpZXIgZm9yIHlvdSB0byAgDQp1bmRl
+cnN0YW5kIHdoYXQgaW5mb3JtYXRpb24gd2UgY29sbGVjdCBhbmQgd2h5IHdlIGNvbGxlY3Qg
+aXQuIFdl4oCZdmUgYWxzbyAgDQp0YWtlbiBzdGVwcyB0byBpbXByb3ZlIG91ciBQcml2YWN5
+IENoZWNrdXAgYW5kIG90aGVyIGNvbnRyb2xzIHdlIHByb3ZpZGUgdG8gIA0Kc2FmZWd1YXJk
+IHlvdXIgZGF0YSBhbmQgcHJvdGVjdCB5b3VyIHByaXZhY3kuDQoNCk5vdGhpbmcgaXMgY2hh
+bmdpbmcgYWJvdXQgeW91ciBjdXJyZW50IHNldHRpbmdzIG9yIGhvdyB5b3VyIGluZm9ybWF0
+aW9uIGlzICANCnByb2Nlc3NlZC4gUmF0aGVyLCB3ZeKAmXZlIGltcHJvdmVkIHRoZSB3YXkg
+d2UgZGVzY3JpYmUgb3VyIHByYWN0aWNlcyBhbmQgaG93ICANCndlIGV4cGxhaW4gdGhlIG9w
+dGlvbnMgeW91IGhhdmUgdG8gdXBkYXRlLCBtYW5hZ2UsIGV4cG9ydCwgYW5kIGRlbGV0ZSB5
+b3VyICANCmRhdGEuDQoNCldl4oCZcmUgbWFraW5nIHRoZXNlIHVwZGF0ZXMgYXMgbmV3IGRh
+dGEgcHJvdGVjdGlvbiByZWd1bGF0aW9ucyBjb21lIGludG8gIA0KZWZmZWN0IGluIHRoZSBF
+dXJvcGVhbiBVbmlvbiwgYW5kIHdl4oCZcmUgdGFraW5nIHRoZSBvcHBvcnR1bml0eSB0byBt
+YWtlICANCmltcHJvdmVtZW50cyBmb3IgR29vZ2xlIHVzZXJzIGFyb3VuZCB0aGUgd29ybGQu
+DQoNCk1ha2luZyBvdXIgUHJpdmFjeSBQb2xpY3kgZWFzaWVyIHRvIHVuZGVyc3RhbmQNCg0K
+U2ltcGxlciBzdHJ1Y3R1cmUgJiBjbGVhcmVyIGxhbmd1YWdlDQoNCldl4oCZdmUgaW1wcm92
+ZWQgdGhlIG5hdmlnYXRpb24gYW5kIG9yZ2FuaXphdGlvbiBvZiB0aGUgcG9saWN5IHRvIG1h
+a2UgaXQgIA0KZWFzaWVyIHRvIGZpbmQgd2hhdCB5b3XigJlyZSBsb29raW5nIGZvci4gV2Xi
+gJl2ZSBhbHNvIGV4cGxhaW5lZCBvdXIgcHJhY3RpY2VzICANCmluIG1vcmUgZGV0YWlsIGFu
+ZCB3aXRoIGNsZWFyZXIgbGFuZ3VhZ2UuDQoNCk5ldyBkZXNjcmlwdGl2ZSB2aWRlb3MgJiBp
+bGx1c3RyYXRpb25zDQoNCk9mdGVuIGEgdmlzdWFsIGRlc2NyaXB0aW9uIGlzIGVhc2llciB0
+byB1bmRlcnN0YW5kIHRoYW4gdGV4dCBhbG9uZSwgc28gIA0Kd2XigJl2ZSBhZGRlZCBzaG9y
+dCB2aWRlb3MgYW5kIGlsbHVzdHJhdGlvbnMgdGhyb3VnaG91dCB0aGUgcG9saWN5Lg0KDQpF
+bWJlZGRlZCBwcml2YWN5IGNvbnRyb2xzDQoNCldl4oCZdmUgbWFkZSBpdCBlYXNpZXIgdG8g
+anVtcCB0byBrZXkgc2V0dGluZ3MgZGlyZWN0bHkgZnJvbSB0aGUgcG9saWN5LCAgDQpoZWxw
+aW5nIHlvdSBtYWtlIGNob2ljZXMgYWJvdXQgeW91ciBwcml2YWN5Lg0KDQpUaGUgcmV2aXNl
+ZCBwb2xpY3kgaXMgYXZhaWxhYmxlIGhlcmUgIA0KPGh0dHBzOi8vYWNjb3VudHMuZ29vZ2xl
+LmNvbS9BY2NvdW50Q2hvb3Nlcj9FbWFpbD1tZWVub3hpb25nQGdtYWlsLmNvbSZjb250aW51
+ZT1odHRwcyUzQSUyRiUyRnBvbGljaWVzLmdvb2dsZS5jb20lMkZwcml2YWN5JTJGdXBkYXRl
+JTNGdXRtX3NvdXJjZSUzRHBwLWVtYWlsJTI2dXRtX21lZGl1bSUzRGVtYWlsJTI2dXRtX2Nh
+bXBhaWduJTNEZ2xvYmFsPiAgDQphbmQgd2lsbCB0YWtlIGVmZmVjdCBvbiBNYXkgMjUsIDIw
+MTguDQoNCkltcHJvdmluZyB5b3VyIHByaXZhY3kgY29udHJvbHMNCg0KV2l0aGluIHRoZSBw
+YXN0IHllYXIsIHdlIHVwZGF0ZWQgTXkgQWN0aXZpdHkgIA0KPGh0dHBzOi8vYWNjb3VudHMu
+Z29vZ2xlLmNvbS9BY2NvdW50Q2hvb3Nlcj9FbWFpbD1tZWVub3hpb25nQGdtYWlsLmNvbSZj
+b250aW51ZT1odHRwcyUzQSUyRiUyRm15YWN0aXZpdHkuZ29vZ2xlLmNvbSUyRm15YWN0aXZp
+dHklM0Z1dG1fc291cmNlJTNEcHAtZW1haWwlMjZ1dG1fbWVkaXVtJTNEZW1haWwlMjZ1dG1f
+Y2FtcGFpZ24lM0RnbG9iYWw+ICANCnNvIHRoYXQgeW91IGNhbiBiZXR0ZXIgYWNjZXNzIGFu
+ZCBtYW5hZ2UgdGhlIGRhdGEgaW4geW91ciBHb29nbGUgQWNjb3VudC4gIA0KV2UgYWxzbyBs
+YXVuY2hlZCBhIHJlZGVzaWduZWQgRGFzaGJvYXJkICANCjxodHRwczovL2FjY291bnRzLmdv
+b2dsZS5jb20vQWNjb3VudENob29zZXI/RW1haWw9bWVlbm94aW9uZ0BnbWFpbC5jb20mY29u
+dGludWU9aHR0cHMlM0ElMkYlMkZteWFjY291bnQuZ29vZ2xlLmNvbSUyRmRhc2hib2FyZCUz
+RnV0bV9zb3VyY2UlM0RwcC1lbWFpbCUyNnV0bV9tZWRpdW0lM0RlbWFpbCUyNnV0bV9jYW1w
+YWlnbiUzRGdsb2JhbD4sICANCndoaWNoIGFsbG93cyB5b3UgdG8gZWFzaWx5IHNlZSBhbiBv
+dmVydmlldyBvZiBwcm9kdWN0cyB5b3XigJlyZSB1c2luZyBhbmQgIA0KeW91ciBkYXRhIGFz
+c29jaWF0ZWQgd2l0aCB0aGVtLg0KDQpUaGlzIG1vbnRoLCB3ZeKAmXZlIHVwZGF0ZWQgb3Vy
+IFByaXZhY3kgQ2hlY2t1cCAgDQo8aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL0FjY291
+bnRDaG9vc2VyP0VtYWlsPW1lZW5veGlvbmdAZ21haWwuY29tJmNvbnRpbnVlPWh0dHBzJTNB
+JTJGJTJGbXlhY2NvdW50Lmdvb2dsZS5jb20lMkZwcml2YWN5Y2hlY2t1cCUzRnV0bV9zb3Vy
+Y2UlM0RwcC1lbWFpbCUyNnV0bV9tZWRpdW0lM0RlbWFpbCUyNnV0bV9jYW1wYWlnbiUzRGds
+b2JhbD4gIA0Kd2l0aCBuZXcgaWxsdXN0cmF0aW9ucyBhbmQgZXhhbXBsZXMgdG8gaGVscCB5
+b3UgbWFrZSBtb3JlIGluZm9ybWVkIGNob2ljZXMgIA0KYWJvdXQgeW91ciBrZXkgcHJpdmFj
+eSBjb250cm9scy4gQW5kIHNpbmNlIHdlIHVuZGVyc3RhbmQgdGhhdCB5b3VyICANCnByZWZl
+cmVuY2VzIG1heSBjaGFuZ2Ugb3ZlciB0aW1lLCB0aGUgbmV3IFByaXZhY3kgQ2hlY2t1cCBl
+bmFibGVzIHlvdSB0byAgDQpzaWduIHVwIGZvciByZWd1bGFyIHJlbWluZGVycyB0byBjaGVj
+ayB5b3VyIHByaXZhY3kgc2V0dGluZ3MuDQoNClRvIGxlYXJuIG1vcmUgYWJvdXQgdGhlc2Ug
+YW5kIG90aGVyIGNvbnRyb2xzIHRvIG1hbmFnZSB5b3VyIHByaXZhY3ksIHZpc2l0ICANCnlv
+dXIgR29vZ2xlIEFjY291bnQgIA0KPGh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9BY2Nv
+dW50Q2hvb3Nlcj9FbWFpbD1tZWVub3hpb25nQGdtYWlsLmNvbSZjb250aW51ZT1odHRwcyUz
+QSUyRiUyRm15YWNjb3VudC5nb29nbGUuY29tJTJGJTNGdXRtX3NvdXJjZSUzRHBwLWVtYWls
+JTI2dXRtX21lZGl1bSUzRGVtYWlsJTI2dXRtX2NhbXBhaWduJTNEZ2xvYmFsPi4NCg0KKGMp
+IDIwMTggR29vZ2xlIExMQywgMTYwMCBBbXBoaXRoZWF0cmUgUGFya3dheSwgTW91bnRhaW4g
+VmlldywgQ0EgOTQwNDMNCg0KVGhpcyBlbWFpbCB3YXMgc2VudCB0byBtZWVub3hpb25nQGdt
+YWlsLmNvbSB0byBwcm92aWRlIGFuIHVwZGF0ZSBhYm91dCB5b3VyICANCkdvb2dsZSBBY2Nv
+dW50Lg0K
+
+--=-fyY7n5VQU7zMVezTvvAgVA==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Id: <a7519674-25e7-4e33-9cf8-179022342575>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Privacy Policy</title>
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3D=
+utf-8" />
+      <!--[if !mso]><!-->
+      <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+      <!--<![endif]-->
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial=
+-scale=3D1.0" />
+      <meta name=3D"robots" content=3D"no index">
+      <!--[if mso | ie]>
+      <style>
+         img{
+         text-align: center !important;
+         }
+         .wid {
+         width:280px !important;
+         }
+         .paddtop{
+         padding-top: 10px !important;
+         }
+         .paddtop2{
+         padding-top: 7px !important;
+         }
+         .nolineheight{
+         line-height: 0px !important;
+         }
+      </style>
+      <![endif]-->
+      <style>
+         body{
+         font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-se=
+rif;
+         color:#000000;
+         -webkit-text-size-adjust: none !important;
+         -webkit-font-smoothing: antialiased !important;
+         -ms-text-size-adjust: none !important;
+         }
+         table, tr, td {
+         border-collapse:collapse;
+         mso-table-lspace:0pt;
+         mso-table-rspace:0pt;
+         }
+         a:link, a:visited, a:hover, a:active {
+         color: #4285f4;
+         text-decoration: none;
+         }
+         .appleLinks a {color:#000000 !important; text-decoration:none=
+ !important;}
+         strong {
+         font-weight: bold !important;
+         }
+         em {
+         font-style: italic !important;
+         }
+         .yshortcuts a span {
+         color: inherit !important;
+         border-bottom: none !important;
+         }
+         html {
+         -webkit-text-size-adjust: none;
+         -ms-text-size-adjust: 100%;
+         }
+         .ReadMsgBody {
+         width: 100%;
+         }
+         .ExternalClass {
+         width: 100%;
+         }
+         .ExternalClass * {
+         line-height: 100%
+         }
+         td {
+         -webkit-text-size-adjust: none;
+         }
+         a[href^=3Dtel] {
+         color: inherit;
+         text-decoration: none;
+         }
+         .mob-hide {
+         display:none !important;  }
+         div, p, a, li, td { -webkit-text-size-adjust:none; }
+         td { text-decoration:none !important;}
+         a[x-apple-data-detectors]{
+         color: inherit !important;
+         text-decoration: none !important;
+         font-size: inherit !important;
+         font-family: inherit !important;
+         font-weight: inherit !important;
+         line-height: inherit !important;
+         }
+         @media screen and (max-width: 600px) {
+         .table{
+         width: 320px !important;
+         }
+            .imgmob{
+               width: 280px !important;
+               max-width: 280px !important;
+            }
+            .footer{
+               padding-right: 22px !important;
+               padding-left: 25px !important;
+            }
+				.mobblock{
+               width:100% !important;
+               float:left !important;
+            }
+        }
+@media screen and (max-width: 570px) {
+			  .txt{
+					text-align: left !important;
+				}
+				.email{
+					padding-left: 30px !important;
+					padding-top: 10px !important;
+				}
+				.wid100{
+					width: 360px !important;
+					min-width: 360px !important;
+				}
+		  }
+       </style>
+   </head>
+<body style=3D"margin: 0 auto; padding:0px;" bgcolor=3D"#fafafa">
+   <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"=
+center" bgcolor=3D"#fafafa">
+      <tr>
+         <td align=3D"center" valign=3D"top">
+                    <!--[if (gte mso 9)|(IE)]>
+            <table align=3D"center" width=3D"600" cellspacing=3D"0" ce=
+llpadding=3D"0">
+               <tr>
+                  <td>
+                     <![endif]-->
+                        <table width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" bgcolor=3D"#fafafa" style=3D"max-width: 600px">
+                          <!--Header starts--><tr>
+                              <td align=3D"center" valign=3D"top" styl=
+e=3D"padding-top: 20px;padding-bottom: 20px;border-bottom:none;">
+                                 <table width=3D"100%" cellspacing=3D"=
+0" cellpadding=3D"0">
+                                    <tr>
+                                       <td align=3D"left" valign=3D"mi=
+ddle" style=3D"padding-left: 30px;" class=3D"mobblock">
+                                          <a href=3D"#" style=3D"text-=
+decoration: none;"><img style=3D"outline: none; text-decoration: none;=
+ display:block;" src=3D"http://services.google.com/fh/files/emails/upd=
+ated_google_logo_new.png" width=3D"98" border=3D"0" alt=3D"Google" tit=
+le=3D"Google" /></a>
+                                       </td>
+<td align=3D"right" valign=3D"middle" style=3D"padding-right: 25px;" c=
+lass=3D"txt email wid100 mobblock"> <table align=3D"right" cellspacing=
+=3D"0" cellpadding=3D"0" class=3D"mobblock"><tr>
+                                                <td class=3D"txt" alig=
+n=3D"right" valign=3D"middle" style=3D"font-family: Roboto, Arial, Ope=
+n Sans, Helvetica, sans-serif;font-size: 14px;line-height: 24px;color:=
+ #5F6368;font-weight: 500"><a href=3D"#" style=3D"text-decoration: non=
+e; color: #5F6368;">meenoxiong@gmail.com</a>
+                                                </td>
+                                             </tr>
+                                          </table>
+                                       <td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr> <!--Header ends-->
+                           <!--Body starts-->
+                           <tr>
+                              <td align=3D"center" style=3D"padding-le=
+ft: 15px;padding-right: 15px;">
+                                 <table width=3D"100%" cellspacing=3D"=
+0" cellpadding=3D"0">
+                                    <tr>
+                                      <td bgcolor=3D"#ffffff" style=3D=
+"padding-left: 35px;padding-right: 35px;box-shadow: 0px 1px 2px 1px rg=
+ba(0,0,0,0.24);
+-webkit-box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.24);border-radius: 4px">
+                                          <table width=3D"100%" cellsp=
+acing=3D"0" cellpadding=3D"0">
+                                                   <tr>
+                                                      <td align=3D"cen=
+ter" valign=3D"top" style=3D"padding-top: 35px">
+                                                         <a href=3D"#"=
+ style=3D"text-decoration: none; max-width: 350px; display: block;"><i=
+mg src=3D"http://services.google.com/fh/files/emails/privacy_header_2x=
+.png" alt=3D"Updating Our Privacy Policy" title=3D"Updating Our Privac=
+y Policy" width=3D"350" height=3D"auto" style=3D"display: block; max-w=
+idth: 350px; width: 100%; height: auto;"></a>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 25px;font-family: Roboto Regul=
+ar,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:=
+ #5F6368">
+                                                         This month, w=
+e=E2=80=99re updating our Privacy Policy to make it easier for you to =
+understand what information we collect and why we collect it. We=E2=80=
+=99ve also taken steps to improve our Privacy Checkup and other contro=
+ls we provide to safeguard your data and protect your privacy.
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 15px;font-family: Roboto Regul=
+ar,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:=
+ #5F6368">
+                                                         Nothing is ch=
+anging about your current settings or how your information is processe=
+d. Rather, we=E2=80=99ve improved the way we describe our practices an=
+d how we explain the options you have to update, manage, export, and d=
+elete your data.
+                                                   </tr>
+                                                     <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 15px;padding-bottom: 35px; fon=
+t-family: Roboto Regular,Helvetica,Arial,sans-serif;font-size: 14px;li=
+ne-height: 24px;border-bottom:1px solid #d5d5d5;color: #5F6368">
+                                                         We=E2=80=99re=
+ making these updates as new data protection regulations come into eff=
+ect in the European Union, and we=E2=80=99re taking the opportunity to=
+ make improvements for Google users around the world.
+                                                   </tr>
+                                                   <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top:35px;font-family: Google Sans, =
+Roboto, Arial, Open Sans, Helvetica, sans-serif;font-size: 20px;line-h=
+eight: 28px;color: #202124;font-weight: 500">
+                                                              Making o=
+ur Privacy Policy easier to understand
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td align=3D"cen=
+ter" valign=3D"top" style=3D"padding-top: 13px">
+                                                           <a href=3D"=
+#" style=3D"text-decoration: none;max-width: 350px; display: block"><i=
+mg src=3D"http://services.google.com/fh/files/emails/email_sec_a_2x.pn=
+g" width=3D"350" height=3D"auto" style=3D"display: block;max-width: 35=
+0px;width:100%"></a>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 20px;font-family: Google Sans,=
+ Roboto, Arial, Open Sans, Helvetica, sans-serif;font-size: 16px;line-=
+height: 24px;font-weight: 500;color: #202124">
+                                                          Simpler stru=
+cture & clearer language
+                                                      </td>
+                                                   </tr>
+                                                       <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 10px;font-family: Roboto Regul=
+ar,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:=
+ #5F6368">
+                                                   We=E2=80=99ve impro=
+ved the navigation and organization of the policy to make it easier to=
+ find what you=E2=80=99re looking for. We=E2=80=99ve also explained ou=
+r practices in more detail and with clearer language.
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td align=3D"cen=
+ter" valign=3D"top" style=3D"padding-top: 35px">
+                                                          <a href=3D"#=
+" style=3D"text-decoration: none;max-width: 350px; display: block"><im=
+g src=3D"http://services.google.com/fh/files/emails/email_sec_b_2x_new=
+_1.png" width=3D"350" height=3D"auto" style=3D"display: block;max-widt=
+h: 350px;width:100%"></a>
+                                                      </td>
+                                                   </tr>
+                                                     <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 15px;font-family: Google Sans,=
+ Roboto, Arial, Open Sans, Helvetica, sans-serif;font-size: 16px;line-=
+height: 24px;font-weight: 500;color: #202124">
+                                                          New descript=
+ive videos & illustrations
+                                                      </td>
+                                                   </tr>
+                                                     <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 6px;font-family: Roboto Regula=
+r,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color: =
+#5F6368">
+                                                   Often a visual desc=
+ription is easier to understand than text alone, so we=E2=80=99ve adde=
+d short videos and illustrations throughout the policy.
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td align=3D"cen=
+ter" valign=3D"top" style=3D"padding-top: 35px">
+                                                         <a href=3D"#"=
+ style=3D"text-decoration: none;max-width: 350px; display: block"><img=
+ src=3D"http://services.google.com/fh/files/emails/email_sec_c_2x_crop=
+ped.png" width=3D"350"  height=3D"auto" style=3D"display: block;max-wi=
+dth: 350px;width:100%"></a>
+                                                      </td>
+                                                   </tr>
+                                                     <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 15px;font-family: Google Sans,=
+ Roboto, Arial, Open Sans, Helvetica, sans-serif;font-size: 16px;line-=
+height: 24px;font-weight: 500;color: #202124">
+                                                          Embedded pri=
+vacy controls
+                                                      </td>
+                                                   </tr>
+                                                      <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 6px;font-family: Roboto Regula=
+r,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color: =
+#5F6368">
+                                                  We=E2=80=99ve made i=
+t easier to jump to key settings directly from the policy, helping you=
+ make choices about your privacy.
+                                                      </td>
+                                                   </tr>
+                                                     <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"border-bottom:1px solid #d5d5d5; padding-to=
+p: 35px;font-family: Roboto Regular,Helvetica,Arial,sans-serif;font-si=
+ze: 14px;line-height: 24px;padding-bottom: 35px;color: #5F6368">
+                                                  The revised policy i=
+s <a href=3D"https://accounts.google.com/AccountChooser?Email=3Dmeenox=
+iong@gmail.com&continue=3Dhttps%3A%2F%2Fpolicies.google.com%2Fprivacy%=
+2Fupdate%3Futm_source%3Dpp-email%26utm_medium%3Demail%26utm_campaign%3=
+Dglobal" target=3D"_blank" style=3D"text-decoration: none;color: #1A73=
+E8">available here</a> and will take effect on May 25, 2018.
+                                                  </td>
+                                                   </tr>
+                                                       <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 35px;font-family: Google Sans,=
+ Roboto, Arial, Open Sans, Helvetica, sans-serif;font-size: 20px;line-=
+height: 28px;font-weight: 500;color: #202124">
+                                                          Improving yo=
+ur privacy controls
+                                                      </td>
+                                                   </tr>
+                                                      <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 12px;font-family: Roboto Regul=
+ar,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:=
+ #5F6368">
+                                                  Within the past year=
+, we updated <a href=3D"https://accounts.google.com/AccountChooser?Ema=
+il=3Dmeenoxiong@gmail.com&continue=3Dhttps%3A%2F%2Fmyactivity.google.c=
+om%2Fmyactivity%3Futm_source%3Dpp-email%26utm_medium%3Demail%26utm_cam=
+paign%3Dglobal" target=3D"_blank" style=3D"text-decoration: none;color=
+: #1A73E8">My Activity</a> so that you can better access and manage th=
+e data in your Google Account. We also launched a redesigned <a href=3D=
+"https://accounts.google.com/AccountChooser?Email=3Dmeenoxiong@gmail.c=
+om&continue=3Dhttps%3A%2F%2Fmyaccount.google.com%2Fdashboard%3Futm_sou=
+rce%3Dpp-email%26utm_medium%3Demail%26utm_campaign%3Dglobal" target=3D=
+"_blank" style=3D"text-decoration: none;color: #1A73E8">Dashboard</a>,=
+ which allows you to easily see an overview of products you=E2=80=99re=
+ using and your data associated with them.
+                                                      </td>
+                                                   </tr>
+                                                     <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 20px;font-family: Roboto Regul=
+ar,Helvetica,Arial,sans-serif;font-size: 14px;line-height: 24px;color:=
+ #5F6368">
+                                                  This month, we=E2=80=
+=99ve updated our <a href=3D"https://accounts.google.com/AccountChoose=
+r?Email=3Dmeenoxiong@gmail.com&continue=3Dhttps%3A%2F%2Fmyaccount.goog=
+le.com%2Fprivacycheckup%3Futm_source%3Dpp-email%26utm_medium%3Demail%2=
+6utm_campaign%3Dglobal" target=3D"_blank" style=3D"text-decoration: no=
+ne;color: #1A73E8">Privacy Checkup</a> with new illustrations and exam=
+ples to help you make more informed choices about your key privacy con=
+trols. And since we understand that your preferences may change over t=
+ime, the new Privacy Checkup enables you to sign up for regular remind=
+ers to check your privacy settings.
+                                                      </td>
+                                                   </tr>
+                                                     <tr>
+                                                      <td align=3D"lef=
+t" valign=3D"top" style=3D"padding-top: 15px;padding-bottom: 30px; fon=
+t-family: Roboto Regular,Helvetica,Arial,sans-serif;font-size: 14px;li=
+ne-height: 24px;color: #5F6368">
+                                                  To learn more about =
+these and other controls to manage your privacy, visit your <a href=3D=
+"https://accounts.google.com/AccountChooser?Email=3Dmeenoxiong@gmail.c=
+om&continue=3Dhttps%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dpp-=
+email%26utm_medium%3Demail%26utm_campaign%3Dglobal" target=3D"_blank" =
+style=3D"text-decoration: none;color: #1A73E8">Google Account</a>.
+                                                      </td>
+                                                   </tr>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                           <!--body ends-->
+                           <tr>
+                              <td align=3D"left" style=3D"padding-left=
+: 15px;padding-right: 15px;padding-top: 30px" class=3D"footer">
+                                 <table width=3D"100%" cellspacing=3D"=
+0" cellpadding=3D"0" class=3D"table">
+                                    <tr>
+                                      <td style=3D"padding-left: 35px;=
+padding-right: 27px" class=3D"footer">
+                                         <a href=3D"#" style=3D"text-d=
+ecoration: none;"><img src=3D"http://services.google.com/fh/files/emai=
+ls/gs_16q2_welcome_google_logo.png" alt=3D"Google" title=3D"Google" wi=
+dth=3D"100" height=3D"auto" style=3D"display: block;"></a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                          <td align=3D"left" class=3D"=
+footer" valign=3D"top" style=3D"font-family:Roboto,Helvetica,Arial,san=
+s-serif; font-size: 12px; mso-line-height-rule: exactly; color:#707575=
+; line-height:16px; padding-left: 35px;padding-right: 35px;padding-top=
+:25px;"><a href=3D"#" style=3D"text-decoration: none; color: #707575;"=
+>&copy; 2018 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA =
+94043</a></td>
+                                       </tr>
+                                       <tr>
+                                          <td align=3D"left" valign=3D=
+"top" style=3D"font-family:Roboto,Helvetica,Arial,sans-serif; font-siz=
+e: 12px; mso-line-height-rule: exactly; color:#707575; line-height:16p=
+x; padding-left: 35px;padding-right: 35px;padding-top:15px;padding-bot=
+tom: 105px" class=3D"footer">This email was sent to <a href=3D"#" styl=
+e=3D"text-decoration: none; color:#707575;">meenoxiong@gmail.com</a> t=
+o provide an update about your Google Account.</td>
+                                       </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                      <!--[if (gte mso 9)|(IE)]>
+                  </td>
+               </tr>
+            </table>
+            <![endif]-->
+         </td>
+      </tr>
+   </table>
+</body>
+</html>
+
+--=-fyY7n5VQU7zMVezTvvAgVA==--

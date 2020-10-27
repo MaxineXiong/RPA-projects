@@ -1,0 +1,586 @@
+Delivered-To: meenoxiong@gmail.com
+Received: from MjE1MzgwMw (unknown [168.61.10.153])
+	by ismtpd0005p1maa1.sendgrid.net (SG) with HTTP id CmCNlRY4QIaIjCA20QQlww
+	for <info@sololearn.com>; Mon, 30 Oct 2017 21:58:55.669 +0000 (UTC)
+X-Google-Smtp-Source: ABhQp+TERUoPqLIpRXtsV4rNt54tkm/gSBNBwt1LhljaUV9bXNt1Smsy0vzCWZftHEHtZCSfDoKu
+X-Received: by 10.99.1.7 with SMTP id 7mr9165031pgb.251.1509400737549;       
+ Mon, 30 Oct 2017 14:58:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1509400737; cv=none; d=google.com;
+	s=arc-20160816;
+	b=VPbaD63YHNBV1H1BH25ldYlXs2J+8BGJzOSnsikGHjtTjf5aTek779Q3lw9Yck/1kd0Ux5vWwjL
+	zHkFIV80003lcOZlbqQubAFIPU2a2OtcS5FTB4hDaEx3cAB9fgJj8nTCuOxWO7Wfvz0j/NBG2gxBw
+	+LELzVMOApoExwPO9gW6pt9PnaMz9rH193rJF5trFjZ3fpAUiAE0sJ5zJY0ROsq7jSaoTK0z+nods
+	KLdvVnm3yfnKUb9G25UvIzemqE3cZbyRskj3lX4FzUeEQ/AFSM32s8/1I8uM/AMwMSYSsdXClmOB4
+	kBf1cQXqcvTxdd61dk64eLTaaB4NDc4Sf5iQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=list-unsubscribe:message-id:to:subject:mime-version:from:date:
+	content-transfer-encoding:dkim-signature:dkim-signature:
+	arc-authentication-results;
+	bh=BuADTWYOv76clrA4qyVFCweSjJBywJJiasvmoatWWZE=;
+	b=aqwCaHv/iO/3yhyFmuxXCZr5MVG/4jOHGzJT9oDyHyCPOX4PTJR6wGiOoQWis8UFJA1WAl7/HqU
+	hpyqzBxAoI6lGkpJy6Ru+7jwX9/UtaOq5NvqjkEIpv3bCrvDtq85Hq7BJS4sOi4siQoAdxAyRIsUB
+	CTpoyjKHFq92vmDvJvs1ZjHfv64YBJtDOObdrZr9Cafh7NXmHJl9anZ6yk1wYquQiK6/sa0frPq+8
+	7FbtNT/TExEzz6Z5KmxR1fV4tYIRm5AwwEeZAXVsDg3lmVQ6y3woOODcLKxgDUaOm87e/rT1/CzEC
+	pKtjnuTuFTe3zg/nONmObLQOup35HAPQ/dBQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@sololearn.com header.s=s1 header.b=Gs7lBGKQ;
+	dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=zUzhT8Ls;
+	spf=pass
+	(google.com: domain of bounces+2153803-acf6-meenoxiong=gmail.com@email.sololearn.com designates 167.89.63.54 as permitted sender)
+	smtp.mailfrom=bounces+2153803-acf6-meenoxiong=gmail.com@email.sololearn.com
+Return-Path: <bounces+2153803-acf6-meenoxiong=gmail.com@email.sololearn.com>
+Received-SPF: pass (google.com: domain of
+ bounces+2153803-acf6-meenoxiong=gmail.com@email.sololearn.com designates
+ 167.89.63.54 as permitted sender) client-ip=167.89.63.54;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@sololearn.com header.s=s1 header.b=Gs7lBGKQ;
+	dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=zUzhT8Ls;
+	spf=pass
+	(google.com: domain of bounces+2153803-acf6-meenoxiong=gmail.com@email.sololearn.com designates 167.89.63.54 as permitted sender)
+	smtp.mailfrom=bounces+2153803-acf6-meenoxiong=gmail.com@email.sololearn.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:to:
+	list-unsubscribe:x-feedback-id; s=smtpapi;
+	bh=+KQo45HKmiFvjY0gjEJk2yF6PRs=;
+	b=zUzhT8Lsw+ZHZQoTATt49gYrvksu5f5CzDp+CJohqB8FgE7xsRIAx4acNXqPV/4nc7UZ0zeW7sC
+	PjXSq/2mPUPnbuPH3RQLTKM4vYhUy0qkk3F/NAA0XL9x6QUgWXEIWhMm/giLTaqj77LLKwdTZw9gK
+	8TVMIlolIKw8+OIi4Ec=
+Date: Mon, 30 Oct 2017 21:58:56 +0000 (UTC)
+From: SoloLearn <info@sololearn.com>
+MIME-Version: 1.0
+Subject: Welcome to SoloLearn!
+To: meenoxiong@gmail.com
+Message-ID: <CmCNlRY4QIaIjCA20QQlww@ismtpd0005p1maa1.sendgrid.net>
+List-Unsubscribe: =?us-ascii?q?=3Cmailto=3Aunsubscribe=40email=2Esololearn=2Ecom=3Fsubject=3Dhttp=3A=2F=2Fl=2Esolo?=
+ =?us-ascii?q?learn=2Ecom=2Fwf=2Funsubscribe*q*upn=3DGUrhgM-2FmERn3r2uvoO2z-2B80k4O?=
+ =?us-ascii?q?FTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7Luz8DEW3TM0pxnKE3ePSCfl?=
+ =?us-ascii?q?KsfYoYHIrM1X4zy8u8u88M6GEKUqKcxmmgSdFm6beTpr2fMs-2BKWAp6mMsi1?=
+ =?us-ascii?q?wGni8BHh-2BItan1G38JPe3-2F3UByo0dWBzWISAdH0t68WZqQ9iG5nurYibu?=
+ =?us-ascii?q?1FGcOH28GtEDA-3D-3D=3E?=
+X-SG-EID: =?us-ascii?q?F1rTv1begfFWJo0auUFW5+V5Z5OekaYwpVFPR2VKLkbFgMgeHZAouRBjBI0pG?=
+ =?us-ascii?q?WfG8lmXiLZyxbZDyo?=
+ =?us-ascii?q?_jdgCkU17ehW8KdXizsYt4s+gnILIAkA5HqdK3doQ0L9QxxaUBgq6d3cwCvrQK?=
+ =?us-ascii?q?JJVur0sG6w3AdZoHC?=
+ y+s8ZJmGWHW9aqnI5LoPkHxpT/AVEDwzal5ALnhklFhbmvkyfxHbuwDB9g==
+X-Feedback-ID: =?us-ascii?q?2153803=3AZBBLB13KZTCE21jjc=2FUpQDI5dGaqXJtoKIt+fhFIYyI=3D=3AZBBLB13K?=
+ =?us-ascii?q?ZTCE21jjc=2FUpQDI5dGaqXJtoKIt+fhFIYyI=3D=3ASG?=
+Uid: 13
+Folder: UiPath Test
+HtmlBody: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html
+ xmlns="http://www.w3.org/1999/xhtml"><head>  <meta name="generator"
+ content="HTML Tidy for HTML5 (experimental) for Windows
+ https://github.com/w3c/tidy-html5/tree/c63cc39" />  <meta
+ http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta
+ name="viewport" content="width=device-width" />  <title>SoloLearn</title> 
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <meta
+ name="viewport" content="width=device-width, initial-scale=1.0" />  <meta
+ http-equiv="X-UA-Compatible" content="IE=edge" />  <meta
+ name="format-detection" content="telephone=no" />  <style type="text/css">
+	/*<![CDATA[*/  /* RESET */   #outlook a {padding:0;} body {width:100%
+ !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;
+ margin:0; padding:0; mso-line-height-rule:exactly;}  table td {
+ border-collapse: collapse; }  .ExternalClass {width:100%;}  .ExternalClass,
+ .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass
+ td, .ExternalClass div {line-height: 100%;}   table td {border-collapse:
+ collapse;}  /* IMG */  img {outline:none; text-decoration:none;
+ -ms-interpolation-mode: bicubic;}  a img {border:none;}    /* Becoming
+ responsive */    @media only screen and (max-device-width: 480px)   { 
+ table[id="container_div"] {max-width: 480px !important;}  
+ table[id="container_table"], table[class="image_container"],
+ table[class="image-group-contenitor"] {width: 100% !important; min-width:
+ 320px !important;}    table[class="image-group-contenitor"] td,
+ table[class="mixed"] td, td[class="mix_image"], td[class="mix_text"],
+ td[class="table-separator"], td[class="section_block"] {display: block
+ !important;width:100% !important;}    table[class="image_container"] img,
+ td[class="mix_image"] img, table[class="image-group-contenitor"] img {width:
+ 100% !important;}  table[class="image_container"] img[class="natural-width"],
+ td[class="mix_image"] img[class="natural-width"],
+ table[class="image-group-contenitor"] img[class="natural-width"] {width: auto
+ !important;}   a[class="button-link justify"] {display: block
+ !important;width:auto !important;}  td[class="table-separator"] br {display:
+ none;}   td[class="cloned_td"]  table[class="image_container"] {width: 100%
+ !important; min-width: 0 !important;}    td[class="img_cont"] img {width:30%
+ !important;}  } table[class="social_wrapp"]  {width: auto;}   /*]]>*/ 
+ </style></head><body bgcolor="#E8E8E8">  <table id="container_div"
+ style="text-align:center; background-color:#e8e8e8; border-collapse:
+ collapse" align="center" bgcolor=  "#E8E8E8" width="100%" cellpadding="0"
+ cellspacing="0" border="0">    <tr>      <td align="center">        <br />       
+ <table id="container_wrapper" cellpadding="0" cellspacing="0" border="0">         
+ <tbody>            <tr>              <td>                <table
+ id="container_table" cellpadding="0" cellspacing="0" border="0"
+ bgcolor="#FFFFFF" style=                "border-collapse: collapse;
+ min-width: 600px;" width="600">                  <tbody>                   
+ <tr>                      <td valign="top" bgcolor="#FFFFFF">                       
+ <table cellpadding="12" cellspacing="0" border="0" style=                       
+ "border-collapse: collapse; background-color: #ffffff" bgcolor="#FFFFFF"
+ width="100%">                          <tbody>                           
+ <tr>                              <td>                                <table
+ width="100%" cellpadding="0" cellspacing="0" border="0"
+ style="border-collapse: collapse">                                  <tbody>                                   
+ <tr valign="top">                                      <td valign="top"
+ class="mix_image" align="center" width="282">                                       
+ <a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fclick=3Fupn=3DE056pM7i4ZFkLSESubY?=
+ =?iso-8859-1?q?d7FhOt8vJYNpwywkfXqqRjpyK9JfEspI8NAFs0WDyDVxV=5FGUrhgM-2FmERn3r?=
+ =?iso-8859-1?q?2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LufbM-2F?=
+ =?iso-8859-1?q?fBbIzvPElkMpWwvbQo-2F-2Fpqjstr3gtMo-2FDtXmToG7FSiJ7OmLR2BDL1A?=
+ =?iso-8859-1?q?yRA1uvssuzQ4nQlbOFEzn-2F0S2-2BtFE2DQY7UTwHWN5fznvx73w-2FVn60d?=
+ =?iso-8859-1?q?if7KSYHp-2FlsOpMsUEjcSDwAo5KDwD-2FrvAxHw-3D-3D=22?=
+ target="_blank"><img data-embeded="auto" src=                                       
+ "http://www.sololearn.com/images/logo.png" alt=""                                       
+ class="" style=                                        "height: auto;
+ vertical-align: top; border: 0px none transparent; border-radius: 0px; width:
+ 282px;"                                        width="282" /></a>                                     
+ </td>                                      <td class="table-separator"
+ width="12" height="12"></td>                                      <td
+ valign="top" class="mix_text" width="282" style="line-height: 130%;">                                       
+ <div style="text-align: right;">                                          <br
+ />                                        </div>                                     
+ </td>                                    </tr>                                 
+ </tbody>                                </table>                             
+ </td>                            </tr>                          </tbody>                       
+ </table>                        <table class="image_container"
+ cellpadding="0" cellspacing="0" border="0" width="100%" style=                       
+ "border-collapse: collapse; background-color: rgb(255, 255, 255);"
+ bgcolor="#FFFFFF">                          <tbody>                           
+ <tr valign="top">                              <td valign="top"
+ align="center">                                <a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fclick=3Fupn=3D-2BBB0Z-2F8iXTQbHdP?=
+ =?iso-8859-1?q?M9f8PBZyMAMTYc0G-2BJJ0KPdxjPfNZrZ-2BjrM3fmqJwPkdhAe9v=5FGUrhgM-?=
+ =?iso-8859-1?q?2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7?=
+ =?iso-8859-1?q?LuIDloxg-2Fj0wDNlv7o0424iQX1nRA2ZsariAUiHVn5KA2EInphzS-2FPdPV?=
+ =?iso-8859-1?q?yNMqvJjF7P0HILAC7HdJe-2BUQSmsy5U7vS07c8eq6-2FksKPPwt6KDQ-2F4-?=
+ =?iso-8859-1?q?2BrNFeWDtYIQyyOMQo2jb6yGdlstxgTka1H7gLHy5Q-3D-3D=22?=
+ target="_blank"><img data-embeded="auto" src=                               
+ "http://www.sololearn.com/images/email/video_banner.jpg" alt=""
+ style="height: auto; vertical-align: top; width: 600px;" width="600" /></a>                             
+ </td>                            </tr>                          </tbody>                       
+ </table>                        <table cellpadding="12" cellspacing="0"
+ border="0" width="100%" style=                        "border-collapse:
+ collapse; background-color: rgb(255, 255, 255);" bgcolor="#FFFFFF">                         
+ <tbody>                            <tr valign="top">                             
+ <td valign="top" style="line-height: 150%; color: rgb(79, 79, 79);">                               
+ <div style="color: rgb(79, 79, 79);">                                  <span
+ style="font-family: arial, helvetica, sans-serif; line-height: 150%;"><span
+ style=                                  "color: rgb(79, 79, 79); line-height:
+ 150%;"><span style=                                  "font-size: 28px; color:
+ rgb(79, 79, 79); line-height: 150%;"><span style=                                 
+ "color: rgb(79, 79, 79); line-height: 150%;"><span style=                                 
+ "font-size: 22px; color: rgb(79, 79, 79); line-height: 150%;">Hi, Meeno
+ Xiong!</span><br /></span></span></span></span>                               
+ </div>                                <p style=                               
+ "color: rgb(79, 79, 79); border: 0px none rgb(79, 79, 79); display: block;
+ margin: 16px 0px; font-family: &#39;Times New Roman&#39;; text-align: left;
+ border-radius: 0px; outline: rgb(79, 79, 79) none 0px; padding: 0px;
+ vertical-align: baseline; word-wrap: break-word; font-size: 16px;
+ text-decoration: none; background-image: none; background-color: rgba(0, 0,
+ 0, 0); background-position: 0% 0%; background-repeat: repeat;">                               
+ <span style=                                "font-family: tahoma, geneva,
+ sans-serif; color: rgb(79, 79, 79); line-height: 150%;"><span style=                               
+ "font-family: arial, helvetica, sans-serif; line-height: 150%;"><span style=                               
+ "font-size: 16px; color: rgb(79, 79, 79); line-height: 150%;">								Welcome
+ to the <a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fclick=3Fupn=3DE056pM7i4ZFkLSESubY?=
+ =?iso-8859-1?q?d7FhOt8vJYNpwywkfXqqRjpw-3D=5FGUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl?=
+ =?iso-8859-1?q?-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7Lu7gVcTnbk5y2rGSonI5MhXSbX?=
+ =?iso-8859-1?q?Ki-2FM6ZKF-2BRAga1kAQdsHi6-2BuVWITVo1RHVltgcd3kZJub-2F3EnCl2d?=
+ =?iso-8859-1?q?phEyADeW7CILZg5nn3iVx-2FwkIw2bu4RuhCVS-2Fi7SbTje33uT0zv7QDbpK?=
+ =?iso-8859-1?q?1cAFTuHnsKIwsApA-3D-3D=22?= target="_blank"
+ style="text-decoration: none; color: rgb(26, 188, 156);">SoloLearn</a>
+ community - where anyone can code! 								<br /><br />								<b>Learn</b>
+ on the go; take fun quizzes; <b>code</b> in the app; <b>compete</b> in code
+ battles with fellow learners; and shine on the leaderboard.								<br /><br
+ />								Good luck and have fun!								<br />							
+	</span></span></span></p>																<p style=                               
+ "color: rgb(79, 79, 79); border: 0px none rgb(79, 79, 79); display: block;
+ margin: 16px 0px; font-family: &#39;Times New Roman&#39;; text-align: left;
+ border-radius: 0px; outline: rgb(79, 79, 79) none 0px; padding: 0px;
+ vertical-align: baseline; word-wrap: break-word; font-size: 16px;
+ text-decoration: none; background-image: none; background-color: rgba(0, 0,
+ 0, 0); background-position: 0% 0%; background-repeat: repeat;">                               
+ <span style="font-family: tahoma, geneva, sans-serif; color: rgb(79, 79, 79);
+ line-height: 150%;">									<span style="font-family: arial, helvetica,
+ sans-serif; line-height: 150%;">										<span style="font-size: 16px;
+ color: rgb(79, 79, 79); line-height: 150%;">								<br /><br />								Best
+ Regards, <br />								The SoloLearn Team															
+	</span></span></span></p>                              </td>                           
+ </tr>                          </tbody>                        </table>                     
+ </td>                    </tr>                    <tr>                     
+ <td valign="top" bgcolor="#FFFFFF">						                        <table
+ cellpadding="10" cellspacing="0" border="0" width="100%" style=                       
+ "border-collapse: collapse; background-color: rgb(58, 70, 75);"
+ bgcolor="#3A464B">                          <tbody>                           
+ <tr valign="top">                              <td valign="top"
+ align="center">                                <table class="social_wrapp"
+ cellpadding="0" cellspacing="0" border="0" width="192" style=                               
+ "border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;">                                 
+ <tbody>                                    <tr>                                     
+ <td>                                        <table class="SocialItemUnit"
+ cellpadding="0" cellspacing="0" border="0" align="left"                                       
+ style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;
+ display: block;"                                        width="46">                                         
+ <tbody>                                            <tr>                                             
+ <td align="left" valign="top" style="text-decoration: none; padding: 4px
+ 0px;" width=                                              "46"><span
+ class="social-follow"><a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fclick=3Fupn=3D-2BBB0Z-2F8iXTQbHdP?=
+ =?iso-8859-1?q?M9f8PBQAW7Ltf-2Frl0WmdwgKTSxbIHIyBKwptG1LR3DqSXSPm7=5FGUrhgM-2F?=
+ =?iso-8859-1?q?mERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7Lu?=
+ =?iso-8859-1?q?5drc0lWEOBsjaOX8GycNHDsIUbGkBAF2zx0IGJofZjpIwFptfIvo0xlOZ0l-2?=
+ =?iso-8859-1?q?FZ-2FhQkc7x808BLRwS9su8qHjmAOteLzaWdoZxbyA3yRt5bOuZVYuAaaHCRT?=
+ =?iso-8859-1?q?Xl-2Fr8RmgovKgLvc4nhXOZa3NHOpWX3KA-3D-3D=22?= target=                                             
+ "_blank" style="text-decoration: none;"><img src=                                             
+ "http://www.sololearn.com/images/email/36px_facebook.png" alt="Facebook"
+ style=                                              "display: block; border:
+ 0; outline: none; padding-bottom: 0; vertical-align: top;" /></a></span></td>                                           
+ </tr>                                          </tbody>                                       
+ </table>                                        <table class="SocialItemUnit"
+ cellpadding="0" cellspacing="0" border="0" align="left"                                       
+ style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;
+ display: block;"                                        width="46">                                         
+ <tbody>                                            <tr>                                             
+ <td align="left" valign="top" style="text-decoration: none; padding: 4px
+ 0px;" width=                                              "46"><span
+ class="social-follow"><a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fclick=3Fupn=3D-2BBB0Z-2F8iXTQbHdP?=
+ =?iso-8859-1?q?M9f8PBZU7TBwkZJnnc1kp1XtNAzErbme-2B0oySC7bcEIcUDNDm=5FGUrhgM-2F?=
+ =?iso-8859-1?q?mERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7Lu?=
+ =?iso-8859-1?q?HNKpbAxxZiJX3HOBWfEQb1-2FJ5dmWjDt74s-2Fgyw6yDo5U0LSrU2eqJ-2Bf?=
+ =?iso-8859-1?q?0Vh8nh6RKkobJdndHiYBvtUuvCt1HJUa-2BA9mB5qVLPKmSEqOsk-2Bxn-2B-?=
+ =?iso-8859-1?q?2FK-2BiGTeMRKfX9MdjaSOyRZNOa-2FKHpgiC3UZ2eSsJg-3D-3D=22?=
+ target=                                              "_blank"
+ style="text-decoration: none;"><img src=                                             
+ "http://www.sololearn.com/images/email/36px_twitter.png" alt="Twitter" style=                                             
+ "display: block; border: 0; outline: none; padding-bottom: 0; vertical-align:
+ top;" /></a></span></td>                                            </tr>                                         
+ </tbody>                                        </table>                                       
+ <table class="SocialItemUnit" cellpadding="0" cellspacing="0" border="0"
+ align="left"                                        style="border-collapse:
+ collapse;mso-table-lspace: 0;mso-table-rspace: 0; display: block;"                                       
+ width="46">                                          <tbody>                                           
+ <tr>                                              <td align="left"
+ valign="top" style="text-decoration: none; padding: 4px 0px;" width=                                             
+ "46"><span class="social-follow"><a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fclick=3Fupn=3D-2BBB0Z-2F8iXTQbHdP?=
+ =?iso-8859-1?q?M9f8PBbgp49cE11-2Bffqnqm52NN65RdwyTFkwh-2F5xMZDQ7PShV=5FGUrhgM-?=
+ =?iso-8859-1?q?2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7?=
+ =?iso-8859-1?q?Lus99ed19-2FCL2HLohtou3jItWoxsry707xFAfi-2FqP4vg9Nx57E9PXbIZK?=
+ =?iso-8859-1?q?q3q2ymHmIdf3y5HJEk9mKuEwGGs980WnNNyXU9J0JtRVGyYJbr6-2BRjsJwWF?=
+ =?iso-8859-1?q?fD1jYJQ5ylF1N7E4oYMVC-2FENmzoMwWZsLUIg-3D-3D=22?=                                             
+ target="_blank" style="text-decoration: none;"><img src=                                             
+ "http://www.sololearn.com/images/email/36px_google.png" alt="Google+" style=                                             
+ "display: block; border: 0; outline: none; padding-bottom: 0; vertical-align:
+ top;" /></a></span></td>                                            </tr>                                         
+ </tbody>                                        </table>                                       
+ <table class="SocialItemUnit" cellpadding="0" cellspacing="0" border="0"
+ align="left"                                        style="border-collapse:
+ collapse;mso-table-lspace: 0;mso-table-rspace: 0; display: block;"                                       
+ width="46">                                          <tbody>                                           
+ <tr>                                              <td align="left"
+ valign="top" style="text-decoration: none; padding: 4px 0px;" width=                                             
+ "46"><span class="social-follow"><a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fclick=3Fupn=3DE056pM7i4ZFkLSESubY?=
+ =?iso-8859-1?q?d7FhOt8vJYNpwywkfXqqRjpw-3D=5FGUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl?=
+ =?iso-8859-1?q?-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuRzvIycV-2BeR95XL-2B1WBhd?=
+ =?iso-8859-1?q?dEG-2FiBG0t9SXKxXtVDwIPui48kqGMG3beEGIrOolUDN78YIBiLtdD8gGF4e?=
+ =?iso-8859-1?q?ncoFLFgW-2FGRVbpmd67WbUZ8FqTgrzpyxGgtQ-2FC9NO3RZG9kD-2Ff4qt4P?=
+ =?iso-8859-1?q?tyN-2B82iBU9UVA3rQ-3D-3D=22?= target="_blank"                                             
+ style="text-decoration: none;"><img src=                                             
+ "http://www.sololearn.com/images/email/36px_website.png" alt="Website" style=                                             
+ "display: block; border: 0; outline: none; padding-bottom: 0; vertical-align:
+ top;" /></a></span></td>                                            </tr>                                         
+ </tbody>                                        </table>                                     
+ </td>                                    </tr>                                 
+ </tbody>                                </table>                             
+ </td>                            </tr>                          </tbody>                       
+ </table>                        <table cellpadding="10" cellspacing="0"
+ border="0" width="100%" style=                        "border-collapse:
+ collapse; background-color: rgb(255, 255, 255);" bgcolor="#FFFFFF">                         
+ <tbody>                            <tr valign="top">                             
+ <td valign="top" style="line-height: 130%; color: rgb(0, 0, 0);">                               
+ <div>                                  <span style="font-size: 12px;
+ line-height: 130%;"><span style=                                 
+ "font-family: Arial, Helvetica, sans-serif; color: rgb(102, 102, 102);
+ line-height: 130%;">Copyright                                 
+ =?iso-8859-1?b?qQ==?= 2016 SoloLearn Inc.,<br />                                 
+ All rights reserved.<br />                                  <br />                                 
+ SoloLearn Inc.<br />                                  5020 Franklin Drive,
+ Suite 100<br />                                  Pleasanton, CA
+ 94588</span></span><br />                                </div>                             
+ </td>                            </tr>                          </tbody>                       
+ </table>                      </td>                    </tr>                 
+ </tbody>                </table>              </td>            </tr>         
+ </tbody>        </table><br />      </td>    </tr>  </table><p><small>If
+ you&#39;d like to unsubscribe and stop receiving these emails <a
+ =?iso-8859-1?q?href=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Funsubscribe=3Fupn=3DGUrhgM-2FmERn?=
+ =?iso-8859-1?q?3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuYPPA?=
+ =?iso-8859-1?q?DexOTj1zGNq9KItHTOPxqDV3Wf3FUNMjVmi7XVlrjvZsW3WjiRqKp2hVgzs-2?=
+ =?iso-8859-1?q?FVnf6Ie49MQj4pr9pbz0KYM6NLxl-2BdYky5Exa17WXgikSXZENH3uqjYmlBa?=
+ =?iso-8859-1?q?-2BNpH-2FAvTcDUKyld8Ik9mAKVzTHwQ-3D-3D=22=3Eclick?=
+ here</a>.</small></p><img
+ =?iso-8859-1?q?src=3D=22http=3A=2F=2Fl=2Esololearn=2Ecom=2Fwf=2Fopen=3Fupn=3DGUrhgM-2FmERn3r2uvoO2?=
+ =?iso-8859-1?q?z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuSlU1248FFjan?=
+ =?iso-8859-1?q?IUooV7ZPmaYLnycE8Kv0R-2F9a8dgWSKDetESy0Tl24gXFojbuKy-2B6yT5wq?=
+ =?iso-8859-1?q?60ag6sOiySrtiZ-2FkDIesmI3lTGW96DpHGo-2B739S7EWVK62WugL7k3AqRv?=
+ =?iso-8859-1?q?QX-2FBTrLQbCGGsek-2ByEUGJ4MPOZlFBltlJ7EO9iXe-2B0Kog-3D=22?=
+ alt="" width="1" height="1" border="0" style="height:1px !important;width:1px
+ !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0
+ !important;margin-right:0 !important;margin-left:0 !important;padding-top:0
+ !important;padding-bottom:0 !important;padding-right:0
+ !important;padding-left:0 !important;"/></body></html>
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>SoloLearn</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <style type="text/css">
+	/*<![CDATA[*/
+  /* RESET */ 
+  #outlook a {padding:0;} body {width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; mso-line-height-rule:exactly;}
+  table td { border-collapse: collapse; }  .ExternalClass {width:100%;}  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} 
+  table td {border-collapse: collapse;}  /* IMG */  img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}  a img {border:none;}  
+
+  /* Becoming responsive */  
+  @media only screen and (max-device-width: 480px) 
+  {  table[id="container_div"] {max-width: 480px !important;} 
+  table[id="container_table"], table[class="image_container"], table[class="image-group-contenitor"] {width: 100% !important; min-width: 320px !important;}  
+  table[class="image-group-contenitor"] td, table[class="mixed"] td, td[class="mix_image"], td[class="mix_text"], td[class="table-separator"], td[class="section_block"] {display: block !important;width:100% !important;}  
+  table[class="image_container"] img, td[class="mix_image"] img, table[class="image-group-contenitor"] img {width: 100% !important;}
+  table[class="image_container"] img[class="natural-width"], td[class="mix_image"] img[class="natural-width"], table[class="image-group-contenitor"] img[class="natural-width"] {width: auto !important;} 
+  a[class="button-link justify"] {display: block !important;width:auto !important;}  td[class="table-separator"] br {display: none;} 
+  td[class="cloned_td"]  table[class="image_container"] {width: 100% !important; min-width: 0 !important;} 
+   td[class="img_cont"] img {width:30% !important;}
+  } table[class="social_wrapp"]  {width: auto;} 
+  /*]]>*/
+  </style>
+</head>
+
+<body bgcolor="#E8E8E8">
+  <table id="container_div" style="text-align:center; background-color:#e8e8e8; border-collapse: collapse" align="center" bgcolor=
+  "#E8E8E8" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+        <br />
+
+        <table id="container_wrapper" cellpadding="0" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td>
+                <table id="container_table" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style=
+                "border-collapse: collapse; min-width: 600px;" width="600">
+                  <tbody>
+                    <tr>
+                      <td valign="top" bgcolor="#FFFFFF">
+                        <table cellpadding="12" cellspacing="0" border="0" style=
+                        "border-collapse: collapse; background-color: #ffffff" bgcolor="#FFFFFF" width="100%">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+                                  <tbody>
+                                    <tr valign="top">
+                                      <td valign="top" class="mix_image" align="center" width="282">
+                                        <a href="http://l.sololearn.com/wf/click?upn=E056pM7i4ZFkLSESubYd7FhOt8vJYNpwywkfXqqRjpyK9JfEspI8NAFs0WDyDVxV_GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LufbM-2FfBbIzvPElkMpWwvbQo-2F-2Fpqjstr3gtMo-2FDtXmToG7FSiJ7OmLR2BDL1AyRA1uvssuzQ4nQlbOFEzn-2F0S2-2BtFE2DQY7UTwHWN5fznvx73w-2FVn60dif7KSYHp-2FlsOpMsUEjcSDwAo5KDwD-2FrvAxHw-3D-3D" target="_blank"><img data-embeded="auto" src=
+                                        "http://www.sololearn.com/images/logo.png" alt=""
+                                        class="" style=
+                                        "height: auto; vertical-align: top; border: 0px none transparent; border-radius: 0px; width: 282px;"
+                                        width="282" /></a>
+                                      </td>
+
+                                      <td class="table-separator" width="12" height="12"></td>
+
+                                      <td valign="top" class="mix_text" width="282" style="line-height: 130%;">
+                                        <div style="text-align: right;">
+                                          <br />
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table class="image_container" cellpadding="0" cellspacing="0" border="0" width="100%" style=
+                        "border-collapse: collapse; background-color: rgb(255, 255, 255);" bgcolor="#FFFFFF">
+                          <tbody>
+                            <tr valign="top">
+                              <td valign="top" align="center">
+                                <a href="http://l.sololearn.com/wf/click?upn=-2BBB0Z-2F8iXTQbHdPM9f8PBZyMAMTYc0G-2BJJ0KPdxjPfNZrZ-2BjrM3fmqJwPkdhAe9v_GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuIDloxg-2Fj0wDNlv7o0424iQX1nRA2ZsariAUiHVn5KA2EInphzS-2FPdPVyNMqvJjF7P0HILAC7HdJe-2BUQSmsy5U7vS07c8eq6-2FksKPPwt6KDQ-2F4-2BrNFeWDtYIQyyOMQo2jb6yGdlstxgTka1H7gLHy5Q-3D-3D" target="_blank"><img data-embeded="auto" src=
+                                "http://www.sololearn.com/images/email/video_banner.jpg" alt="" style="height: auto; vertical-align: top; width: 600px;" width="600" /></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table cellpadding="12" cellspacing="0" border="0" width="100%" style=
+                        "border-collapse: collapse; background-color: rgb(255, 255, 255);" bgcolor="#FFFFFF">
+                          <tbody>
+                            <tr valign="top">
+                              <td valign="top" style="line-height: 150%; color: rgb(79, 79, 79);">
+                                <div style="color: rgb(79, 79, 79);">
+                                  <span style="font-family: arial, helvetica, sans-serif; line-height: 150%;"><span style=
+                                  "color: rgb(79, 79, 79); line-height: 150%;"><span style=
+                                  "font-size: 28px; color: rgb(79, 79, 79); line-height: 150%;"><span style=
+                                  "color: rgb(79, 79, 79); line-height: 150%;"><span style=
+                                  "font-size: 22px; color: rgb(79, 79, 79); line-height: 150%;">Hi, Meeno Xiong!</span><br /></span></span></span></span>
+                                </div>
+
+                                <p style=
+                                "color: rgb(79, 79, 79); border: 0px none rgb(79, 79, 79); display: block; margin: 16px 0px; font-family: &#39;Times New Roman&#39;; text-align: left; border-radius: 0px; outline: rgb(79, 79, 79) none 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word; font-size: 16px; text-decoration: none; background-image: none; background-color: rgba(0, 0, 0, 0); background-position: 0% 0%; background-repeat: repeat;">
+                                <span style=
+                                "font-family: tahoma, geneva, sans-serif; color: rgb(79, 79, 79); line-height: 150%;"><span style=
+                                "font-family: arial, helvetica, sans-serif; line-height: 150%;"><span style=
+                                "font-size: 16px; color: rgb(79, 79, 79); line-height: 150%;">
+								Welcome to the <a href="http://l.sololearn.com/wf/click?upn=E056pM7i4ZFkLSESubYd7FhOt8vJYNpwywkfXqqRjpw-3D_GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7Lu7gVcTnbk5y2rGSonI5MhXSbXKi-2FM6ZKF-2BRAga1kAQdsHi6-2BuVWITVo1RHVltgcd3kZJub-2F3EnCl2dphEyADeW7CILZg5nn3iVx-2FwkIw2bu4RuhCVS-2Fi7SbTje33uT0zv7QDbpK1cAFTuHnsKIwsApA-3D-3D" target="_blank" style="text-decoration: none; color: rgb(26, 188, 156);">SoloLearn</a> community - where anyone can code! 
+								<br /><br />
+								<b>Learn</b> on the go; take fun quizzes; <b>code</b> in the app; <b>compete</b> in code battles with fellow learners; and shine on the leaderboard.
+								<br /><br />
+								Good luck and have fun!
+								<br />
+								</span></span></span></p>
+								
+								<p style=
+                                "color: rgb(79, 79, 79); border: 0px none rgb(79, 79, 79); display: block; margin: 16px 0px; font-family: &#39;Times New Roman&#39;; text-align: left; border-radius: 0px; outline: rgb(79, 79, 79) none 0px; padding: 0px; vertical-align: baseline; word-wrap: break-word; font-size: 16px; text-decoration: none; background-image: none; background-color: rgba(0, 0, 0, 0); background-position: 0% 0%; background-repeat: repeat;">
+                                <span style="font-family: tahoma, geneva, sans-serif; color: rgb(79, 79, 79); line-height: 150%;">
+									<span style="font-family: arial, helvetica, sans-serif; line-height: 150%;">
+										<span style="font-size: 16px; color: rgb(79, 79, 79); line-height: 150%;">
+								<br /><br />
+								Best Regards, <br />
+								The SoloLearn Team								
+								</span></span></span></p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td valign="top" bgcolor="#FFFFFF">						
+
+                        <table cellpadding="10" cellspacing="0" border="0" width="100%" style=
+                        "border-collapse: collapse; background-color: rgb(58, 70, 75);" bgcolor="#3A464B">
+                          <tbody>
+                            <tr valign="top">
+                              <td valign="top" align="center">
+                                <table class="social_wrapp" cellpadding="0" cellspacing="0" border="0" width="192" style=
+                                "border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <table class="SocialItemUnit" cellpadding="0" cellspacing="0" border="0" align="left"
+                                        style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0; display: block;"
+                                        width="46">
+                                          <tbody>
+                                            <tr>
+                                              <td align="left" valign="top" style="text-decoration: none; padding: 4px 0px;" width=
+                                              "46"><span class="social-follow"><a href="http://l.sololearn.com/wf/click?upn=-2BBB0Z-2F8iXTQbHdPM9f8PBQAW7Ltf-2Frl0WmdwgKTSxbIHIyBKwptG1LR3DqSXSPm7_GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7Lu5drc0lWEOBsjaOX8GycNHDsIUbGkBAF2zx0IGJofZjpIwFptfIvo0xlOZ0l-2FZ-2FhQkc7x808BLRwS9su8qHjmAOteLzaWdoZxbyA3yRt5bOuZVYuAaaHCRTXl-2Fr8RmgovKgLvc4nhXOZa3NHOpWX3KA-3D-3D" target=
+                                              "_blank" style="text-decoration: none;"><img src=
+                                              "http://www.sololearn.com/images/email/36px_facebook.png" alt="Facebook" style=
+                                              "display: block; border: 0; outline: none; padding-bottom: 0; vertical-align: top;" /></a></span></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+
+                                        <table class="SocialItemUnit" cellpadding="0" cellspacing="0" border="0" align="left"
+                                        style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0; display: block;"
+                                        width="46">
+                                          <tbody>
+                                            <tr>
+                                              <td align="left" valign="top" style="text-decoration: none; padding: 4px 0px;" width=
+                                              "46"><span class="social-follow"><a href="http://l.sololearn.com/wf/click?upn=-2BBB0Z-2F8iXTQbHdPM9f8PBZU7TBwkZJnnc1kp1XtNAzErbme-2B0oySC7bcEIcUDNDm_GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuHNKpbAxxZiJX3HOBWfEQb1-2FJ5dmWjDt74s-2Fgyw6yDo5U0LSrU2eqJ-2Bf0Vh8nh6RKkobJdndHiYBvtUuvCt1HJUa-2BA9mB5qVLPKmSEqOsk-2Bxn-2B-2FK-2BiGTeMRKfX9MdjaSOyRZNOa-2FKHpgiC3UZ2eSsJg-3D-3D" target=
+                                              "_blank" style="text-decoration: none;"><img src=
+                                              "http://www.sololearn.com/images/email/36px_twitter.png" alt="Twitter" style=
+                                              "display: block; border: 0; outline: none; padding-bottom: 0; vertical-align: top;" /></a></span></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+
+                                        <table class="SocialItemUnit" cellpadding="0" cellspacing="0" border="0" align="left"
+                                        style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0; display: block;"
+                                        width="46">
+                                          <tbody>
+                                            <tr>
+                                              <td align="left" valign="top" style="text-decoration: none; padding: 4px 0px;" width=
+                                              "46"><span class="social-follow"><a href="http://l.sololearn.com/wf/click?upn=-2BBB0Z-2F8iXTQbHdPM9f8PBbgp49cE11-2Bffqnqm52NN65RdwyTFkwh-2F5xMZDQ7PShV_GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7Lus99ed19-2FCL2HLohtou3jItWoxsry707xFAfi-2FqP4vg9Nx57E9PXbIZKq3q2ymHmIdf3y5HJEk9mKuEwGGs980WnNNyXU9J0JtRVGyYJbr6-2BRjsJwWFfD1jYJQ5ylF1N7E4oYMVC-2FENmzoMwWZsLUIg-3D-3D"
+                                              target="_blank" style="text-decoration: none;"><img src=
+                                              "http://www.sololearn.com/images/email/36px_google.png" alt="Google+" style=
+                                              "display: block; border: 0; outline: none; padding-bottom: 0; vertical-align: top;" /></a></span></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+
+                                        <table class="SocialItemUnit" cellpadding="0" cellspacing="0" border="0" align="left"
+                                        style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0; display: block;"
+                                        width="46">
+                                          <tbody>
+                                            <tr>
+                                              <td align="left" valign="top" style="text-decoration: none; padding: 4px 0px;" width=
+                                              "46"><span class="social-follow"><a href="http://l.sololearn.com/wf/click?upn=E056pM7i4ZFkLSESubYd7FhOt8vJYNpwywkfXqqRjpw-3D_GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuRzvIycV-2BeR95XL-2B1WBhddEG-2FiBG0t9SXKxXtVDwIPui48kqGMG3beEGIrOolUDN78YIBiLtdD8gGF4encoFLFgW-2FGRVbpmd67WbUZ8FqTgrzpyxGgtQ-2FC9NO3RZG9kD-2Ff4qt4PtyN-2B82iBU9UVA3rQ-3D-3D" target="_blank"
+                                              style="text-decoration: none;"><img src=
+                                              "http://www.sololearn.com/images/email/36px_website.png" alt="Website" style=
+                                              "display: block; border: 0; outline: none; padding-bottom: 0; vertical-align: top;" /></a></span></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table cellpadding="10" cellspacing="0" border="0" width="100%" style=
+                        "border-collapse: collapse; background-color: rgb(255, 255, 255);" bgcolor="#FFFFFF">
+                          <tbody>
+                            <tr valign="top">
+                              <td valign="top" style="line-height: 130%; color: rgb(0, 0, 0);">
+                                <div>
+                                  <span style="font-size: 12px; line-height: 130%;"><span style=
+                                  "font-family: Arial, Helvetica, sans-serif; color: rgb(102, 102, 102); line-height: 130%;">Copyright
+                                  © 2016 SoloLearn Inc.,<br />
+                                  All rights reserved.<br />
+                                  <br />
+                                  SoloLearn Inc.<br />
+                                  5020 Franklin Drive, Suite 100<br />
+                                  Pleasanton, CA 94588</span></span><br />
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table><br />
+      </td>
+    </tr>
+  </table>
+
+<p><small>If you&#39;d like to unsubscribe and stop receiving these emails <a href="http://l.sololearn.com/wf/unsubscribe?upn=GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuYPPADexOTj1zGNq9KItHTOPxqDV3Wf3FUNMjVmi7XVlrjvZsW3WjiRqKp2hVgzs-2FVnf6Ie49MQj4pr9pbz0KYM6NLxl-2BdYky5Exa17WXgikSXZENH3uqjYmlBa-2BNpH-2FAvTcDUKyld8Ik9mAKVzTHwQ-3D-3D">click here</a>.</small></p>
+
+<img src="http://l.sololearn.com/wf/open?upn=GUrhgM-2FmERn3r2uvoO2z-2B80k4OFTl-2BW1GjyZRIIz7ZmfHqqrkP2YdPYgQpNaR7LuSlU1248FFjanIUooV7ZPmaYLnycE8Kv0R-2F9a8dgWSKDetESy0Tl24gXFojbuKy-2B6yT5wq60ag6sOiySrtiZ-2FkDIesmI3lTGW96DpHGo-2B739S7EWVK62WugL7k3AqRvQX-2FBTrLQbCGGsek-2ByEUGJ4MPOZlFBltlJ7EO9iXe-2B0Kog-3D" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
